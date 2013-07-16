@@ -14,13 +14,13 @@
 	</div>
 	<div id="columns">
 		<div id="side">
-		    <div id="cart"
-			   <% if @cart.line_items.empty? %>
-			     style="display: none"
-			   <%end%>
-			   >
-			   <%= render @cart %>
-			</div>
+		    
+			   <% if @cart %>
+			      <%= hidden_div_if( @cart.line_items.empty?, id:'cart' )   do  %>
+			         <%=  render  @cart  %>
+			      <% end %>
+			   <% end %>
+		
 			
 			<ul>
 				<li><a href="http://localhost:3000">Home</a></li>
@@ -33,6 +33,7 @@
 			<%= yield %>
 		</div>
 	</div>
+	
 </body>
 </html>
 
