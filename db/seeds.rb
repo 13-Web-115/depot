@@ -7,23 +7,37 @@
 # Visit http://www.pragmaticprogrammer.com/titles/rails4 for more book information.
 #---
 # encoding: utf-8
+<<<<<<< HEAD
 
 Product.delete_all
 
+=======
+Product.delete_all
+>>>>>>> de3e201cc930b970cdab81e6f204fee553ea27aa
 Product.create(title: 'CoffeeScript',
   description: 
     %{<p>
         CoffeeScript is JavaScript done right. It provides all of JavaScript's
+<<<<<<< HEAD
 		functionality wrapped in a cleaner, more succinct syntax. In the first
 		book on this exciting new language, CoffeeScript guru Trevor Burnham
 		shows you how to hold onto all the power and flexibility of JavaScript
 		while writing clearer, cleaner, and safer code.
+=======
+	functionality wrapped in a cleaner, more succinct syntax. In the first
+	book on this exciting new language, CoffeeScript guru Trevor Burnham
+	shows you how to hold onto all the power and flexibility of JavaScript
+	while writing clearer, cleaner, and safer code.
+>>>>>>> de3e201cc930b970cdab81e6f204fee553ea27aa
       </p>},
   image_url:   'cs.jpg',    
   price: 36.00)
 # . . .
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> de3e201cc930b970cdab81e6f204fee553ea27aa
 Product.create(title: 'Programming Ruby 1.9',
   description:
     %{<p>
@@ -35,7 +49,10 @@ Product.create(title: 'Programming Ruby 1.9',
   price: 49.95)
 # . . .
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> de3e201cc930b970cdab81e6f204fee553ea27aa
 Product.create(title: 'Rails Test Prescriptions',
   description: 
     %{<p>
@@ -49,4 +66,7 @@ Product.create(title: 'Rails Test Prescriptions',
   image_url: 'rtp.jpg',
   price: 34.95)
   
+<<<<<<< HEAD
   
+=======
+>>>>>>> de3e201cc930b970cdab81e6f204fee553ea27aa
