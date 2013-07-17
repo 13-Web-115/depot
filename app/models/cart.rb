@@ -12,12 +12,7 @@ class Cart < ActiveRecord::Base
   end
   
   def total_price
-<<<<<<< HEAD
     line_items.to_a.sum{ |item| item.total_price}
   end
   
-=======
-    line_items.to_a.sum { |item| item.total_price }
-  end
->>>>>>> de3e201cc930b970cdab81e6f204fee553ea27aa
 end
