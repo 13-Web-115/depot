@@ -11,8 +11,6 @@
  *= require_self
  *= require_tree .
  */
-
- 
 #banner {
 	background: #9c9;
 	padding: 10px;
@@ -21,7 +19,7 @@
 	color: #282;
 	text-align: center;
 	
-	img{
+	img {
 		float: left;
 	}
 }
@@ -29,7 +27,7 @@
 #notice {
 	color: #000 !important;
 	border: 2px solid red;
-	padding: lem;
+	padding: 1em;
 	margin-bottom: 2em;
 	background-color: #f0f0f0;
 	font: bold smaller sans-serif;
@@ -38,48 +36,85 @@
 #columns {
 	background: #141;
 	
-	#main{
+	#main {
 		margin-left: 17em;
-		padding: lem;
+		padding: 1em;
 		background: white;
 	}
 	
-	#side{
+	#side {
 		float: left;
 		padding: 1em 2em;
 		width: 13em;
 		background: #141;
 		
-		from,div{
-		   display:inline;
+		form, div {
+		  display: inline;
 		}
 		
-		input{
-		   font-size:small;
+		input {
+		  font-size: small;
 		}
 		
-		#cart{
-		   font-size:smaller;
-		   color:     white;
-		   
-		   table{
-		   border-top: 1px dotted #595;
-		   border-bottom: 1px dotted #595;
-		   margin-bottom: 10px;
-		   }
-		}
+		  #cart {
+		    font-size: smaller;
+		    color: white;
+		    
+		    table {
+		      border-top: 1px dotted #595;
+		      border-bottom: 1px dotted #595;
+		      margin-bottom: 10px;
+		    }
+		  }
 		
-		ul{
+		ul {
 			padding: 0;
 			
-			li{
+			li {
 				list-style: none;
 				
-				a{
+				a {
 					color: #bfb;
-					font-size: small;
+					font-size: samll;
 				}
 			}
 		}
 	}
+}
+
+.depot_form {
+  fieldset {
+    background: #efe;
+    
+    legend {
+      color: #dfd;
+      background: #141;
+      font-family: sans-serif;
+      
+      padding: 0.2em 1em;
+    }
+  }
+  
+  form {
+    label {
+      width: 5em;
+      float: left;
+      text-align: right;
+      padding-top: 0.2em;
+      margin-right: 0.1em;
+      display: block;
+    }
+    
+    select, textarea, input {
+      margin-left: 0.5em;
+    }
+    
+    .submit {
+      margin-left: 4em;
+    }
+    
+    br {
+      display: none
+    }
+  }
 }
