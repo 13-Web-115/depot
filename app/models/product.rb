@@ -5,12 +5,13 @@ class Product < ActiveRecord::Base
   validates :price, numericality: {greater_than_or_equal_to: 0.01}
   validates :title, uniqueness: true
   validates :image_url,  allow_blank: true, format: {
-    with:   %r{\.(gif|jpg|png)$}i,    # ¡°\.¡±×ªÒå×Ö·û£¬ .Ö¸´¿´âµÄdot£¬¶ø²»ÊÇ´ú±íËùÓÐ×Ö·û
+    with:   %r{\.(gif|jpg|png)$}i,    # ï¿½ï¿½\.ï¿½ï¿½×ªï¿½ï¿½ï¿½Ö·ï¿½ .Ö¸ï¿½ï¿½ï¿½ï¿½ï¿½dotï¿½ï¿½ï¿½ï¿½ï¿½Ç´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö·ï¿½
     message: 'must be a URL for GIF, JPG or PNG image.'
   }
 
   
   has_many :line_items
+  has_many :orders, through: :line_items
   
   before_destroy :ensure_not_referenced_by_any_line_item
   

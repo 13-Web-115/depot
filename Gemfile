@@ -1,4 +1,5 @@
-source 'https://rubygems.org'
+#source 'https://rubygems.org'
+source 'http://ruby.taobao.org'
 
 gem 'rails', '3.2.13'
 
@@ -25,6 +26,7 @@ gem 'jquery-rails',"2.3.0"
 # To use ActiveModel has_secure_password
 gem 'bcrypt-ruby', '~> 3.0.0'
 
+gem 'will_paginate', '~>3.0'
 # To use Jbuilder templates for JSON
 # gem 'jbuilder'
 
