@@ -16,12 +16,20 @@
     <%= f.text_field :title %>
   </div>
   <div class="field">
+    <%= f.label :owner %><br />
+    <%= f.text_field :owner %>
+  </div>
+  <div class="field">
     <%= f.label :description %><br />
     <%= f.text_area :description, rows:6 %>
   </div>
   <div class="field">
   	<%= f.label :genre %>
-  	<%= select_tag 'genre', options_for_select(["literature", "economy", "life", "children", "technology"], "literature")%>
+  	<% if @product %>
+  		<%= select_tag 'genre', options_for_select(["literature", "economy", "life", "children", "technology"], @product.genre)%>
+  	<% else %>
+  		<%= select_tag 'genre', options_for_select(["literature", "economy", "life", "children", "technology"], 'literature') %>
+  	<% end %>
   </div>
   <div class="field">
     <%= f.label :image_url %><br />

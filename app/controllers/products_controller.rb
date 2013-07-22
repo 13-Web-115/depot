@@ -4,7 +4,12 @@ class ProductsController < ApplicationController
   before_filter :authorizeAdminAndShopper
   
   def index
-    @products = Product.all
+    user = User.find_by_id(session[:user_id])
+    if user.genre == "shopkeeper"
+      @products = Product.where(owner: user.name)
+    else
+      @products = Product.all
+    end
 
     respond_to do |format|
       format.html # index.html.erb
