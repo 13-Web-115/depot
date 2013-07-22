@@ -31,6 +31,12 @@
   	<%= f.password_field :password_confirmation, size: 40%>
   </div>
   
+  <div class="field">
+    <%= f.label :genre, "Type:" %><br />
+    <%= f.select :genre, User::USER_TYPES,
+    			 prompt: 'Select an user type' %>
+  </div>
+  
   <div class="action">
     <%= f.submit %>
   </div>
