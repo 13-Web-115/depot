@@ -5,7 +5,7 @@ class UserStoriesTest < ActionDispatch::IntegrationTest
   # test "the truth" do
   #   assert true
   # end
-=begin
+
   test "Integration" do
     LineItem.delete_all
     Order.delete_all
@@ -14,7 +14,7 @@ class UserStoriesTest < ActionDispatch::IntegrationTest
     get "/"
     assert_response :success
     assert_template "index"
-  
+=begin  
     xml_http_request :post, '/line_items', product_id: ruby_book.id
     assert_response :success
   
@@ -53,9 +53,8 @@ class UserStoriesTest < ActionDispatch::IntegrationTest
     assert_equal ["dave@example.com"], mail.to
     assert_equal 'Sam Ruby <depot@example.com>', mail[:from].value
     assert_equal "Pragmatic Store Order Confirmation", mail.subject
+=end    
    end
-   
-=end
 end
 
 

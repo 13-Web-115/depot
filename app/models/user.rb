@@ -6,6 +6,8 @@ class User < ActiveRecord::Base
   
   after_destroy :ensure_an_admin_remains
   
+  has_many :products
+  
   private
     def ensure_an_admin_remains
       if User.count.zero?
