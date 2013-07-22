@@ -5,9 +5,14 @@ class OrdersController < ApplicationController
   # GET /orders.json
   def index
     #@orders = Order.all
-    @orders = Order.paginate page: params[:page], order: 'created_at desc',
+    user = User.find_by_id(session[:user_id])
+    if user.genre == "ordinary"
+      @orders = Order.where(name: "#{user.name}")
+    else
+      @orders = Order.all
+    end
+    @orders = @orders.paginate page: params[:page], order: 'created_at desc',
       per_page: 10
-
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @orders }
@@ -21,6 +26,7 @@ class OrdersController < ApplicationController
     if(params[:shipped])
       respond_to do |format|
         OrderNotifier.shipped(@order).deliver
+        @order.update_attribute(:shipped, true)
         format.html { redirect_to @order, notice: 'Shipped E-mail has been sent!' } # show.html.erb
         format.json { render json: @order }
       end

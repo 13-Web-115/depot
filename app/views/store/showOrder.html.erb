@@ -8,7 +8,7 @@
 		<tr>
 			<%= form_tag do %>
 				<td>
-					<%= text_field_tag 'id', nil, value: item.id, size: 2 %>
+					<%= text_field_tag 'id', nil, value: item.id, readonly: true, size: 2 %>
 				</td>
 				<td><%= item.product.title %></td>
 				<td>

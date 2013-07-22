@@ -15,7 +15,7 @@
 
   <div class="field">
     <%= f.label :name, t('.name') %><br />
-    <%= f.text_field :name, size: 40 %>
+    <%= f.text_field :name, value: @user.name, readonly: true, size: 40 %>
   </div>
   <div class="field">
     <%= f.label :address, t('.address_html') %><br />
