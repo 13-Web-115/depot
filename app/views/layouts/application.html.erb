@@ -9,6 +9,7 @@
 <body class='<%= controller.controller_name %>'>
 
 	<div id="banner">
+		
 		<%= form_tag store_path, class: 'locale' do %>
 			<%= select_tag 'set_locale',
 				options_for_select(LANGUAGES, I18n.locale.to_s),
@@ -16,6 +17,11 @@
 			<%= submit_tag 'submit'%>
 			<%= javascript_tag "$('.locale input').hide()" %>
 		<% end %>
+		<div id="userMessage">
+			<% if session[:user_id] %>
+				<%= "Welcome #{@user.name}!"%>
+			<% end %>
+		</div>
 		<%= image_tag("logo.png") %>
 		<%= @page_title || t('.title') %>
 	</div>
@@ -40,6 +46,9 @@
 				<li> <a href="http://www.baidu.com"><%= t('.questions') %></a> </li>
 				<li> <a href="http://www.google.com.hk"><%= t('.news') %></a> </li>
 				<li> <a href="http://www.baidu.com"><%= t('.contact') %></a> </li>
+				<% unless session[:user_id] %>
+					<li> <%= link_to t('.login'), login_path %> </li>
+				<% end %>
 			</ul>
 			<ul>
 				<li> <%= link_to t('.literature'), store_path(genre: "literature") %> </li>

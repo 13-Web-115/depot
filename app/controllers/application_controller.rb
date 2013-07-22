@@ -1,5 +1,6 @@
 class ApplicationController < ActionController::Base
   before_filter :set_i18n_locale_from_params
+  before_filter :getCurrentUser
   
   protect_from_forgery
   before_filter :authorize
@@ -7,9 +8,16 @@ class ApplicationController < ActionController::Base
   private
     
     def authorize
-      unless User.find_by_id(session[:user_id])
-        redirect_to login_url, notice: "Please in"
+      unless User.find_by_id(session[:user_id]) 
+        redirect_to login_url, notice: "Please login"
       end
+    end
+    
+    def getCurrentUser
+      if !@user
+        @user = User.find_by_id(session[:user_id])
+      end
+          
     end
     
     def current_cart
