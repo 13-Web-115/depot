@@ -57,5 +57,4 @@ class StoreController < ApplicationController
     end
     @cart = current_cart
   end
-  
 end

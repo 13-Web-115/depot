@@ -1,5 +1,6 @@
 class LineItemsController < ApplicationController
   skip_before_filter :authorize, only: :create
+  before_filter :authorizeAdmin
   
   # GET /line_items
   # GET /line_items.json
@@ -87,4 +88,13 @@ class LineItemsController < ApplicationController
       format.json { head :no_content }
     end
   end
+  
+  private
+    
+    def authorizeAdmin
+      user = User.find_by_id(session[:user_id])
+      unless user and user.genre == "admin" 
+        redirect_to login_url, notice: "Please login"
+      end
+    end
 end

@@ -2,8 +2,10 @@
 
 one:
   name: dave
+  genre: admin
   password_digest: <%= BCrypt::Password.create('secret') %>
 
 two:
   name: MyString
+  genre: admin
   password_digest: MyString

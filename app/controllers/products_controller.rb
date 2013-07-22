@@ -1,6 +1,8 @@
 class ProductsController < ApplicationController
   # GET /products
   # GET /products.json
+  before_filter :authorizeAdminAndShopper
+  
   def index
     @products = Product.all
 
@@ -87,4 +89,13 @@ class ProductsController < ApplicationController
       format.atom
     end
   end
+  
+  private
+    
+    def authorizeAdminAndShopper
+      user = User.find_by_id(session[:user_id])
+      unless user and (user.genre == "admin" or user.genre == "shopkeeper") 
+        redirect_to login_url, notice: "Please login"
+      end
+    end
 end

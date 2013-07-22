@@ -8,11 +8,13 @@ class OrdersController < ApplicationController
     user = User.find_by_id(session[:user_id])
     if user.genre == "ordinary"
       @orders = Order.where(name: "#{user.name}")
-    else
-      @orders = Order.all
-    end
-    @orders = @orders.paginate page: params[:page], order: 'created_at desc',
+      @orders = @orders.paginate page: params[:page], order: 'created_at desc',
       per_page: 10
+    else
+      @orders = Order.paginate page: params[:page], order: 'created_at desc',
+      per_page: 10
+    end
+    
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @orders }
