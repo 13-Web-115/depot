@@ -18,27 +18,39 @@ class OrdersController < ApplicationController
   # GET /orders/1.json
   def show
     @order = Order.find(params[:id])
-
-    respond_to do |format|
-      format.html # show.html.erb
-      format.json { render json: @order }
+    if(params[:shipped])
+      respond_to do |format|
+        OrderNotifier.shipped(@order).deliver
+        format.html { redirect_to @order, notice: 'Shipped E-mail has been sent!' } # show.html.erb
+        format.json { render json: @order }
+      end
+    else
+      respond_to do |format|
+        format.html # show.html.erb
+        format.json { render json: @order }
+      end
     end
+    
   end
 
   # GET /orders/new
   # GET /orders/new.json
   def new
-    @cart = current_cart
-    if @cart.line_items.empty?
-      redirect_to store_url, notice: "Your cart is empty"
-      return
+    if session[:user_id]
+      @cart = current_cart
+      if @cart.line_items.empty?
+        redirect_to store_url, notice: "Your cart is empty"
+        return
+      end
+      @order = Order.new
+      respond_to do |format|
+        format.html # new.html.erb
+        format.json { render json: @order }
+      end
+    else
+      redirect_to login_url, notice: "Please Login First!"
     end
-    @order = Order.new
-
-    respond_to do |format|
-      format.html # new.html.erb
-      format.json { render json: @order }
-    end
+    
   end
 
   # GET /orders/1/edit

@@ -1,6 +1,9 @@
 Depot::Application.routes.draw do
   get 'admin' => 'admin#index'
   get 'store/index'
+  get 'store/show'
+  get 'store/showOrder'
+  post 'store/showOrder'
   
   controller :sessions do
     get 'login' => :new

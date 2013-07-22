@@ -7,16 +7,26 @@ en:
   
   layouts:
     application:
-      title:      "Pragmatic Bookshelf"
-      home:       "Home"
-      questions:  "Questions"
-      news:       "News"
-      contact:    "Contact"
+      title:          "Pragmatic Bookshelf"
+      home:           "Home"
+      questions:      "Questions"
+      news:           "News"
+      contact:        "Contact"
+      literature:     "literature"
+      economy:        "economy"
+      life:           "life"
+      children:       "children"
+      technology:     "technology"
   
   store:
     index:
       title_html:   "Your Pragmatic Catalog"
       add_html:     "Add to Cart"
+      detail:       "Detail"
+    
+    show:
+      add_html:     "Add to Cart"
+      back:         "Back"
 
   carts:
     cart:

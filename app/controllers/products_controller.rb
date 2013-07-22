@@ -13,9 +13,8 @@ class ProductsController < ApplicationController
   # GET /products/1
   # GET /products/1.json
   def show
-    @product = Product.find(params[:id])   
-# params[:id] represents the value of the parameter id
-# It also can be represented as params['id']
+    @product = Product.find(params[:id])
+
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @product }
@@ -42,7 +41,7 @@ class ProductsController < ApplicationController
   # POST /products.json
   def create
     @product = Product.new(params[:product])
-
+    @product.genre = params[:genre]
     respond_to do |format|
       if @product.save
         format.html { redirect_to @product, notice: 'Product was successfully created.' }
@@ -58,7 +57,7 @@ class ProductsController < ApplicationController
   # PUT /products/1.json
   def update
     @product = Product.find(params[:id])
-
+    @product.genre = params[:genre]
     respond_to do |format|
       if @product.update_attributes(params[:product])
         format.html { redirect_to @product, notice: 'Product was successfully updated.' }
@@ -88,5 +87,4 @@ class ProductsController < ApplicationController
       format.atom
     end
   end
-  
 end

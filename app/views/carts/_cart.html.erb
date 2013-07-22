@@ -7,6 +7,7 @@
 	</tr>
 </table>
 
-<%= button_to t('.checkout'), new_order_path, method: :get %>
+<%= button_to t('.checkout'), controller: 'store', action: :showOrder, method: :get %>
+<!--<%= button_to t('.checkout'), new_order_path, method: :get %>-->
 <%= button_to t('.empty'), cart, method: :delete,
     confirm: t('.ifsure') %>
