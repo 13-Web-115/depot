@@ -21,4 +21,10 @@ class OrderNotifier < ActionMailer::Base
     
     mail to: order.email, subject: 'Pragmatic Store Order Shipped'
   end
+  
+  def shipProducts(order, line_items)
+    @order = order
+    @line_items = line_items
+    mail to: order.email, subject: 'Pragmatic Store Order Products Shipped'
+  end
 end

@@ -27,6 +27,9 @@
 </table>
 
 <br />
-
+<% if @user.genre != "ordinary" %>
 <%= link_to 'New Order', new_order_path %>
+<% end %>
+<% if @orders.class == ActiveRecord::Relation %>
 <p><%= will_paginate @orders %></p>
+<% end %>

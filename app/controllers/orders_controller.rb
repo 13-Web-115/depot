@@ -11,8 +11,23 @@ class OrdersController < ApplicationController
       @orders = @orders.paginate page: params[:page], order: 'created_at desc',
       per_page: 10
     else
-      @orders = Order.paginate page: params[:page], order: 'created_at desc',
-      per_page: 10
+      if user.genre == "shopkeeper"
+        #do something
+        @orders = []
+        orders = Order.all
+        orders.each do |order|
+          line_items = order.line_items
+          line_items.each do |item|
+            if Product.find_by_id(item.product_id).owner == user.name
+              @orders << order
+              break
+            end
+          end
+        end
+      else
+        @orders = Order.paginate page: params[:page], order: 'created_at desc',
+        per_page: 10
+      end
     end
     
     respond_to do |format|
@@ -25,9 +40,19 @@ class OrdersController < ApplicationController
   # GET /orders/1.json
   def show
     @order = Order.find(params[:id])
+    user = User.find_by_id(session[:user_id])
+    @line_items = []
+    if user.genre == "shopkeeper"
+      @order.line_items.each do |item|
+        if Product.find_by_id(item.product_id).owner == user.name
+          @line_items << item
+        end
+      end
+    end
+    
     if(params[:shipped])
       respond_to do |format|
-        OrderNotifier.shipped(@order).deliver
+        OrderNotifier.shipProducts(@order, @line_items).deliver
         @order.update_attribute(:shipped, true)
         format.html { redirect_to @order, notice: 'Shipped E-mail has been sent!' } # show.html.erb
         format.json { render json: @order }

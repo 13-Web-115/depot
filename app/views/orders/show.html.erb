@@ -20,8 +20,17 @@
   <b>Pay type:</b>
   <%= @order.pay_type %>
 </p>
-
-
+<% if @user.genre == "shopkeeper" %>
+<p>
+	<b>Products:</b>
+	<table>
+	<%= render @line_items %>
+	</table>
+</p>
+<% end %>
 <%= link_to 'Edit', edit_order_path(@order) %> |
-<%= link_to 'Back', orders_path %> |
+<%= link_to 'Back', orders_path %>
+<% if @user.genre != "ordinary" %>
+ |
 <%= link_to 'Shipped', order_path(@order, shipped: "yes") %>
+<% end %>
