@@ -1,5 +1,5 @@
 class LineItemsController < ApplicationController
-  skip_before_filter :authorize, only: :create
+  skip_before_filter :authorize, only: [:create, :update, :destroy]
   
   # GET /line_items
   # GET /line_items.json
@@ -83,7 +83,11 @@ class LineItemsController < ApplicationController
     @line_item.destroy
 
     respond_to do |format|
-      format.html { redirect_to line_items_url }
+      if current_cart.line_items.length == 0
+        format.html { redirect_to store_url }
+      else
+        format.html {redirect_to controller: 'store', action: :showOrder, method: :get}
+      end    
       format.json { head :no_content }
     end
   end

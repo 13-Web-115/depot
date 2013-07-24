@@ -4,6 +4,7 @@
 	<th>Num</th>
 	<th> </th>
 	<th>Price</th>
+	<th></th>
 	<% @cart.line_items.each do |item| %>
 		<tr>
 			<%= form_tag do %>
@@ -19,6 +20,7 @@
 				</td>
 			<% end %>
 			<td><%= number_to_currency(item.total_price) %></td>
+			<td><%= link_to 'Remove', item, method: :delete, data: { confirm: 'Are you sure?' } %></td>
 		</tr>
 	<% end %>
 	<tr class="total_line">
