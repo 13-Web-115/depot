@@ -26,6 +26,10 @@ es:
       detail:       "pormenor"
       
     show:
+      comments:     "comentários"
+      poster:       "cartaz"
+      add_comment:  "Adicionar comentário"
+      no_comments:  "Sem comentários!"
       add_html:     "A&ntilde;adir al Carrito"
       back:         "voltar"
       

@@ -26,6 +26,10 @@ en:
       detail:       "Detail"
     
     show:
+      comments:     "Comments"
+      poster:       "Poster"
+      add_comment:  "Add Comment"
+      no_comments:  "No Any Comments For This Product Yet!"
       add_html:     "Add to Cart"
       back:         "Back"
 

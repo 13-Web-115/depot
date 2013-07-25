@@ -23,6 +23,10 @@ jp:
       detail:       "詳細"
       
     show:
+      comments:     "注釈"
+      poster:       "ポスター"
+      add_comment:  "コメントを追加"
+      no_comments:  "コメントはありません!"
       add_html:     "加える"
       back:         "復帰"
   

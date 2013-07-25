@@ -1,5 +1,5 @@
 <table>
-	<th>ID</th>
+	<th></th>
 	<th>Title</th>
 	<th>Num</th>
 	<th> </th>
@@ -9,7 +9,7 @@
 		<tr>
 			<%= form_tag do %>
 				<td>
-					<%= text_field_tag 'id', nil, value: item.id, readonly: true, size: 2 %>
+					<%= text_field_tag 'id', nil, value: item.id, style: "display:none" %>
 				</td>
 				<td><%= item.product.title %></td>
 				<td>
