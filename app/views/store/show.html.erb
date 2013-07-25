@@ -42,8 +42,11 @@
 <% else %>
 	<p>
 		<b><%= t('.no_comments') %></b>
+		<p>
+			<%= link_to t('.add_comment'), new_comment_path(product_id: @product.id) %>
+		</p>
 	</p>
-	<%= link_to t('.add_comment'), new_comment_path(product_id: @product.id) %>
+	
 <% end %>
 
 <div class="field">
