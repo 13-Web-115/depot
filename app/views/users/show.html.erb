@@ -1,15 +1,16 @@
+<% if notice %>
 <p id="notice"><%= notice %></p>
-
+<% end %>
 <p>
   <b>Name:</b>
-  <%= @user.name %>
+  <%= @user1.name %>
 </p>
 
 <p>
   <b>Password digest:</b>
-  <%= @user.password_digest %>
+  <%= @user1.password_digest %>
 </p>
 
 
-<%= link_to 'Edit', edit_user_path(@user) %> |
+<%= link_to 'Edit', edit_user_path(@user1) %> |
 <%= link_to 'Back', users_path %>
