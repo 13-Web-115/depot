@@ -4,12 +4,17 @@ class CartsController < ApplicationController
   # GET /carts
   # GET /carts.json
   def index
-    @carts = Cart.all
-
-    respond_to do |format|
-      format.html # index.html.erb
-      format.json { render json: @carts }
+    user = User.find_by_id(session[:user_id])
+    unless user and user.genre == "admin" 
+      redirect_to login_url, notice: "Access Denied!"
+    else
+      @carts = Cart.all
+      respond_to do |format|
+        format.html # index.html.erb
+        format.json { render json: @carts }
+      end
     end
+    
   end
 
   # GET /carts/1

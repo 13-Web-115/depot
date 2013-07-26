@@ -50,14 +50,18 @@ class StoreController < ApplicationController
   end
   
   def showOrder
+    @cart = current_cart
     if(params[:quantity])
-      line_item = LineItem.find(params[:id]) 
-      if params[:quantity].to_i != 0
-        line_item.update_attribute(:quantity, params[:quantity].to_i)
+      line_item = LineItem.find(params[:id])
+      quantity =  params[:quantity].to_i
+      if quantity != 0
+        line_item.update_attribute(:quantity, quantity)
       else
         line_item.destroy
+        if @cart.line_items.empty?
+          redirect_to store_path, notice: 'Your Cart is Empty!'
+        end
       end
-    end
-    @cart = current_cart
+    end  
   end
 end
