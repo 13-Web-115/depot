@@ -59,6 +59,11 @@
 		width: 14em;
 		background: #141;
 		
+		a {
+		  TEXT-DECORATION:none
+		}
+		a:hover{TEXT-DECORATION:underline}
+		
 		#cart {
 			font-size: smaller;
 			color: white;	
