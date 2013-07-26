@@ -36,11 +36,16 @@ class CartsController < ApplicationController
   # GET /carts/new
   # GET /carts/new.json
   def new
-    @cart = Cart.new
-
-    respond_to do |format|
-      format.html # new.html.erb
-      format.json { render json: @cart }
+    user = User.find_by_id(session[:user_id])
+    unless user and user.genre == "admin" 
+      redirect_to login_url, notice: "Access Denied!"
+    else
+      @cart = Cart.new
+  
+      respond_to do |format|
+        format.html # new.html.erb
+        format.json { render json: @cart }
+      end
     end
   end
 

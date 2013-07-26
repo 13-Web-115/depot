@@ -30,11 +30,15 @@ class CommentsController < ApplicationController
   # GET /comments/new.json
   def new
     @comment = Comment.new
-    session[:product_id] = params[:product_id]
-    #puts "NNNNNNNNNNNNNNNNN:#{params[:product_id]}"
-    respond_to do |format|
-      format.html # new.html.erb
-      format.json { render json: @comment }
+    if params[:product_id]
+      session[:product_id] = params[:product_id]
+      #puts "NNNNNNNNNNNNNNNNN:#{params[:product_id]}"
+      respond_to do |format|
+        format.html # new.html.erb
+        format.json { render json: @comment }
+      end
+    else
+      redirect_to store_path, notice: 'Access Denied!'
     end
   end
 

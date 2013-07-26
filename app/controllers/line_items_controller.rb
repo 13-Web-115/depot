@@ -32,11 +32,16 @@ class LineItemsController < ApplicationController
   # GET /line_items/new
   # GET /line_items/new.json
   def new
-    @line_item = LineItem.new
-
-    respond_to do |format|
-      format.html # new.html.erb
-      format.json { render json: @line_item }
+    user = User.find_by_id(session[:user_id])
+    unless user and user.genre == "admin" 
+      redirect_to login_url, notice: "Access Denied!"
+    else
+      @line_item = LineItem.new
+  
+      respond_to do |format|
+        format.html # new.html.erb
+        format.json { render json: @line_item }
+      end
     end
   end
 
