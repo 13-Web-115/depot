@@ -4,12 +4,18 @@ class LineItemsController < ApplicationController
   # GET /line_items
   # GET /line_items.json
   def index
-    @line_items = LineItem.all
+    user = User.find_by_id(session[:user_id])
+    unless user and user.genre == "admin" 
+      redirect_to login_url, notice: "Access Denied!"
+    else
+      @line_items = LineItem.all
 
-    respond_to do |format|
-      format.html # index.html.erb
-      format.json { render json: @line_items }
+      respond_to do |format|
+        format.html # index.html.erb
+        format.json { render json: @line_items }
+      end
     end
+    
   end
 
   # GET /line_items/1

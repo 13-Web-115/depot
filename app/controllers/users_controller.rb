@@ -4,12 +4,18 @@ class UsersController < ApplicationController
   skip_before_filter :authorize, only: [:new, :create]
   
   def index
-    @users = User.order(:name)
+    user = User.find_by_id(session[:user_id])
+    unless user and user.genre == "admin" 
+      redirect_to login_url, notice: "Access Denied!"
+    else
+      @users = User.order(:name)
 
-    respond_to do |format|
-      format.html # index.html.erb
-      format.json { render json: @users }
+      respond_to do |format|
+        format.html # index.html.erb
+        format.json { render json: @users }
+      end
     end
+    
   end
 
   # GET /users/1
