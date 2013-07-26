@@ -13,7 +13,7 @@ class CommentsControllerTest < ActionController::TestCase
 
   test "should get new" do
     get :new
-    assert_response :success
+    assert_redirected_to store_path
   end
 
   test "should show comment" do
