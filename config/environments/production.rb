@@ -64,6 +64,20 @@ Depot::Application.configure do
   # Log the query plan for queries taking more than this (works
   # with SQLite, MySQL, and PostgreSQL)
   # config.active_record.auto_explain_threshold_in_seconds = 0.5
+  Depot::Application.configure do
+    config.action_mailer.delivery_method = :smtp
+    
+    config.action_mailer.smtp_settings = {
+      address:                "smtp.gmail.com",
+      port:                   587,
+      domain:                 "domain.of.sender.net",
+      authentication:         "plain",
+      user_name:              "imwubinqi@gmail.com",
+      password:               "19920529",
+      enable_starttls_auto:   true
+    }
+  end
+
   config.action_mailer.default_url_options = { :host => 'desolate-cove-8767.herokuapp.com' }
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.perform_deliveries = true
@@ -74,8 +88,8 @@ Depot::Application.configure do
     port: 587,
     domain: "desolate-cove-8767.herokuapp.com",
     authentication: "plain",
-    enable_starttls_auto: false,
-    user_name: "imwubinqi@gmail.com",
+    enable_starttls_auto: true,
+    user_name: ENV["imwubinqi@gmail.com"],
     password: ENV["19920529"]
   }
 end
