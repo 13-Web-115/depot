@@ -5,6 +5,7 @@ jp:
   layouts:
     application:
       title:          "ネット書店"
+      welcome:        "こんにちは"
       home:           "ホーム"
       questions:      "問題"
       news:           "ニュース"

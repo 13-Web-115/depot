@@ -7,9 +7,7 @@
   <%= csrf_meta_tags %>
 </head>
 <body class='<%= controller.controller_name %>'>
-
 	<div id="banner">
-		
 		<%= form_tag store_path, class: 'locale' do %>
 			<%= select_tag 'set_locale',
 				options_for_select(LANGUAGES, I18n.locale.to_s),
@@ -19,7 +17,7 @@
 		<% end %>
 		<div id="userMessage">
 			<% if session[:user_id] %>
-				<%= "Welcome Back #{@user.name}!"%>
+				<%= t('.welcome') + " #{@user.name}!"%>
 			<% end %>
 		</div>
 		<%= image_tag("logo.png") %>
@@ -28,7 +26,7 @@
 	<div id="columns">
 		<div id="side">
 			<%= form_tag store_path do %>
-			<div>
+			<div id="search">
 	 			<%= text_field_tag 'bookName', params[:bookName], size: 14%>
 	 		</div>
 	 		<div>

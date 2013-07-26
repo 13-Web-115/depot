@@ -8,6 +8,7 @@ en:
   layouts:
     application:
       title:          "Pragmatic Bookshelf"
+      welcome:        "Welcome"
       home:           "Home"
       questions:      "Questions"
       news:           "News"

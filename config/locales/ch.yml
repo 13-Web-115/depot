@@ -5,6 +5,7 @@ ch:
   layouts:
     application:
       title:          "网上书城"
+      welcome:        "您好"
       home:           "主页"
       questions:      "问题"
       news:           "新闻"
