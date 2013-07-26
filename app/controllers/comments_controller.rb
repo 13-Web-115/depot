@@ -48,7 +48,7 @@ class CommentsController < ApplicationController
   def create
     user = User.find_by_id(session[:user_id])
     product = Product.find_by_id(session[:product_id])
-    session[:product_id] = nil
+    
     @comment = product.comments.create(params[:comment])
     @comment.poster = user.name
     #@comment = Comment.new(params[:comment])
@@ -56,6 +56,7 @@ class CommentsController < ApplicationController
 
     respond_to do |format|
       if @comment.save
+        session[:product_id] = nil
         format.html { redirect_to controller: 'store', action: :show, id: product, notice: 'Comment was successfully created.' }
         format.json { render json: @comment, status: :created, location: @comment }
       else
