@@ -18,6 +18,12 @@ en:
       life:           "life"
       children:       "children"
       technology:     "technology"
+      my_orders:      "My Orders"
+      orders:         "Orders"
+      products:       "Products"
+      users:          "Users"
+      comments:       "Comments"
+      logout:         "Logout"
   
   store:
     index:

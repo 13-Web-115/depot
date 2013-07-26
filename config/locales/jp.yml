@@ -15,6 +15,12 @@ jp:
       life:           "生活类"
       children:       "人生"
       technology:     "テク" 
+      my_orders:      "マイオーダー"
+      orders:         "オーダー"
+      products:       "製品"
+      users:          "ユーザー"
+      comments:       "注釈"
+      logout:         "ログアウト"
       
   store:
     index:

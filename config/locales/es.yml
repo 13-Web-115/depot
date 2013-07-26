@@ -18,6 +18,12 @@ es:
       life:           "vida"
       children:       "crianças"
       technology:     "tecnologia" 
+      my_orders:      "Minhas ordens"
+      orders:         "Ordens"
+      products:       "produtos"
+      users:          "usuários"
+      comments:       "comentários"
+      logout:         "sair"
       
   store:
     index:
