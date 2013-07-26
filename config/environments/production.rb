@@ -72,10 +72,10 @@ Depot::Application.configure do
   config.action_mailer.smtp_settings = {
     address: "smtp.gmail.com",
     port: 587,
-    domain: "desolate-cove-8767.herokuapp.com",
+    domain: "domain.of.sender.net",
     authentication: "plain",
     enable_starttls_auto: true,
-    user_name: ENV["imwubinqi@gmail.com"],
-    password: ENV["19920529"]
+    user_name:  "imwubinqi@gmail.com",
+    password:   "19920529",
   }
 end
