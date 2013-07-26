@@ -69,8 +69,8 @@ module Depot
       domain: "myapp.herokuapp.com",
       authentication: "plain",
       enable_starttls_auto: true,
-      user_name: ENV["GMAIL_USERNAME"],
-      password: ENV["GMAIL_PASSWORD"]
+      user_name:  "imwubinqi@gmail.com",
+      password: "w1992529"
     } 
   end
 end
