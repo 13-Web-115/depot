@@ -52,8 +52,11 @@ class StoreController < ApplicationController
   def showOrder
     if(params[:quantity])
       line_item = LineItem.find(params[:id]) 
-      line_item.update_attribute(:quantity, params[:quantity].to_i)
-      puts line_item.quantity
+      if params[:quantity].to_i != 0
+        line_item.update_attribute(:quantity, params[:quantity].to_i)
+      else
+        line_item.destroy
+      end
     end
     @cart = current_cart
   end
