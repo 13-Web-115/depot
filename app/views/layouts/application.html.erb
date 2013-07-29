@@ -22,6 +22,18 @@
 		</div>
 		<%= image_tag("logo.png") %>
 		<%= @page_title || t('.title') %>
+		<ul>
+			<li> <a href="/"><%= t('.home') %></a> </li>
+			<li> <a href="http://www.baidu.com"><%= t('.questions') %></a> </li>
+			<li> <a href="http://www.google.com.hk"><%= t('.news') %></a> </li>
+			<li> <a href="http://www.baidu.com"><%= t('.contact') %></a> </li>
+			<% unless session[:user_id] %>
+					<li> <%= link_to t('.login'), login_path %> </li>
+			<% else %>
+					<li> <%= link_to t('.logout'), logout_path, method: :delete %> </li>
+			<% end %>
+		</ul>
+		<br />
 	</div>
 	<div id="columns">
 		<div id="side">
@@ -39,22 +51,69 @@
 					<%= render @cart %>
 				<% end %>
 			<% end %>
+			
 			<ul>
-				<li> <a href="/"><%= t('.home') %></a> </li>
-				<li> <a href="http://www.baidu.com"><%= t('.questions') %></a> </li>
-				<li> <a href="http://www.google.com.hk"><%= t('.news') %></a> </li>
-				<li> <a href="http://www.baidu.com"><%= t('.contact') %></a> </li>
-				<% unless session[:user_id] %>
-					<li> <%= link_to t('.login'), login_path %> </li>
-				<% end %>
+				<li id="menu" onClick="menus('menu1')"> 图书分类 </li> 
+				<li id="menu1" style="display:none"> 				
+					<div onClick="menus('menu1_2')"> 文艺 </div> <br/> 
+					<div id="menu1_2" style="display:none">
+						<%= link_to t('.literature'), store_path(genre: "literature") %> <br />
+						<%= link_to t('.economy'), store_path(genre: "economy") %> <br />
+						<%= link_to t('.life'), store_path(genre: "life") %> <br />
+						<%= link_to t('.children'), store_path(genre: "children") %> <br />
+						<%= link_to t('.technology'), store_path(genre: "technology") %> <br />
+					</div> <br />
+					<div onClick="menus('menu1_3')"> 青春 </div> <br />
+					<div id="menu1_3" style="display:none">
+						<%= link_to t('.literature'), store_path(genre: "literature") %> <br />
+						<%= link_to t('.economy'), store_path(genre: "economy") %> <br />
+						<%= link_to t('.life'), store_path(genre: "life") %> <br />
+						<%= link_to t('.children'), store_path(genre: "children") %> <br />
+						<%= link_to t('.technology'), store_path(genre: "technology") %> <br />
+					</div> <br />
+					<div onClick="menus('menu1_4')"> 少儿 </div> <br />
+					<div id="menu1_4" style="display:none">
+						<%= link_to t('.literature'), store_path(genre: "literature") %> <br />
+						<%= link_to t('.economy'), store_path(genre: "economy") %> <br />
+						<%= link_to t('.life'), store_path(genre: "life") %> <br />
+						<%= link_to t('.children'), store_path(genre: "children") %> <br />
+						<%= link_to t('.technology'), store_path(genre: "technology") %> <br />
+					</div> <br />
+					<div onClick="menus('menu1_5')"> 生活 </div> <br />
+					<div id="menu1_5" style="display:none">
+						<%= link_to t('.literature'), store_path(genre: "literature") %> <br />
+						<%= link_to t('.economy'), store_path(genre: "economy") %> <br />
+						<%= link_to t('.life'), store_path(genre: "life") %> <br />
+						<%= link_to t('.children'), store_path(genre: "children") %> <br />
+						<%= link_to t('.technology'), store_path(genre: "technology") %> <br />
+					</div> <br />
+					<div onClick="menus('menu1_6')"> 科技 </div> <br />
+					<div id="menu1_6" style="display:none">
+						<%= link_to t('.literature'), store_path(genre: "literature") %> <br />
+						<%= link_to t('.economy'), store_path(genre: "economy") %> <br />
+						<%= link_to t('.life'), store_path(genre: "life") %> <br />
+						<%= link_to t('.children'), store_path(genre: "children") %> <br />
+						<%= link_to t('.technology'), store_path(genre: "technology") %> <br />
+					</div> <br />
+					<div onClick="menus('menu1_7')"> 教育 </div> <br />
+					<div id="menu1_7" style="display:none">
+						<%= link_to t('.literature'), store_path(genre: "literature") %> <br />
+						<%= link_to t('.economy'), store_path(genre: "economy") %> <br />
+						<%= link_to t('.life'), store_path(genre: "life") %> <br />
+						<%= link_to t('.children'), store_path(genre: "children") %> <br />
+						<%= link_to t('.technology'), store_path(genre: "technology") %> <br />
+					</div> <br />
+					<div onClick="menus('menu1_8')"> 经管 </div> <br />
+					<div id="menu1_8" style="display:none">
+						<%= link_to t('.literature'), store_path(genre: "literature") %> <br />
+						<%= link_to t('.economy'), store_path(genre: "economy") %> <br />
+						<%= link_to t('.life'), store_path(genre: "life") %> <br />
+						<%= link_to t('.children'), store_path(genre: "children") %> <br />
+						<%= link_to t('.technology'), store_path(genre: "technology") %> <br />
+					</div>
+				</li> 
 			</ul>
-			<ul>
-				<li> <%= link_to t('.literature'), store_path(genre: "literature") %> </li>
-				<li> <%= link_to t('.economy'), store_path(genre: "economy") %> </li>
-				<li> <%= link_to t('.life'), store_path(genre: "life") %> </li>
-				<li> <%= link_to t('.children'), store_path(genre: "children") %> </li>
-				<li> <%= link_to t('.technology'), store_path(genre: "technology") %> </li>
-			</ul>
+		
 			<% if session[:user_id] %>
 			<ul>
 				<% if @user.genre == "ordinary"%>
@@ -69,8 +128,6 @@
 					<li><%= link_to t('.comments'), comments_path %></li>
 				<% end %>
 			</ul>
-			
-			<%= button_to t('.logout'), logout_path, method: :delete %>
 			<% end %>
 		</div>
 		<div id="main">

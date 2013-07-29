@@ -24,14 +24,32 @@
 	text-align: center;
 	
 	#userMessage {
-	  color: #2ef;
-	  font-size: 0.5em;
+	  color: #dcf;
+	  font-size: 0.4em;
 	  font-variant: normal;
 	  font: normal "Times New Roman", serif;
 	  float: right;
 	}
 	img {
 		float: left;
+	}
+	a {
+      TEXT-DECORATION:none
+    }
+  a:hover{TEXT-DECORATION:underline}
+	ul {
+	  float: right;
+	  list-style: none outside none;
+	  li {
+	    float: left;
+	    a {
+	      color: #dfd;
+    	  display: block;
+    	  padding: 7px 15px;
+    	  text-decoration: none;
+    	  display: inline;
+	   } 
+	  } 
 	}
 }
 	
@@ -88,10 +106,15 @@
 		
 		ul {
 			padding: 0;
-			
+			cursor:pointer;
+			#menu1 {
+			  color: #fea;
+			  padding: 0.5em;
+			  a{color: #baf;}
+			}
 			li {
 				list-style: none;
-				
+				color: #bfb;
 				a {
 					color: #bfb;
 					font-size: small;
