@@ -42,7 +42,11 @@ class StoreController < ApplicationController
   def show
     @product = Product.find(params[:id])
     @cart = current_cart
-    
+    @comments = @product.comments
+    @comments = @comments.paginate page: params[:page], order: 'created_at desc',
+      per_page: 5
+    @comment = Comment.new
+    session[:product_id] = @product.id
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @product }

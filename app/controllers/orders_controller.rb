@@ -18,7 +18,8 @@ class OrdersController < ApplicationController
         orders.each do |order|
           line_items = order.line_items
           line_items.each do |item|
-            if Product.find_by_id(item.product_id).owner == user.name
+            product = Product.find_by_id(item.product_id)
+            if product and product.owner == user.name
               @orders << order
               break
             end

@@ -23,6 +23,11 @@
   <%= number_to_currency(@product.price) %>
 </p>
 </div>
+<div class="field">
+<%= button_to t('.add_html'), line_items_path(product_id: @product), remote: true %>
+</div>
+
+<p style="border-bottom-style: dotted; overflow: hidden;"></p>
 
 <% if @product.comments.any? %>
 <div class="field">
@@ -30,28 +35,23 @@
 	<tr>
 		<th><%= t('.comments') %></th>
 		<th><%= t('.poster') %></th>
+		<th><%= t('.time') %></th>
 	</tr>
-	<%= render(@product.comments) %>
-	<tr>
-		<td colspan='2'>
-			<%= link_to t('.add_comment'), new_comment_path(product_id: @product.id) %>
-		</td>
-	</tr>
+	<%= render(@comments) %>
+	
 </table>
+<p><%= will_paginate @comments %></p>
 </div>
 <% else %>
 	<p>
 		<b><%= t('.no_comments') %></b>
-		<p>
-			<%= link_to t('.add_comment'), new_comment_path(product_id: @product.id) %>
-		</p>
 	</p>
-	
 <% end %>
 
-<div class="field">
-<%= button_to t('.add_html'), line_items_path(product_id: @product), remote: true %>
-</div>
+<p style="border-bottom-style: dotted; overflow: hidden; border-color: #aaa"></p>
+
+<%= render 'form' %>
+
 <%= link_to t('.back'), store_path %> 
 
 
