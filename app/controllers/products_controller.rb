@@ -49,6 +49,9 @@ class ProductsController < ApplicationController
   def create
     @product = Product.new(params[:product])
     @product.genre = params[:genre]
+    unless File.exist?(@product.image_url)
+      @product.image_url = 'default.png'
+    end
     respond_to do |format|
       if @product.save
         format.html { redirect_to @product, notice: 'Product was successfully created.' }
