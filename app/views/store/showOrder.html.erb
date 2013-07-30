@@ -4,6 +4,8 @@
 <h1>Manage Your Cart</h1>
 <p style="border-bottom-style: dotted; overflow: hidden"></p>
 
+<fieldset>
+<legend>Your Cart</legend>
 <table class="manageCart">
 	<th></th>
 	<th>Books</th>
@@ -34,6 +36,7 @@
 		<td class="total_cell"><%= number_to_currency(@cart.total_price) %></td>
 	</tr>
 </table>
+</fieldset>
 
 <p style="border-bottom-style: dotted; overflow: hidden; border-color: #aaa"></p>
 

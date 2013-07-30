@@ -17,7 +17,7 @@
 		<% end %>
 		<div id="userMessage">
 			<% if session[:user_id] %>
-				<%= t('.welcome') + " #{@user.name}!"%>
+				<%= link_to t('.welcome') + " #{@user.name}!", edit_user_path(@user) %>
 			<% end %>
 		</div>
 		<%= image_tag("logo.png") %>
