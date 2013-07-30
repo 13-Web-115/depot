@@ -1,16 +1,12 @@
 <% if notice %>
 <p id="notice"><%= notice %></p>
 <% end %>
-<%= image_tag(@product.image_url) %>
+<h1>Book Details</h1> <br />
 <div class="message">
+<%= image_tag(@product.image_url) %>
 <p>
-  <b>Title:</b>
-  <h3><%= @product.title %></h3>
-</p>
-
-<p>
-  <b>Description:</b>
-  <%= sanitize(@product.description) %>
+  <b class="title">Title:</b>
+  <%= @product.title %>
 </p>
 
 <p>
@@ -22,6 +18,12 @@
   <b>Price:</b>
   <%= number_to_currency(@product.price) %>
 </p>
+
+<p>
+  <b>Description:</b>
+  <%= sanitize(@product.description) %>
+</p>
+
 </div>
 <div class="field">
 <%= button_to t('.add_html'), line_items_path(product_id: @product), remote: true %>
@@ -50,8 +52,10 @@
 
 <p style="border-bottom-style: dotted; overflow: hidden; border-color: #aaa"></p>
 
+<div class="commentForm">
 <%= render 'form' %>
+</div>
 
-<%= link_to t('.back'), store_path %> 
+<div> | <%= link_to t('.back'), store_path %> </div>
 
 
