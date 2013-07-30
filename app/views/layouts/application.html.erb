@@ -57,40 +57,54 @@
 				<li id="menu" onClick="menus('menu1')"> <%= t('.category') %> </li> 
 				<li id="menu1" > 				
 					<div onClick="menus('menu1_2')"> <%= t('.art') %> </div> <br/> 
-					<div id="menu1_2" style="display:none">
-						<%= link_to t('.literature'), store_path(genre: "literature") %> <br />
-
-					</div> <br />
+					<ol id="menu1_2" style="display:none">
+						<li><%= link_to t('.literature'), store_path(genre: "literature") %></li>
+						<li><%= link_to t('.memoir'), store_path(genre: "memoir") %></li>
+						<li><%= link_to t('.art1'), store_path(genre: "art") %></li>
+						<li><%= link_to t('.photograph'), store_path(genre: "photograph") %></li> 
+					</ol> <br />
 					<div onClick="menus('menu1_3')"> <%= t('.youth') %> </div> <br />
-					<div id="menu1_3" style="display:none">
-						<%= link_to t('.literature'), store_path(genre: "literature") %> <br />
-
-					</div> <br />
+					<ol id="menu1_3" style="display:none">
+						<li><%= link_to t('.youthliterature'), store_path(genre: "youth literature") %></li>
+						<li><%= link_to t('.cartoon'), store_path(genre: "cartoon") %></li>
+						<li><%= link_to t('.humor'), store_path(genre: "humor") %></li>
+					</ol> <br />
 					<div onClick="menus('menu1_4')"> <%= t('.children') %> </div> <br />
-					<div id="menu1_4" style="display:none">
-						<%= link_to t('.children'), store_path(genre: "children") %> <br />
-
-					</div> <br />
+					<ol id="menu1_4" style="display:none">
+						<li><%= link_to t('.0-2'), store_path(genre: "0-2") %></li>
+						<li><%= link_to t('.3-6'), store_path(genre: "3-6") %></li>
+						<li><%= link_to t('.7-10'), store_path(genre: "7-10") %></li>
+						<li><%= link_to t('.11-14'), store_path(genre: "11-14") %></li>
+						<li><%= link_to t('.picturebook'), store_path(genre: "picture book") %></li>
+					</ol> <br />
 					<div onClick="menus('menu1_5')"> <%= t('.life') %> </div> <br />
-					<div id="menu1_5" style="display:none">
-						<%= link_to t('.life'), store_path(genre: "life") %> <br />
-						
-					</div> <br />
+					<ol id="menu1_5" style="display:none">
+						<li><%= link_to t('.exercise'), store_path(genre: "exercise") %></li>
+						<li><%= link_to t('.food'), store_path(genre: "food") %></li>
+						<li><%= link_to t('.tour'), store_path(genre: "tour") %></li>
+						<li><%= link_to t('.arder'), store_path(genre: "arder") %></li>
+						<li><%= link_to t('.family'), store_path(genre: "family") %></li>
+					</ol> <br />
 					<div onClick="menus('menu1_6')"> <%= t('.technology') %> </div> <br />
-					<div id="menu1_6" style="display:none">
-						<%= link_to t('.technology'), store_path(genre: "technology") %> <br />
-						
-					</div> <br />
+					<ol id="menu1_6" style="display:none">
+						<li><%= link_to t('.coptic'), store_path(genre: "coptic") %></li>
+						<li><%= link_to t('.building'), store_path(genre: "building") %></li>
+						<li><%= link_to t('.computer'), store_path(genre: "computer") %></li>
+						<li><%= link_to t('.naturalscience'), store_path(genre: "natural science") %></li>
+						<li><%= link_to t('.medicine'), store_path(genre: "medicine") %></li>
+					</ol> <br />
 					<div onClick="menus('menu1_7')"> <%= t('.education') %> </div> <br />
-					<div id="menu1_7" style="display:none">
-						<%= link_to t('.literature'), store_path(genre: "literature") %> <br />
-						
-					</div> <br />
+					<ol id="menu1_7" style="display:none">
+						<li><%= link_to t('.foreignlanguage'), store_path(genre: "foreign language") %></li>
+						<li><%= link_to t('.test'), store_path(genre: "test") %></li>
+						<li><%= link_to t('.teachingmaterial'), store_path(genre: "teaching material") %></li>
+					</ol> <br />
 					<div onClick="menus('menu1_8')"> <%= t('.management') %> </div> <br />
-					<div id="menu1_8" style="display:none">
-						<%= link_to t('.economy'), store_path(genre: "economy") %> <br />
-						
-					</div>
+					<ol id="menu1_8" style="display:none">
+						<li><%= link_to t('.economy'), store_path(genre: "economy") %></li>
+						<li><%= link_to t('.manage'), store_path(genre: "manage") %></li>
+						<li><%= link_to t('.finance'), store_path(genre: "finance") %></li>
+					</ol>
 				</li> 
 			</ul>
 		

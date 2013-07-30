@@ -7,6 +7,14 @@ class Product < ActiveRecord::Base
   with:   %r{\.(gif|jpg|png)$}i,
   message: 'must be a URL for GIF, JPG or PNG image.'
   }
+  PRODUCT_TYPES = ['literature', 'memoir', 'art', 'photograph',
+    'youth literature', 'cartoon', 'humor',
+    '0-2', '3-6', '7-10', '11-14', 'picture book',
+    'exercise', 'food', 'tour', 'arder', 'family',
+    'coptic', 'building', 'computer', 'natural science', 'medicine',
+    'foreign language', 'test', 'teaching material',
+    'economy', 'manage', 'finance'
+    ]
   
   has_many :line_items
   has_many :orders, through: :line_items

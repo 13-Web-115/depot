@@ -21,7 +21,7 @@ Product.create(title: 'CoffeeScript',
   shows you how to hold onto all the power and flexibility of JavaScript
   while writing clearer, cleaner, and safer code.
       </p>",
-  genre:  'technology',
+  genre:  'computer',
   owner:  'shop1',
   image_url:   'cs.jpg',    
   price: 36.00)
@@ -31,7 +31,7 @@ Product.create(title: 'Debug It',
     %{<p>
         Do you like debugging. If your answer is yes then join us. Let's Debug it.
       </p>},
-  genre:  'technology',
+  genre:  'computer',
   owner:  'shop1',
   image_url: 'debug.jpg',
   price: 57.95)
@@ -43,7 +43,7 @@ Product.create(title: 'Programming Ruby 1.9',
         out there. If you need to get working programs delivered fast,
         you should add Ruby to your toolbox.
       </p>},
-  genre:  'technology',
+  genre:  'computer',
   owner:  'shop1',
   image_url: 'ruby.jpg',
   price: 49.95)
@@ -55,7 +55,7 @@ Product.create(title: 'Rails',
         out there. If you need to get working programs delivered fast,
         you should add Ruby to your toolbox.
       </p>},
-  genre:  'technology',
+  genre:  'computer',
   owner:  'shop1',
   image_url: 'rails.png',
   price: 67.9)
@@ -70,7 +70,7 @@ Product.create(title: 'Rails Test Prescriptions',
         procedures for Rails 2 and Rails 3, and introduces popular add-ons,
         including Cucumber, Shoulda, Machinist, Mocha, and Rcov.
       </p>},
-  genre:  'technology',
+  genre:  'computer',
   owner:  'shop1',
   image_url: 'rtp.jpg',
   price: 34.95)
@@ -85,7 +85,7 @@ Product.create(title: 'Web Design For Developers',
         procedures for Rails 2 and Rails 3, and introduces popular add-ons,
         including Cucumber, Shoulda, Machinist, Mocha, and Rcov.
       </p>},
-  genre:  'technology',
+  genre:  'computer',
   owner:  'shop1',
   image_url: 'wd4d.jpg',
   price: 14.35)
@@ -115,7 +115,7 @@ Product.create(title: 'Daily Life',
     %{<p>
          Daily Life
       </p>},
-  genre:  'life',
+  genre:  'arder',
   owner:  'shop2',
   image_url: 'life1.png',
   price: 9.5)
@@ -125,7 +125,7 @@ Product.create(title: 'Pig',
     %{<p>
          Pigs
       </p>},
-  genre:  'children',
+  genre:  'picture book',
   owner:  'shop2',
   image_url: 'child1.png',
   price: 9.5)

@@ -30,9 +30,13 @@
   <div class="field">
   	<%= f.label :genre %>
   	<% if @product %>
-  		<%= select_tag 'genre', options_for_select(["literature", "economy", "life", "children", "technology"], @product.genre)%>
+  		<%= f.select :genre, Product::PRODUCT_TYPES, value:@product.genre %>
+  		<!--<%= select_tag 'genre', options_for_select(["literature", "economy", "life", "children", "technology"], @product.genre)%>
+  		-->
   	<% else %>
-  		<%= select_tag 'genre', options_for_select(["literature", "economy", "life", "children", "technology"], 'literature') %>
+  		<%= f.select :genre, Product::PRODUCT_TYPES, value:'literature' %>
+  		<!--<%= select_tag 'genre', options_for_select(["literature", "economy", "life", "children", "technology"], 'literature') %>
+  		-->
   	<% end %>
   </div>
   <div class="field">

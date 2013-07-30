@@ -48,7 +48,7 @@ class ProductsController < ApplicationController
   # POST /products.json
   def create
     @product = Product.new(params[:product])
-    @product.genre = params[:genre]
+    #@product.genre = params[:genre]
     unless File.exist?(@product.image_url)
       @product.image_url = 'default.png'
     end

@@ -107,10 +107,17 @@
 		ul {
 			padding: 0;
 			cursor:pointer;
+			#menu {
+			  font-size: 1.3em;
+			}
 			#menu1 {
 			  color: #fea;
-			  padding: 0.5em;
+			  padding: 1em;
+			  font-size: 1em;
 			  a{color: #baf;}
+			  ol {
+			    padding-left: 1em;
+			  }
 			}
 			li {
 				list-style: none;
