@@ -1,9 +1,12 @@
 <% if notice %>
 <p id="notice"><%= notice %></p>
 <% end %>
-<table>
+<h1>Manage Your Cart</h1>
+<p style="border-bottom-style: dotted; overflow: hidden"></p>
+
+<table class="manageCart">
 	<th></th>
-	<th>Title</th>
+	<th>Books</th>
 	<th>Num</th>
 	<th> </th>
 	<th>Price</th>
@@ -27,8 +30,12 @@
 		</tr>
 	<% end %>
 	<tr class="total_line">
-		<td colspan="4">Total</td>
+		<td colspan="4">Total:</td>
 		<td class="total_cell"><%= number_to_currency(@cart.total_price) %></td>
 	</tr>
 </table>
-<div><%= button_to 'Confirm', new_order_path, method: :get %></div>
+
+<p style="border-bottom-style: dotted; overflow: hidden; border-color: #aaa"></p>
+
+<div style="float:left; padding-right: 1em;"><%= button_to 'Confirm', new_order_path, method: :get %> </div>
+<div>|  <%= link_to 'Continue Shopping', store_path %></div>
