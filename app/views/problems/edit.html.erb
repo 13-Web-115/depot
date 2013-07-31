@@ -1,6 +1,6 @@
-<h1>Editing problem</h1>
+<h1><%= t('.edit_problem')%></h1>
 
 <%= render 'form' %>
 
-<%= link_to 'Show', @problem %> |
-<%= link_to 'Back', problems_path %>
+<%= link_to t('.show'), @problem %> |
+<%= link_to t('.back'), problems_path %>

@@ -332,3 +332,35 @@ en:
       password_digest:      "Password digest:"
       edit:                 "Edit"
       back:                 "Back"
+
+  about_us:
+    index:
+      aboutus:              "About Us"
+
+  problems:
+    index:
+      list_problems:        "Listing problems"
+      content:              "Content"
+      questioner:           "Questioner"
+      new_problem:          "New Problem"
+      show:                 "Show"
+      edit:                 "Edit"
+      destroy:              "Destroy"   
+    new:
+      new_problem:          "New Problem"
+      back:                 "Back"
+    form:
+      create_problem:       "Create Problem"
+      content:              "Content"
+      questioner:           "Questioner"
+    edit:
+      edit_problem:         "Editing problem"
+      show:                 "Show"      
+      back:                 "Back"
+    show:
+      show_problem:         "Show Problem"
+      content:              "Content"
+      questioner:           "Questioner"
+      edit:                 "Edit"
+      back:                 "Back"
+                        

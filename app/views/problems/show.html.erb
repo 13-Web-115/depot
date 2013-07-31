@@ -1,17 +1,17 @@
-<h1>Show Problem</h1>
+<h1><%= t('.show_problem')%></h1>
 <%if notice %>
 <p id="notice"><%= notice %></p>
 <% end %>
 <p>
-  <b>Content:</b>
+  <b><%= t('.content')%>:</b>
   <%= @problem.content %>
 </p>
 
 <p>
-  <b>Questioner:</b>
+  <b><%= t('.questioner')%>:</b>
   <%= @problem.questioner %>
 </p>
 
 
-<%= link_to 'Edit', edit_problem_path(@problem) %> |
-<%= link_to 'Back', problems_path %>
+<%= link_to t('.edit'), edit_problem_path(@problem) %> |
+<%= link_to t('.back'), problems_path %>
