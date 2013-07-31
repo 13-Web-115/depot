@@ -1,9 +1,9 @@
-Dear <%= @order.name %>
+<%= t('.dear') %> <%= @order.name %>
 
-Thank you for your recent order from The Pragmatic Store.
+<%= t('.message') %>
 
-You ordered the following items:
+<%= t('.yourorder') %>
 
 <%= render @order.line_items %>
 
-We'll send you a separate e-mail when your order ships.
+<%= t('.separate') %>

@@ -239,7 +239,12 @@ en:
     shipped:
       order_shipped:    "Order shipped"
       message:          "This is just to let you know that we've shipped your recent order:"
-      description:      "Description"      
+      description:      "Description" 
+    received:
+      dear:             "Dear"
+      message:          "Thank you for your recent order from The Pragmatic Store！"
+      yourorder:        "You ordered the following items:"
+      separate:         "We'll send you a separate e-mail when your order ships."     
     
   products:
     new:

@@ -240,6 +240,11 @@ ch:
       order_shipped:    "订单发货"
       message:          "您最近的订单我们已发货："
       description:      "具体"      
+    received:
+      dear:             "亲爱的"
+      message:          "感谢您最近在宇宙超级无敌网上岳阳大书局上购买了商品！"
+      yourorder:        "您的订单包括："
+      separate:         "您的货物发出之后我们会再发送一封确认邮件。"
     
   products:
     new:

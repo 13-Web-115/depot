@@ -239,7 +239,12 @@ jp:
     shipped:
       order_shipped:    "受注が出荷"
       message:          "我々が出荷している最近の注文："
-      description:      "詳細"      
+      description:      "詳細"
+    received:
+      dear:             "親愛なる"
+      message:          "製品を購入するための宇宙無敵の超大型書店で最近のオンライン岳していただきありがとうございます！！"
+      yourorder:        "ご注文は以下のものが含まれ:"
+      separate:         "あなたが商品を送った後、私たちは、その後確認メールをお送りします。"      
     
   products:
     new:

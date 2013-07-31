@@ -240,7 +240,12 @@ es:
       order_shipped:    "La orden enviada"
       message:          "Esto es sólo para hacerle saber que hemos enviado su orden reciente:"
       description:      "Descripción"      
-    
+    received:
+      dear:             "Querido"
+      message:          "Gracias por su reciente pedido de la tienda del Pragmática usted."
+      yourorder:        "Usted ordenó lo siguiente:"
+      separate:         "Te enviaremos un correo electrónico por separado cuando se envía la orden." 
+          
   products:
     new:
       new_product:        "Nuevo producto"

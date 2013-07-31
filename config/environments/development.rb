@@ -7,7 +7,7 @@ Depot::Application.configure do
      domain:                 "domain.of.sender.net",
      authentication:         "plain",
      user_name:              "imwubinqi@gmail.com",
-     password:               "w1992529",
+     password:               "bdjaqsjarwhwnsye",
      enable_starttls_auto:   true
    }
   
