@@ -1,9 +1,20 @@
 jp:
   
   thanks:         "ご愛顧いただき、ありがとうございます"
+
+  invalid:        "無効なユーザー/パスワードの組み合わせ"
+  logout:         "ログアウト"
   
+  admin:
+    index:
+      welcome:      "歓迎"
+      its:          "今は"
+      wehave:       "我々は持っている"
+      order:        "注文."
+          
   layouts:
     application:
+      Pragmatic_Books_Online_Store: "実用的なオンラインブックストア"
       title:          "ネット書店"
       welcome:        "こんにちは"
       home:           "ホーム"
@@ -27,7 +38,7 @@ jp:
       art1:                   "アート"
       photograph:             "写真撮影"
       youthliterature:        "青少年文学"
-      cartoon:                "日本製アニメ"
+      cartoon:                "アニメ"
       humor:                  "ユーモア"
       0-2:                    "0-2歳"
       3-6:                    "3-6歳"
@@ -54,29 +65,128 @@ jp:
       orders:         "オーダー"
       products:       "製品"
       users:          "ユーザー"
-      comments:       "注釈"
+      comments:       "コメント"
       logout:         "ログアウト"
-      
+      search:         "検索"
+
+  line_items:
+    form:
+      product_id:           "製品番号"
+      cart_id:              "カート番号"
+    edit:
+      edit_line_item:       "行項目を編集する"
+      show:                 "詳細"
+      back:                 "帰る"
+    index:
+      line_item_list:       "ラインアイテムリスト "
+      product:              "製品"
+      cart:                 "カート"
+      show:                 "詳細"
+      edit:                 "編集"
+      destroy:              "削除"
+      sure_delete:          "あなたは確信して削除されている ?"
+      new_line_item:        "新しい行項目"
+    new:
+      new_line_item:        "新しい行項目"
+      back:                 "帰る"
+    show:
+      product:              "製品:"
+      cart:                 "カート:"
+      edit:                 "編集"
+      back:                 "帰る"    
+        
   store:
     index:
       title_html:   "カタログ"
       add_html:     "加える"
       detail:       "詳細"
-      
+      prelabel:     "前のページ"
+      nexlabel:     "次のページ"
     show:
-      comments:     "注釈"
+      comments:     "コメント"
       poster:       "ポスター"
       add_comment:  "コメントを追加"
       no_comments:  "コメントはありません!"
       add_html:     "加える"
-      back:         "復帰"
-  
+      back:         "帰る"
+      book_details:     "本の詳細"
+      title:            "タイトル:"
+      genre:            "分類:"
+      price:            "価格:"
+      descriptions:     "説明:"
+    form:
+      your_comment:     "あなたのコメント:"
+      add_comment:      "コメントを追加します" 
+    showHome:
+      new_user:         "新規会員登録"
+      back:             "帰る"
+    showOrder:
+      manage_your_cart:   "あなたのショッピングカートを管理します"
+      your_cart:          "あなたのショッピングカート"
+      books:              "本"
+      num:                "数"
+      price:              "価格"
+      remove:             "削除"
+      sure_delete:        "あなたはそれを削除してもよろしいですか？"
+      total:              "合計:"
+      confirm:            "確認"
+      continue_shopping:  "買い物を続ける"
+      update:             "アップデート"
+      
   carts:
     cart:
       title:      "あなたのカート"
-      empty:      "空の"
+      empty:      "削除"
       checkout:   "決済"
       ifsure:     "決定する?"
+      total:      "合計"
+    form:
+      confirm:    "確認"
+    edit:
+      edit_cart:  "ショッピングカートを変更"
+      show:       "詳細"
+      back:       "帰る"
+    index:
+      cart_list:          "ショッピングカート一覧"
+      show:               "詳細"
+      edit:               "編集"
+      destroy:            "削除"
+      sure_delete:        "あなたはそれを削除してもよろしいですか？"
+      new_cart:           "新しいショッピングカート"
+    new:
+      new_cart:           "新しいショッピングカート"
+      back:               "帰る"
+    show:
+      your_cart:          "あなたのショッピングカート"
+      total:              "合計"
+      empty_cart:         "ショッピングカートを削除"
+      sure_empty:         "削除を確認してください？"
+      
+  comments:
+    form:
+      content:            "内容"
+      confirm:            "確認"
+    edit:
+      edit_comment:       "コメントの編集"
+      show:               "詳細"
+      back:               "帰る"
+    index:
+      comment_list:       "コメント一覧"
+      content:            "内容"
+      poster:             "コメンテーター"
+      show:               "詳細"
+      edit:               "編集"
+      destroy:            "削除"
+      sure_delete:        "あなたはそれを削除してもよろしいですか？"
+      new_comment:        "コメントを追加"
+    new:
+      new_comment:        "コメントを追加"
+      back:               "帰る"
+    show:
+      content:            "内容："
+      poster:             "コメンテーター:"
+      edit:               "編集"
+      back:               "帰る"
       
   number:
     currency:
@@ -88,7 +198,13 @@ jp:
         format:    "%u%n"
         
   orders:
+    edit:
+      edit_order:     "注文を編集"
+      show:           "詳細"
+      back:           "帰る"
     new:
+      new_order:      "新規受注"
+      back:           "帰る"
       legend:         "メッセージを入力"
     form:
       name:           "フルネーム"
@@ -97,3 +213,116 @@ jp:
       pay_type:       "支払い"
       pay_prompt_html: "お支払方法を選択してください"
       submit:          "注文を送信"
+    index:
+      order_list:      "注文リスト"
+      name:            "名前"
+      address:         "アドレス"
+      email:           "E-mail"
+      pay_type:        "お支払い方法"
+      shipped:         "出荷"
+      show:            "詳細"
+      edit:            "編集"
+      destroy:         "削除"
+      sure_delete:     "あなたはそれを削除してもよろしいですか？"
+      new_order:       "新規受注"
+    show:
+      name:            "名前:"
+      address:         "アドレス:"
+      email:           "E-mail:"
+      pay_type:        "お支払い方法:"
+      product:         "製品"
+      edit:            "編集"
+      back:            "帰る"
+      shipped:         "出荷"
+  
+  order_notifier:
+    shipped:
+      order_shipped:    "受注が出荷"
+      message:          "我々が出荷している最近の注文："
+      description:      "詳細"      
+    
+  products:
+    new:
+      new_product:        "新発売"
+      back:               "帰る"
+    form:
+      title:              "タイトル"
+      owner:              "所有者"
+      description:        "詳細"
+      genre:              "分類"
+      image_url:          "画像のURL"
+      price:              "価格"
+      create:             "作成"
+    index:
+      product_list:       "商品リスト"
+      new_product:        "新発売"
+      comments:           "コメント"
+      show:               "詳細"
+      edit:               "編集"
+      destroy:            "削除"
+      sure_delete:        "あなたはそれを削除してもよろしいですか？"
+    edit:
+      show:               "詳細"
+      back:               "帰る"
+      edit_product:       "製品情報を編集する"
+    show:
+      title:              "タイトル:"
+      owner:              "所有者:"
+      description:        "詳細:"
+      genre:              "分類:"
+      image_url:          "画像のURL:"
+      price:              "価格:"
+      edit:               "編集"
+      back:               "帰る"
+    indexPre:
+      product_list:       "商品リスト"
+      title:              "タイトル"
+      owner:              "所有者"
+      description:        "詳細"
+      genre:              "分類"
+      image_url:          "画像のURL"
+      price:              "価格"
+      show:               "詳細"
+      edit:               "編集"
+      destroy:            "削除"
+      sure_delete:        "あなたはそれを削除してもよろしいですか？"
+      new_product:        "新発売"
+
+  sessions:
+    new:
+      please_login:       "にログインしてください"
+      name:               "ユーザー名:"
+      password:           "パスワード:"
+      login:              "ログイン"
+      new_user:           "新規ユーザー"
+      
+  users:
+    form:
+      enter_user_details:   "ユーザー情報を入力します"
+      name:                 "ユーザー名:"
+      password:             "パスワード:"
+      password_confirm:     "パスワードの確認:"
+      genre:                "分類:"
+      select_user_type:     "ユーザータイプを選択"
+      confirm:              "確認"
+    edit:
+      editing_user:         "ユーザーの編集"
+      show:                 "ユーザーを表示"
+      back:                 "帰る"
+    index:
+      user_list:            "ユーザーリスト"
+      name:                 "名前"
+      type:                 "分類"
+      show:                 "詳細"
+      edit:                 "編集"
+      destroy:              "削除"
+      sure_delete:          "あなたはそれを削除してもよろしいですか？"
+      new_user:             "新規ユーザー"
+    new:
+      new_user:             "新規ユーザー"
+      back:                 "帰る"
+    show:
+      name:                 "名前:"
+      password_digest:      "パスワードダイジェスト:"
+      edit:                 "編集"
+      back:                 "帰る"

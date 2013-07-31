@@ -18,5 +18,5 @@
 	</div>
 <% end %>
 <% if @products.class == ActiveRecord::Relation %>
-<p><%= will_paginate @products %></p>
+<p><%= will_paginate @products, previous_label: t('.prelabel'),next_label: t('.nexlabel') %></p>
 <% end %>

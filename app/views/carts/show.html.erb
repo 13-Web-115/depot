@@ -1,7 +1,7 @@
 <% if notice %>
 <p id="notice"><%= notice %></p>
 <% end %>
-<div class="cart_title">Your Cart</div>
+<div class="cart_title"><%= t('.your_cart') %></div>
 <table>
 	<%= render(@cart.line_items) %>
 	<!--
@@ -19,13 +19,13 @@
 	<% end %>
 	-->
 	<tr class="total_line">
-		<td colspan="2">Total</td>
+		<td colspan="2"><%= t('.total') %></td>
 		<td class="total_cell"><%= number_to_currency(@cart.total_price) %></td>
 	</tr>
 </table>
 
-<%= button_to 'Empty cart', @cart, method: :delete,
-    confirm: 'Are you sure?'%>
+<%= button_to t('.empty_cart'), @cart, method: :delete,
+    confirm: t('.sure_empty') %>
 <!-- 
 <%= link_to 'Edit', edit_cart_path(@cart) %> |
 <%= link_to 'Back', carts_path %>

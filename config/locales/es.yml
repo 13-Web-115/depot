@@ -1,124 +1,328 @@
-# Sample localization file for English. Add more files in this directory for other locales.
-# See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
-
 es:
   
   thanks:         "Gracias por su pedido"
   
+  invalid:        "Invalid combinación usuario / contraseña"
+  logout:         "Conectados a"
+  
+  admin:
+    index:
+      welcome:      "Bienvenida"
+      its:          "Es"
+      wehave:       "Tenemos"
+      order:        "pedido(s)."
+      
   layouts:
     application:
-      title:          "Publicaciones de Pragmatic"
-      welcome:        "¡Hola"
-      home:           "Inicio"
+      Pragmatic_Books_Online_Store: "Libros pragmáticas Tienda Online"
+      title:          "Pragmatic Bookshelf"
+      welcome:        "Bienvenida"
+      home:           "Casa"
       questions:      "Preguntas"
       news:           "Noticias"
       contact:        "Contacto"
       login:          "Login"
-      regitster:      "Registro"
+      register:       "Registro"
       category:       "Libros Categoría"
-      art:            "Literatura"
+      art:            "Literatura y Arte"
       youth:          "Juventud"
       education:      "Educación"
-      management:     "Economía y Gestión"
-      literature:     "literatura"
-      economy:        "economia"
-      life:           "vida"
-      children:       "crianças"
-      technology:     "tecnologia" 
+      management:     "Economía Gestión"
+      literature:     "Literatura"
+      economy:        "Economía"
+      life:           "Vida"
+      children:       "Niños"
+      technology:     "Tecnología"
       
-      memoir:                 "biografía"
+      memoir:                 "memoria"
       art1:                   "arte"
       photograph:             "fotografía"
-      youthliterature:        "literatura juvenil artes"
-      cartoon:                "anime"
+      youthliterature:        "literatura juvenil"
+      cartoon:                "dibujos animados"
       humor:                  "humor"
-      0-2:                    "0-2 año de edad"
-      3-6:                    "3-6 año de edad"
-      7-10:                   "7-10 año de edad"
-      11-14:                  "11-14 año de edad"
-      picturebook:            "picture book"
-      exercise:               "movimiento"
-      food:                   "gastrónomo"
-      tour:                   "turismo"
-      arder:                  "ocio"
-      family:                 "casa de la familia"
-      coptic:                 "popular science"
-      building:               "construcción"
+      0-2:                    "0-2 años"
+      3-6:                    "3-6 años"
+      7-10:                   "7-10 años"
+      11-14:                  "11-14 años"
+      picturebook:            "libro ilustrado"
+      exercise:               "ejercer"
+      food:                   "comida"
+      tour:                   "gira"
+      arder:                  "arder"
+      family:                 "familia"
+      coptic:                 "copto"
+      building:               "edificio"
       computer:               "ordenador"
       naturalscience:         "ciencias Naturales"
       medicine:               "medicina"
       foreignlanguage:        "lengua extranjera"
-      test:                   "examen"
+      test:                   "prueba"
       teachingmaterial:       "material didáctico"
       manage:                 "administración"
-      finance:                "inversión"
+      finance:                "financiar"
       
-      my_orders:      "Minhas ordens"
-      orders:         "Ordens"
-      products:       "produtos"
-      users:          "usuários"
-      comments:       "comentários"
-      logout:         "sair"
+      my_orders:      "Mis pedidos"
+      orders:         "órdenes"
+      products:       "Productos"
+      users:          "Usuarios"
+      comments:       "Comentarios"
+      logout:         "Salir"
+      search:         "Buscar"
+
+  line_items:
+    form:
+      product_id:           "Identificación del producto"
+      cart_id:              "Cesta ID"
+    edit:
+      edit_line_item:       "Editar rubro"
+      show:                 "Mostrar"
+      back:                 "Espalda"
+    index:
+      line_item_list:       "Lista de artículos de línea"
+      product:              "Producto"
+      cart:                 "Cesta"
+      show:                 "Mostrar"
+      edit:                 "Editar"
+      destroy:              "Destruir"
+      sure_delete:          "Está seguro de eliminar ?"
+      new_line_item:        "Nueva partida"
+    new:
+      new_line_item:        "Nueva partida"
+      back:                 "Espalda"
+    show:
+      product:              "Producto:"
+      cart:                 "Cesta:"
+      edit:                 "Editar"
+      back:                 "Espalda"
       
   store:
     index:
-      title_html:   "Su Cat&aacute;logo de Pragmatic"
-      add_html:     "A&ntilde;adir al Carrito"
-      detail:       "pormenor"
-      
+      title_html:   "Su catálogo Pragmática"
+      add_html:     "Añadir a la Cesta"
+      detail:       "Detalle"   
+      prelabel:     "Página anterior"
+      nexlabel:     "Página siguiente"
     show:
-      comments:     "comentários"
-      poster:       "cartaz"
-      add_comment:  "Adicionar comentário"
-      no_comments:  "Sem comentários!"
-      add_html:     "A&ntilde;adir al Carrito"
-      back:         "voltar"
-      
+      comments:     "Comentarios"
+      poster:       "Póster"
+      add_comment:  "Añadir comentario"
+      no_comments:  "No Cualquiera Comentarios para este producto todavía!"
+      add_html:     "Añadir a la Cesta"
+      back:         "Espalda"
+      book_details:     "Detalles del libro"
+      title:            "Título:"
+      genre:            "Género:"
+      price:            "Precio:"
+      descriptions:     "Descripciones:"
+    form:
+      your_comment:     "Tu comentario:"
+      add_comment:      "Añadir comentario" 
+    showHome:
+      new_user:         "Nuevo usuario ?"
+      back:             "Espalda"
+    showOrder:
+      manage_your_cart:   "Gestione su cesta"
+      your_cart:          "Su carro"
+      books:              "Libros"
+      num:                "Número"
+      price:              "Precio"
+      remove:             "Eliminar"
+      sure_delete:        "Está seguro de eliminar ?"
+      total:              "Total:"
+      confirm:            "Confirmar"
+      continue_shopping:  "Continuar sus compras"
+      update:             "Actualizar"
+         
   carts:
     cart:
-      title:      "Carrito de la Compra"
-      empty:      "Vaciar Carrito"
-      checkout:   "Comprar"
-      ifsure:     "Are you sure?"
+      title:      "Su pedido"
+      empty:      "Vaciar el carro"
+      checkout:   "Caja"
+      ifsure:     "Está seguro de vaciar la cesta ?"
+      total:      "Total"
+    form:
+      confirm:    "Confirmar"
+    edit:
+      edit_cart:  "Editar cesta"
+      show:       "Mostrar"
+      back:       "Espalda"
+    index:
+      cart_list:          "Carrito lista"
+      show:               "Mostrar"
+      edit:               "Editar"
+      destroy:            "Destruir"
+      sure_delete:        "Está seguro de eliminar ?"
+      new_cart:           "Nueva compra"
+    new:
+      new_cart:           "Nueva compra"
+      back:               "Espalda"
+    show:
+      your_cart:          "Your cart"
+      total:              "Total："
+      empty_cart:         "Carrito vacío"
+      sure_empty:         "Está seguro de vaciar la cesta ?"
 
+  comments:
+    form:
+      content:            "Contenido"
+      confirm:            "Confirmar"
+    edit:
+      edit_comment:       "Edit comment"
+      show:               "Mostrar"
+      back:               "Espalda"
+    index:
+      comment_list:       "Lista de comentarios"
+      content:            "Contenido"
+      poster:             "Póster"
+      show:               "Mostrar"
+      edit:               "Editar"
+      destroy:            "Destruir"
+      sure_delete:        "Está seguro de eliminar ?"
+      new_comment:        "Nuevo comentario"
+    new:
+      new_comment:        "Nuevo comentario"
+      back:               "Espalda"
+    show:
+      content:            "Contenido:"
+      poster:             "Póster:"
+      edit:               "Editar"
+      back:               "Espalda"
+  
   number:
     currency:
       format:
-        unit:      "$US"
+        unit:      "$"
         precision: 2
-        separator: ","
-        delimiter: "."
-        format:    "%n&nbsp;%u"
+        separator: "."
+        delimiter: ","
+        format:    "%u%n"
 
   orders:
+    edit:
+      edit_order:     "Editar para"
+      show:           "Mostrar"
+      back:           "Espalda"
     new:
-      legend:         "Por favor,introduzca sus datos"
+      new_order:      "Nuevo orden"
+      back:           "Espalda"
+      legend:         "Introduzca sus datos"
     form:
       name:           "Nombre"
-      address_html:   "Direcci&oacute;n"
-      email:          "E-mail"
-      pay_type:       "Forma de pago"
-      pay_prompt_html: "Seleccione un m&eacute;todo de pago"
-      submit:          "Realizar Pedido"
+      address_html:   "Dirección"
+      email:          "Email"
+      pay_type:       "Lugar con"
+      pay_prompt_html: "Seleccione una forma de pago"
+      submit:          "Ponga la orden"
+    index:
+      order_list:      "Lista de la orden"
+      name:            "Nombre"
+      address:         "Dirección"
+      email:           "Email"
+      pay_type:        "Preste tipo"
+      shipped:         "Transportado"
+      show:            "Mostrar"
+      edit:            "Editar"
+      destroy:         "Destruir"
+      sure_delete:     "Está seguro de eliminar ?"
+      new_order:       "New order"
+    show:
+      name:            "Nombre"
+      address:         "Dirección："
+      email:           "Email："
+      pay_type:        "Pay type："
+      product:         "Product"
+      edit:            "Editar"
+      back:            "Espalda"
+      shipped:         "Transportado"
+
+  order_notifier:
+    shipped:
+      order_shipped:    "La orden enviada"
+      message:          "Esto es sólo para hacerle saber que hemos enviado su orden reciente:"
+      description:      "Descripción"      
+    
+  products:
+    new:
+      new_product:        "Nuevo producto"
+      back:               "Espalda"
+    form:
+      title:              "Título"
+      owner:              "Propietario"
+      description:        "Descripción"
+      genre:              "Género"
+      image_url:          "Image url"
+      price:              "Precio"
+      create:             "Create"
+    index:
+      product_list:       "Product list"
+      new_product:        "New product"
+      comments:           "Comments"
+      show:               "Mostrar"
+      edit:               "Editar"
+      destroy:            "Destruir"
+      sure_delete:        "Está seguro de eliminar ?"
+    edit:
+      show:               "Mostrar"
+      back:               "Espalda"
+      edit_product:       "Edit product"
+    show:
+      title:              "Título"
+      owner:              "Propietario"
+      description:        "Descripción"
+      genre:              "Género"
+      image_url:          "Image url"
+      price:              "Precio"
+      edit:               "Editar"
+      back:               "Espalda"
+    indexPre:
+      product_list:       "Product list"
+      title:              "Título"
+      owner:              "Propietario"
+      description:        "Descripción"
+      genre:              "Género"
+      image_url:          "URL de la imagen"
+      price:              "Precio"
+      show:               "Mostrar"
+      edit:               "Editar"
+      destroy:            "Destruir"
+      sure_delete:        "Está seguro de eliminar ?"
+      new_product:        "Nuevo producto"
+
+  sessions:
+    new:
+      please_login:       "Por favor, inicie sesión"
+      name:               "Nombre:"
+      password:           "Contraseña:"
+      login:              "Login"
+      new_user:           "Nuevo usuario ?"
       
-  activerecord:
-    models:
-      order:      "pedido"
-    attributes:
-      order:
-        address:  "Direcci&oacute;n"
-        name:     "Nombre"
-        email:    "E-mail"
-        pay_type: "Forma de pago"
-    errors:
-      messages:
-        inclusion:  "no est&accute; incluido en la lista"
-        blank:      "no puede quedar en blanco"
-  errors:
-    template:
-      body:         "Hay problemas con los siguientes campos:"
-      header:
-        one:        "1 error ha impedido que este %{model} se guarde"
-        other:      ":%{count} errores han impedido que este %{model} se guarde"
-        
-        
+  users:
+    form:
+      enter_user_details:   "Introduzca los datos de usuario"
+      name:                 "Nombre:"
+      password:             "Contraseña:"
+      password_confirm:     "Contraseña confirm:"
+      genre:                "Género:"
+      select_user_type:     "seleccionar el tipo de usuario"
+      confirm:              "Confirmar"
+    edit:
+      editing_user:         "Edición usuario"
+      show:                 "Mostrar"
+      back:                 "Espalda"
+    index:
+      user_list:            "Lista_usuarios"
+      name:                 "Nombre"
+      type:                 "Tipo"
+      show:                 "Mostrar"
+      edit:                 "Editar"
+      destroy:              "Destruir"
+      sure_delete:          "Está seguro de eliminar ?"
+      new_user:             "Nuevo usuario ?"
+    new:
+      new_user:             "Nuevo usuario ?"
+      back:                 "Espalda"
+    show:
+      name:                 "Nombre:"
+      password_digest:      "Contraseña digest:"
+      edit:                 "Editar"
+      back:                 "Espalda"

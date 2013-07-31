@@ -1,4 +1,4 @@
-<h1>Listing carts</h1>
+<h1><%= t('.cart_list') %></h1>
 
 <table>
   <tr>
@@ -9,13 +9,13 @@
 
 <% @carts.each do |cart| %>
   <tr>
-    <td><%= link_to 'Show', cart %></td>
-    <td><%= link_to 'Edit', edit_cart_path(cart) %></td>
-    <td><%= link_to 'Destroy', cart, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <td><%= link_to t('.show'), cart %></td>
+    <td><%= link_to t('.edit'), edit_cart_path(cart) %></td>
+    <td><%= link_to t('.destroy'), cart, method: :delete, data: { confirm: t('.sure_delete') } %></td>
   </tr>
 <% end %>
 </table>
 
 <br />
 
-<%= link_to 'New Cart', new_cart_path %>
+<%= link_to t('.new_cart'), new_cart_path %>

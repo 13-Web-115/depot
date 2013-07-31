@@ -1,18 +1,18 @@
 <% if notice %>
 <p id="notice"><%= notice %></p>
 <% end %>
-<h1>Manage Your Cart</h1>
+<h1><%= t('.manage_your_cart') %></h1>
 <br />
 <p style="border-bottom-style: dotted; overflow: hidden"></p>
 <br />
 <fieldset>
-<legend>Your Cart</legend>
+<legend><%= t('.your_cart')%></legend>
 <table class="manageCart">
 	<th></th>
-	<th>Books</th>
-	<th>Num</th>
+	<th><%= t('.books')%></th>
+	<th><%= t('.num') %></th>
 	<th> </th>
-	<th>Price</th>
+	<th><%= t('.price') %></th>
 	<th></th>
 	<% @cart.line_items.each do |item| %>
 		<tr>
@@ -25,15 +25,15 @@
 					<%= number_field_tag 'quantity', nil, value: item.quantity, min: 1, max: 100, size: 1 %>
 				</td>
 				<td>
-					<%= submit_tag 'Update'%>
+					<%= submit_tag t('.update')%>
 				</td>
 			<% end %>
 			<td><%= number_to_currency(item.total_price) %></td>
-			<td><%= link_to 'Remove', item, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+			<td><%= link_to t('.remove'), item, method: :delete, data: { confirm: t('.sure_delete') } %></td>
 		</tr>
 	<% end %>
 	<tr class="total_line">
-		<td colspan="4">Total:</td>
+		<td colspan="4"><%= t('.total') %></td>
 		<td class="total_cell"><%= number_to_currency(@cart.total_price) %></td>
 	</tr>
 </table>
@@ -41,5 +41,7 @@
 <br />
 <p style="border-bottom-style: dotted; overflow: hidden; border-color: #aaa"></p>
 <br />
-<div style="float:left; padding-right: 1em;"><%= button_to 'Confirm', new_order_path, method: :get %> </div>
-<div>|  <%= link_to 'Continue Shopping', store_path %></div>
+
+<div style="float:left; padding-right: 1em;"><%= button_to t('.confirm'), new_order_path, method: :get %> </div>
+<div>|  <%= link_to t('.continue_shopping'), store_path %></div>
+

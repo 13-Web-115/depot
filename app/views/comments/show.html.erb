@@ -1,15 +1,15 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <b>Content:</b>
+  <b><%= t('.content') %></b>
   <%= sanitize(@comment.content) %>
 </p>
 
 <p>
-  <b>Poster:</b>
+  <b><%= t('.poster') %></b>
   <%= @comment.poster %>
 </p>
 
 
-<%= link_to 'Edit', edit_comment_path(@comment) %> |
-<%= link_to 'Back', comments_path %>
+<%= link_to t('.edit'), edit_comment_path(@comment) %> |
+<%= link_to t('.back'), comments_path %>

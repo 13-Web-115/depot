@@ -1,12 +1,20 @@
-# Sample localization file for English. Add more files in this directory for other locales.
-# See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
-
 en:
   
   thanks:         "Thanks you for your order"
   
+  invalid:        "Invalid user/password combination"
+  logout:         "Logged out"
+  
+  admin:
+    index:
+      welcome:      "Welcome"
+      its:          "It's"
+      wehave:       "We have"
+      order:        "order(s)."
+      
   layouts:
     application:
+      Pragmatic_Books_Online_Store: "Pragmatic Books Online Store"
       title:          "Pragmatic Bookshelf"
       welcome:        "Welcome"
       home:           "Home"
@@ -59,13 +67,41 @@ en:
       users:          "Users"
       comments:       "Comments"
       logout:         "Logout"
-  
+      search:         "Search"
+
+  line_items:
+    form:
+      product_id:           "Product id"
+      cart_id:              "Cart id"
+    edit:
+      edit_line_item:       "Edit line item"
+      show:                 "Show"
+      back:                 "Back"
+    index:
+      line_item_list:       "Line item list"
+      product:              "Product"
+      cart:                 "Cart"
+      show:                 "Show"
+      edit:                 "Edit"
+      destroy:              "Destroy"
+      sure_delete:          "Are you sure delete ?"
+      new_line_item:        "New line item"
+    new:
+      new_line_item:        "New line item"
+      back:                 "Back"
+    show:
+      product:              "Product:"
+      cart:                 "Cart:"
+      edit:                 "Edit"
+      back:                 "Back"
+      
   store:
     index:
       title_html:   "Your Pragmatic Catalog"
       add_html:     "Add to Cart"
-      detail:       "Detail"
-    
+      detail:       "Detail"   
+      prelabel:     "Previous page"
+      nexlabel:     "Next page"
     show:
       comments:     "Comments"
       poster:       "Poster"
@@ -73,14 +109,85 @@ en:
       no_comments:  "No Any Comments For This Product Yet!"
       add_html:     "Add to Cart"
       back:         "Back"
-
+      book_details:     "Book details"
+      title:            "Title:"
+      genre:            "Genre:"
+      price:            "Price:"
+      descriptions:     "Descriptions:"
+    form:
+      your_comment:     "Your comment:"
+      add_comment:      "Add comment" 
+    showHome:
+      new_user:         "New user ?"
+      back:             "Back"
+    showOrder:
+      manage_your_cart:   "Manage your cart"
+      your_cart:          "Your cart"
+      books:              "Books"
+      num:                "Number"
+      price:              "Price"
+      remove:             "Remove"
+      sure_delete:        "Are you sure delete ?"
+      total:              "Total:"
+      confirm:            "Confirm"
+      continue_shopping:  "Continue shopping"
+      update:             "Update"
+         
   carts:
     cart:
       title:      "Your Cart"
       empty:      "Empty Cart"
       checkout:   "Checkout"
-      ifsure:     "Are you sure?"
+      ifsure:     "Are you sure empty this cart?"
+      total:      "Total"
+    form:
+      confirm:    "Confirm"
+    edit:
+      edit_cart:  "Edit cart"
+      show:       "Show"
+      back:       "Back"
+    index:
+      cart_list:          "Cart list"
+      show:               "Show"
+      edit:               "Edit"
+      destroy:            "Destroy"
+      sure_delete:        "Are you sure delete ?"
+      new_cart:           "New cart"
+    new:
+      new_cart:           "New cart"
+      back:               "Back"
+    show:
+      your_cart:          "Your cart"
+      total:              "Total："
+      empty_cart:         "Empty cart"
+      sure_empty:         "Are you sure empty this cart ?"
 
+  comments:
+    form:
+      content:            "Content"
+      confirm:            "Confirm"
+    edit:
+      edit_comment:       "Edit comment"
+      show:               "Show"
+      back:               "Back"
+    index:
+      comment_list:       "Comment list"
+      content:            "Content"
+      poster:             "Poster"
+      show:               "Show"
+      edit:               "Edit"
+      destroy:            "Destroy"
+      sure_delete:        "Are you sure delete ?"
+      new_comment:        "New comment"
+    new:
+      new_comment:        "New comment"
+      back:               "Back"
+    show:
+      content:            "Content:"
+      poster:             "Poster:"
+      edit:               "Edit"
+      back:               "Back"
+  
   number:
     currency:
       format:
@@ -91,7 +198,13 @@ en:
         format:    "%u%n"
 
   orders:
+    edit:
+      edit_order:     "Edit order"
+      show:           "Show"
+      back:           "Back"
     new:
+      new_order:      "New order"
+      back:           "Back"
       legend:         "Please Enter Your Details"
     form:
       name:           "Name"
@@ -100,3 +213,116 @@ en:
       pay_type:       "Place with"
       pay_prompt_html: "Select a payment method"
       submit:          "Place Order"
+    index:
+      order_list:      "Order list"
+      name:            "Name"
+      address:         "Address"
+      email:           "Email"
+      pay_type:        "Pay type"
+      shipped:         "Shipped"
+      show:            "Show"
+      edit:            "Edit"
+      destroy:         "Destroy"
+      sure_delete:     "Are you sure delete ?"
+      new_order:       "New order"
+    show:
+      name:            "Name"
+      address:         "Address："
+      email:           "Email："
+      pay_type:        "Pay type："
+      product:         "Product"
+      edit:            "Edit"
+      back:            "Back"
+      shipped:         "Shipped"
+
+  order_notifier:
+    shipped:
+      order_shipped:    "Order shipped"
+      message:          "This is just to let you know that we've shipped your recent order:"
+      description:      "Description"      
+    
+  products:
+    new:
+      new_product:        "New product"
+      back:               "Back"
+    form:
+      title:              "Title"
+      owner:              "Owner"
+      description:        "Description"
+      genre:              "Genre"
+      image_url:          "Image url"
+      price:              "Price"
+      create:             "Create"
+    index:
+      product_list:       "Product list"
+      new_product:        "New product"
+      comments:           "Comments"
+      show:               "Show"
+      edit:               "Edit"
+      destroy:            "Destroy"
+      sure_delete:        "Are you sure delete ?"
+    edit:
+      show:               "Show"
+      back:               "Back"
+      edit_product:       "Edit product"
+    show:
+      title:              "Title"
+      owner:              "Owner"
+      description:        "Description"
+      genre:              "Genre"
+      image_url:          "Image url"
+      price:              "Price"
+      edit:               "Edit"
+      back:               "Back"
+    indexPre:
+      product_list:       "Product list"
+      title:              "Title"
+      owner:              "Owner"
+      description:        "Description"
+      genre:              "Genre"
+      image_url:          "Image url"
+      price:              "Price"
+      show:               "Show"
+      edit:               "Edit"
+      destroy:            "Destroy"
+      sure_delete:        "Are you sure delete ?"
+      new_product:        "New product"
+
+  sessions:
+    new:
+      please_login:       "Please login"
+      name:               "Name:"
+      password:           "Password:"
+      login:              "Login"
+      new_user:           "New user ?"
+      
+  users:
+    form:
+      enter_user_details:   "Enter user details"
+      name:                 "Name:"
+      password:             "Password:"
+      password_confirm:     "Password confirm:"
+      genre:                "Genre:"
+      select_user_type:     "select user type"
+      confirm:              "Confirm"
+    edit:
+      editing_user:         "Editing user"
+      show:                 "Show"
+      back:                 "Back"
+    index:
+      user_list:            "user_list"
+      name:                 "Name"
+      type:                 "Type"
+      show:                 "Show"
+      edit:                 "Edit"
+      destroy:              "Destroy"
+      sure_delete:          "Are you sure delete ?"
+      new_user:             "New user ?"
+    new:
+      new_user:             "New user ?"
+      back:                 "Back"
+    show:
+      name:                 "Name:"
+      password_digest:      "Password digest:"
+      edit:                 "Edit"
+      back:                 "Back"

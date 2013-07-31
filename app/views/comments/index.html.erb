@@ -1,9 +1,9 @@
-<h1>Listing comments</h1>
+<h1><%= t('.comment_list') %></h1>
 
 <table>
   <tr>
-    <th>Content</th>
-    <th>Poster</th>
+    <th><%= t('.content') %></th>
+    <th><%= t('.poster') %></th>
     <th></th>
     <th></th>
     <th></th>
@@ -13,13 +13,13 @@
   <tr>
     <td><%= comment.content %></td>
     <td><%= comment.poster %></td>
-    <td><%= link_to 'Show', comment %></td>
-    <td><%= link_to 'Edit', edit_comment_path(comment) %></td>
-    <td><%= link_to 'Destroy', comment, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <td><%= link_to t('.show'), comment %></td>
+    <td><%= link_to t('.edit'), edit_comment_path(comment) %></td>
+    <td><%= link_to t('.destroy'), comment, method: :delete, data: { confirm: t('.sure_delete') } %></td>
   </tr>
 <% end %>
 </table>
 
 <br />
 
-<%= link_to 'New Comment', new_comment_path %>
+<%= link_to t('.new_comment'), new_comment_path %>

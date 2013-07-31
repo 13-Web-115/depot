@@ -2,35 +2,35 @@
 <p id="notice"><%= notice %></p>
 <% end %>
 <p>
-  <b>Name:</b>
+  <b><%= t('.name') %></b>
   <%= @order.name %>
 </p>
 
 <p>
-  <b>Address:</b>
+  <b><%= t('.address') %></b>
   <%= @order.address %>
 </p>
 
 <p>
-  <b>Email:</b>
+  <b><%= t('.email') %></b>
   <%= @order.email %>
 </p>
 
 <p>
-  <b>Pay type:</b>
+  <b><%= t('.pay_type') %></b>
   <%= @order.pay_type %>
 </p>
 <% if @user.genre == "shopkeeper" %>
 <p>
-	<b>Products:</b>
+	<b><%= t('product') %></b>
 	<table>
 	<%= render @line_items %>
 	</table>
 </p>
 <% end %>
-<%= link_to 'Edit', edit_order_path(@order) %> |
-<%= link_to 'Back', orders_path %>
+<%= link_to t('.edit'), edit_order_path(@order) %> |
+<%= link_to t('.back'), orders_path %>
 <% if @user.genre != "ordinary" %>
  |
-<%= link_to 'Shipped', order_path(@order, shipped: "yes") %>
+<%= link_to t('.shipped'), order_path(@order, shipped: "yes") %>
 <% end %>
