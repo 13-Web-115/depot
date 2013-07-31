@@ -18,8 +18,16 @@ function menus(str){
 	var obj; 
 	// 返回 str 对象和 picId 对象是否存在 
 	if (document.getElementById(str)){ 
+		var strs = new Array("menu1_2", "menu1_3", "menu1_4", "menu1_5", "menu1_6", "menu1_7", "menu1_8");
+		for (var i=0; i<strs.length; i++)
+		{
+			if (str != strs[i])
+			{
+				obj=document.getElementById(strs[i]); 
+				obj.style.display = "none";
+			}
+		}
 		obj=document.getElementById(str); //obj 为 DIV 对象 
-		//pic=document.getElementById(picId); //pic 为 图片对象 
 		
 		if (obj.style.display == "none"){ //如果DIV对象的 display 样式值为 none 的话 
 			obj.style.display = ""; //就将 display 的样式清空 

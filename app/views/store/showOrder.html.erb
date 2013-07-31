@@ -2,8 +2,9 @@
 <p id="notice"><%= notice %></p>
 <% end %>
 <h1>Manage Your Cart</h1>
+<br />
 <p style="border-bottom-style: dotted; overflow: hidden"></p>
-
+<br />
 <fieldset>
 <legend>Your Cart</legend>
 <table class="manageCart">
@@ -37,8 +38,8 @@
 	</tr>
 </table>
 </fieldset>
-
+<br />
 <p style="border-bottom-style: dotted; overflow: hidden; border-color: #aaa"></p>
-
+<br />
 <div style="float:left; padding-right: 1em;"><%= button_to 'Confirm', new_order_path, method: :get %> </div>
 <div>|  <%= link_to 'Continue Shopping', store_path %></div>
