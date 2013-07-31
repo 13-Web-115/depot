@@ -11,7 +11,7 @@
   <tr>
     <td><%= link_to t('.show'), cart %></td>
     <td><%= link_to t('.edit'), edit_cart_path(cart) %></td>
-    <td><%= link_to t('.destroy'), cart, method: :delete, data: { confirm: t('.sure_delete？') } %></td>
+    <td><%= link_to t('.destroy'), cart, method: :delete, data: { confirm: t('.sure_delete') } %></td>
   </tr>
 <% end %>
 </table>

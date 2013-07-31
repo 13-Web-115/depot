@@ -19,7 +19,7 @@
     <td><%= product.price %></td>
     <td><%= link_to t('.show'), product %></td>
     <td><%= link_to t('.edit'), edit_product_path(product) %></td>
-    <td><%= link_to t('.destroy'), product, method: :delete, data: { confirm: t('.sure_delete？') } %></td>
+    <td><%= link_to t('.destroy'), product, method: :delete, data: { confirm: t('.sure_delete') } %></td>
   </tr>
 <% end %>
 </table>

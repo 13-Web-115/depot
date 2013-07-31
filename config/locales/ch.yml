@@ -2,11 +2,16 @@ ch:
   
   thanks:         "谢谢惠顾"
   
+  logout:       "登出"
+  invalid:      "用户不存在或者密码错误,请重新登录"
+
   admin:
-    welcome:      "欢迎光临"
-  
-  
-  
+    index:
+      welcome:      "欢迎光临"
+      its:          "现在是"
+      wehave:       "我们有"  
+      order:        "个账单。"
+
   layouts:
     application:
       Pragmatic_Books_Online_Store:   "宇宙超级无敌网上岳阳大书局"
@@ -62,6 +67,7 @@ ch:
       users:          "用户"
       comments:       "评论"
       logout:         "登出"
+      search:         "搜索"
       
   line_items:
     form:
@@ -78,7 +84,7 @@ ch:
       show:                 "详情"
       edit:                 "编辑"
       destroy:              "删除"
-      sure_delete？:         "您确定要删除吗？"
+      sure_delete:          "您确定要删除吗？"
       new_line_item:        "新建商品"
     new:
       new_line_item:        "新建商品"
@@ -94,6 +100,8 @@ ch:
       title_html:      "商品目录"
       add_html:        "添加到购物车"
       detail:          "详情"  
+      prelabel:        "上一页"
+      nexlabel:        "下一页"
     show:
       comments:         "评论"
       poster:          "评论者"
@@ -113,7 +121,7 @@ ch:
       new_user:         "注册用户"
       back:             "返回"
     showOrder:
-      manage_your_art:    "管理您的购物车"
+      manage_your_cart:   "管理您的购物车"
       your_cart:          "您的购物车"
       books:              "书籍"
       num:                "数量"
@@ -123,6 +131,7 @@ ch:
       total:              "总量："
       confirm:            "确认"
       continue_shopping:  "继续购物"
+      update:             "更新"
     
   carts:
     cart:
@@ -142,7 +151,7 @@ ch:
       show:               "详情"
       edit:               "编辑"
       destroy:            "删除"
-      sure_delete？:      "您确定要删除吗？"
+      sure_delete:        "您确定要删除吗？"
       new_cart:           "新建购物车"
     new:
       new_cart:           "新建购物车"
@@ -151,7 +160,7 @@ ch:
       your_cart:          "您的购物车"
       total:              "总数："
       empty_cart:         "清空购物车"
-      sure_empty？:        "确认清空？"
+      sure_empty:        "确认清空？"
   
   comments:
     form:
@@ -168,7 +177,7 @@ ch:
       show:               "详情"
       edit:               "编辑"
       destroy:            "删除"
-      sure_delete？:      "您确定要删除吗？"
+      sure_delete:        "您确定要删除吗？"
       new_comment:        "添加评论"
     new:
       new_comment:        "添加评论"
@@ -178,7 +187,6 @@ ch:
       poster:             "评论者："
       edit:               "编辑"
       back:               "返回"
-
   
   number:
     currency:
@@ -215,7 +223,7 @@ ch:
       show:            "详情"
       edit:            "编辑"
       destroy:         "删除"
-      sure_delete？:   "您确定要删除吗？"
+      sure_delete:     "您确定要删除吗？"
       new_order:       "新建订单"
     show:
       name:            "姓名："
@@ -239,7 +247,7 @@ ch:
       back:               "返回"
     form:
       title:              "书名"
-      owner:              "所有者"
+      owner:              "卖家"
       description:        "简介"
       genre:              "分类"
       image_url:          "图片url"
@@ -252,7 +260,7 @@ ch:
       show:               "详情"
       edit:               "编辑"
       destroy:            "删除"
-      sure_delete？:      "您确定要删除吗？"
+      sure_delete:        "您确定要删除吗？"
     edit:
       show:               "详情"
       back:               "返回"
@@ -277,12 +285,12 @@ ch:
       show:               "详情"
       edit:               "编辑"
       destroy:            "删除"
-      sure_delete？:      "您确定要删除吗？"
+      sure_delete:        "您确定要删除吗？"
       new_product:        "新建商品"
 
   sessions:
     new:
-      please_login:       "请登录"
+      please_login:       "请登陆"
       name:               "用户名："
       password:           "密码："
       login:              "登陆"
@@ -308,7 +316,7 @@ ch:
       show:                 "详情"
       edit:                 "编辑"
       destroy:              "删除"
-      sure_delete？:        "您确定要删除吗？"
+      sure_delete:          "您确定要删除吗？"
       new_user:             "注册新用户？"
     new:
       new_user:             "用户注册"

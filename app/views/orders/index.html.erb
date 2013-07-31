@@ -21,7 +21,7 @@
     <td><%= order.shipped %></td>
     <td><%= link_to t('.show'), order %></td>
     <td><%= link_to t('.edit'), edit_order_path(order) %></td>
-    <td><%= link_to t('.destroy'), order, method: :delete, data: { confirm: t('.sure_delete？') } %></td>
+    <td><%= link_to t('.destroy'), order, method: :delete, data: { confirm: t('.sure_delete') } %></td>
   </tr>
 <% end %>
 </table>

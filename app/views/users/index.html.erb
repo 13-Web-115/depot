@@ -18,7 +18,7 @@
     <td><%= user.genre %></td>
     <td><%= link_to t('.show'), user %></td>
     <td><%= link_to t('.edit'), edit_user_path(user) %></td>
-    <td><%= link_to t('.destroy'), user, method: :delete, data: { confirm: t('.sure_delete？') } %></td>
+    <td><%= link_to t('.destroy'), user, method: :delete, data: { confirm: t('.sure_delete') } %></td>
   </tr>
 <% end %>
 </table>
