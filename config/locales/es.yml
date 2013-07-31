@@ -64,6 +64,7 @@ es:
       my_orders:      "Mis pedidos"
       orders:         "órdenes"
       products:       "Productos"
+      postnews:       "Prensa posterior"
       users:          "Usuarios"
       comments:       "Comentarios"
       logout:         "Salir"

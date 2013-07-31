@@ -64,6 +64,7 @@ en:
       my_orders:      "My Orders"
       orders:         "Orders"
       products:       "Products"
+      postnews:       "Post News"
       users:          "Users"
       comments:       "Comments"
       logout:         "Logout"

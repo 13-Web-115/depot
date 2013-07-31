@@ -1,0 +1,27 @@
+<h1>Listing News</h1>
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Content</th>
+    <th>Poster</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @things.each do |thing| %>
+  <tr>
+    <td><%= thing.title %></td>
+    <td><%= thing.content %></td>
+    <td><%= thing.poster %></td>
+    <td><%= link_to 'Show', thing %></td>
+    <td><%= link_to 'Edit', edit_thing_path(thing) %></td>
+    <td><%= link_to 'Destroy', thing, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'Post News', new_thing_path %>

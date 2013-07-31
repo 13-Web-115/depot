@@ -1,0 +1,22 @@
+<h1>Show News</h1>
+<% if notice %>
+<p id="notice"><%= notice %></p>
+<% end %>
+<p>
+  <b>Title:</b>
+  <%= @thing.title %>
+</p>
+
+<p>
+  <b>Content:</b>
+  <%= @thing.content %>
+</p>
+
+<p>
+  <b>Poster:</b>
+  <%= @thing.poster %>
+</p>
+
+
+<%= link_to 'Edit', edit_thing_path(@thing) %> |
+<%= link_to 'Back', things_path %>

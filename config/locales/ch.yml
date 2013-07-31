@@ -64,6 +64,7 @@ ch:
       my_orders:      "我的订单"
       orders:         "订单"
       products:       "商品"
+      postnews:       "发布新闻"
       users:          "用户"
       comments:       "评论"
       logout:         "登出"

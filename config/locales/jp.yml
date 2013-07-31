@@ -64,6 +64,7 @@ jp:
       my_orders:      "マイオーダー"
       orders:         "オーダー"
       products:       "製品"
+      postnews:       "ポストのニュース"
       users:          "ユーザー"
       comments:       "コメント"
       logout:         "ログアウト"

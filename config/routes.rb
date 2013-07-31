@@ -1,10 +1,21 @@
 Depot::Application.routes.draw do
+  get "about_us/index"
+
+  resources :things
+
+
+  resources :problems
+
+
   get 'admin' => 'admin#index'
   get 'store/index'
   get 'store/show'
   get 'store/showOrder'
   post 'store/showOrder'
   
+  controller :about_us do
+    get 'about' => :index
+  end
   controller :sessions do
     get 'login' => :new
     post 'login' => :create
