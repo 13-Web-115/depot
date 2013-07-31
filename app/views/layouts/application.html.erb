@@ -1,113 +1,114 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title><%= t('.Pragmatic_Books_Online_Store') %></title>
+  <title>Pragmatic Books Online Store</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
-<body class='<%= controller.controller_name %>'>
-	<div id="banner">
-		<%= form_tag store_path, class: 'locale' do %>
-			<%= select_tag 'set_locale',
-				options_for_select(LANGUAGES, I18n.locale.to_s),
-				onchange: 'this.form.submit()' %>
-			<%= submit_tag 'submit'%>
-			<%= javascript_tag "$('.locale input').hide()" %>
+<body class="<%= controller.controller_name %>", id="body">
+<%= form_tag store_path, class: 'locale' do %>
+	<%= select_tag 'set_locale', options_for_select(LANGUAGES, I18n.locale.to_s),
+			onchange: 'this.form.submit()' %>
+	<%= submit_tag 'submit'%>
+	<%= javascript_tag "$('.locale input').hide()" %>
+<% end %>
+<div id="container">
+  <div id="header"> 
+	<div id="userMessage">
+		<% if session[:user_id] %>
+			<%= link_to t('.welcome') + " #{@user.name}!", edit_user_path(@user) %>
 		<% end %>
-		<div id="userMessage">
-			<% if session[:user_id] %>
-				<%= link_to t('.welcome') + " #{@user.name}!", edit_user_path(@user) %>
-			<% end %>
-		</div>
-		<%= image_tag("logo.png") %>
-		<%= @page_title || t('.title') %>
-		<ul>
-			<li> <a href="/"><%= t('.home') %></a> </li>
-			<li> <a href="http://www.baidu.com"><%= t('.questions') %></a> </li>
-			<li> <a href="http://www.google.com.hk"><%= t('.news') %></a> </li>
-			<li> <a href="http://www.baidu.com"><%= t('.contact') %></a> </li>
-			<% unless session[:user_id] %>
-					<li> <%= link_to t('.login'), login_path %> </li>
-					<li> <%= link_to t('.register'), new_user_path %> </li>
-			<% else %>
-					<li> <%= link_to t('.logout'), logout_path, method: :delete %> </li>
-			<% end %>
-		</ul>
-		<br />
 	</div>
-	<div id="columns">
-		<div id="side">
-			<%= form_tag store_path do %>
-			<div id="search">
-	 			<%= text_field_tag 'bookName', params[:bookName], size: 14%>
-	 		</div>
-	 		<div>
-	 		<%= submit_tag t('.search') %>
-	 		</div>
-	 		<% end %>
-	 		
+	<!--<%= image_tag("logo.png") %>-->
+	<div id="title"><%= @page_title || t('.title') %></div>
+	<ul>
+		<li> <a href="/"><%= t('.home') %></a> </li>
+		<li> <a href="http://www.baidu.com"><%= t('.questions') %></a> </li>
+		<li> <a href="http://www.google.com.hk"><%= t('.news') %></a> </li>
+		<li> <a href="http://www.baidu.com"><%= t('.contact') %></a> </li>
+		<% unless session[:user_id] %>
+			<li> <%= link_to t('.login'), login_path %> </li>
+			<li> <%= link_to t('.register'), new_user_path %> </li>
+		<% else %>
+			<li> <%= link_to t('.logout'), logout_path, method: :delete %> </li>
+		<% end %>
+	</ul>
+	<br />
+	<div id="search">
+		<%= form_tag store_path do %>
+			<div id="searchBox">
+				<%= text_field_tag 'bookName', params[:bookName], size: 14%>
+			</div>
+			<div>
+				<%= submit_tag "Search" %>
+			</div>
+		<% end %>
+	</div>
+  </div>
+  <div id="border">
+    <div id="main1">
+      <div id="left">
+        <div id="menu">
+          <ul>	
 			<% if @cart %>
 				<%= hidden_div_if(@cart.line_items.empty?, id: 'cart') do %>
 					<%= render @cart %>
 				<% end %>
 			<% end %>
-			
-			<ul>
-				<li id="menu" onClick="menus('menu1')"> <%= t('.category') %> </li> 
-				<li id="menu1" > 				
-					<div onClick="menus('menu1_2')"> <%= t('.art') %> </div> <br/> 
+				<li onClick="menus('menu1')"> <%= t('.category') %> </li> 
+				<div id="menu1" > 				
+					<div onClick="menus('menu1_2')"> <%= t('.art') %> </div>
 					<ol id="menu1_2" style="display:none">
 						<li><%= link_to t('.literature'), store_path(genre: "literature") %></li>
 						<li><%= link_to t('.memoir'), store_path(genre: "memoir") %></li>
 						<li><%= link_to t('.art1'), store_path(genre: "art") %></li>
 						<li><%= link_to t('.photograph'), store_path(genre: "photograph") %></li> 
-					</ol> <br />
-					<div onClick="menus('menu1_3')"> <%= t('.youth') %> </div> <br />
+					</ol>
+					<div onClick="menus('menu1_3')"> <%= t('.youth') %> </div>
 					<ol id="menu1_3" style="display:none">
 						<li><%= link_to t('.youthliterature'), store_path(genre: "youth literature") %></li>
 						<li><%= link_to t('.cartoon'), store_path(genre: "cartoon") %></li>
 						<li><%= link_to t('.humor'), store_path(genre: "humor") %></li>
-					</ol> <br />
-					<div onClick="menus('menu1_4')"> <%= t('.children') %> </div> <br />
+					</ol>
+					<div onClick="menus('menu1_4')"> <%= t('.children') %> </div>
 					<ol id="menu1_4" style="display:none">
 						<li><%= link_to t('.0-2'), store_path(genre: "0-2") %></li>
 						<li><%= link_to t('.3-6'), store_path(genre: "3-6") %></li>
 						<li><%= link_to t('.7-10'), store_path(genre: "7-10") %></li>
 						<li><%= link_to t('.11-14'), store_path(genre: "11-14") %></li>
 						<li><%= link_to t('.picturebook'), store_path(genre: "picture book") %></li>
-					</ol> <br />
-					<div onClick="menus('menu1_5')"> <%= t('.life') %> </div> <br />
+					</ol>
+					<div onClick="menus('menu1_5')"> <%= t('.life') %> </div>
 					<ol id="menu1_5" style="display:none">
 						<li><%= link_to t('.exercise'), store_path(genre: "exercise") %></li>
 						<li><%= link_to t('.food'), store_path(genre: "food") %></li>
 						<li><%= link_to t('.tour'), store_path(genre: "tour") %></li>
 						<li><%= link_to t('.arder'), store_path(genre: "arder") %></li>
 						<li><%= link_to t('.family'), store_path(genre: "family") %></li>
-					</ol> <br />
-					<div onClick="menus('menu1_6')"> <%= t('.technology') %> </div> <br />
+					</ol>
+					<div onClick="menus('menu1_6')"> <%= t('.technology') %> </div>
 					<ol id="menu1_6" style="display:none">
 						<li><%= link_to t('.coptic'), store_path(genre: "coptic") %></li>
 						<li><%= link_to t('.building'), store_path(genre: "building") %></li>
 						<li><%= link_to t('.computer'), store_path(genre: "computer") %></li>
 						<li><%= link_to t('.naturalscience'), store_path(genre: "natural science") %></li>
 						<li><%= link_to t('.medicine'), store_path(genre: "medicine") %></li>
-					</ol> <br />
-					<div onClick="menus('menu1_7')"> <%= t('.education') %> </div> <br />
+					</ol>
+					<div onClick="menus('menu1_7')"> <%= t('.education') %> </div>
 					<ol id="menu1_7" style="display:none">
 						<li><%= link_to t('.foreignlanguage'), store_path(genre: "foreign language") %></li>
 						<li><%= link_to t('.test'), store_path(genre: "test") %></li>
 						<li><%= link_to t('.teachingmaterial'), store_path(genre: "teaching material") %></li>
-					</ol> <br />
-					<div onClick="menus('menu1_8')"> <%= t('.management') %> </div> <br />
+					</ol>
+					<div onClick="menus('menu1_8')"> <%= t('.management') %> </div>
 					<ol id="menu1_8" style="display:none">
 						<li><%= link_to t('.economy'), store_path(genre: "economy") %></li>
 						<li><%= link_to t('.manage'), store_path(genre: "manage") %></li>
 						<li><%= link_to t('.finance'), store_path(genre: "finance") %></li>
 					</ol>
-				</li> 
+				</div> 
 			</ul>
-		
 			<% if session[:user_id] %>
 			<ul>
 				<% if @user.genre == "ordinary"%>
@@ -123,10 +124,32 @@
 				<% end %>
 			</ul>
 			<% end %>
-		</div>
-		<div id="main">
+        </div>
+        <div id="menubottom">
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="#">About us</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+      
+      <div id="right">
+      	
+      	<div id="main">
 			<%= yield %>
 		</div>
-	</div>
+		
+      </div>
+      <div class="clear"></div>
+    </div>
+  </div>
+  <div id="footer">
+    <div id="copyright"> <span>© Copyright 2013.<br />
+      All rights reserved.</span> </div>
+    <div id="payment"><%=image_tag("paypal.gif",alt:"paypal")%></div>
+  </div>
+  <div id="footerend"></div>
+</div>
 </body>
 </html>
