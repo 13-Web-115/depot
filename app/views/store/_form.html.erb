@@ -12,10 +12,10 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :content, 'Your Comment:' %><br />
+    <%= f.label :content, t('.your_comment') %><br />
     <%= f.text_area :content, rows:6 %>
   </div>
   <div class="actions">
-    <%= f.submit 'Add Comment'%>
+    <%= f.submit t('.add_comment') %>
   </div>
 <% end %>

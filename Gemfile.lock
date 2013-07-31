@@ -1,5 +1,5 @@
 GEM
-  remote: http://rubygems.org/
+  remote: http://ruby.taobao.org/
   specs:
     actionmailer (3.2.13)
       actionpack (= 3.2.13)
@@ -42,6 +42,7 @@ GEM
     coffee-script-source (1.6.2)
     daemons (1.1.9)
     erubis (2.7.0)
+    eventmachine (1.0.3)
     eventmachine (1.0.3-x86-mingw32)
     excon (0.25.3)
     execjs (1.4.0)
@@ -71,6 +72,7 @@ GEM
     mysql (2.9.1)
     mysql (2.9.1-x86-mingw32)
     netrc (0.7.7)
+    pg (0.16.0)
     pg (0.16.0-x86-mingw32)
     polyglot (0.3.3)
     rack (1.4.5)
@@ -129,6 +131,7 @@ GEM
     will_paginate (3.0.4)
 
 PLATFORMS
+  ruby
   x86-mingw32
 
 DEPENDENCIES

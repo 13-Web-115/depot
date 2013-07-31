@@ -1,26 +1,26 @@
 <% if notice %>
 <p id="notice"><%= notice %></p>
 <% end %>
-<h1>Book Details</h1> <br />
+<h1><%= t('.book_details')%></h1> <br />
 <div class="message">
 <%= image_tag(@product.image_url) %>
 <p>
-  <b class="title">Title:</b>
+  <b class="title"><%= t('.title') %></b>
   <%= @product.title %>
 </p>
 
 <p>
-  <b>Genre:</b>
+  <b><%= t('.genre') %></b>
   <%= @product.genre %>
 </p>
 
 <p>
-  <b>Price:</b>
+  <b><%= t('.price') %></b>
   <%= number_to_currency(@product.price) %>
 </p>
 
 <p>
-  <b>Description:</b>
+  <b><%= t('.descriptions') %></b>
   <%= sanitize(@product.description) %>
 </p>
 

@@ -8,6 +8,7 @@
 #---
 # encoding: utf-8
 Product.delete_all
+User.create(name:'admin', password: 'admin',password_confirmation:'admin', genre:'admin')
 Product.create(title: 'CoffeeScript',
   description: 
     "<p>
