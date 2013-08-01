@@ -332,3 +332,34 @@ ch:
       password_digest:      "密码摘要："
       edit:                 "编辑"
       back:                 "返回"
+
+  about_us:
+    index:
+      aboutus:              "关于我们"
+
+  problems:
+    index:
+      list_problems:        "问题清单"
+      content:              "内容"
+      questioner:           "提问者"
+      new_problem:          "新提问"
+      show:                 "详情"
+      edit:                 "编辑"
+      destroy:              "删除"      
+    new:
+      new_problem:          "新提问"
+      back:                 "返回"
+    form:
+      create_problem:       "创建提问"
+      content:              "内容"
+      questioner:           "提问者"
+    edit:
+      edit_problem:         "编辑问题"
+      show:                 "详情"      
+      back:                 "返回"
+    show:
+      show_problem:         "问题详情"
+      content:              "内容"
+      questioner:           "提问者"
+      edit:                 "编辑"
+      back:                 "返回"

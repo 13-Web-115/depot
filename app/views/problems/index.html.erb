@@ -1,9 +1,9 @@
-<h1>Listing problems</h1>
+<h1><%= t('.list_problems')%></h1>
 
 <table>
   <tr>
-    <th>Content</th>
-    <th>Questioner</th>
+    <th><%= t('.content')%></th>
+    <th><%= t('.questioner')%></th>
     <th></th>
     <th></th>
     <th></th>
@@ -13,13 +13,13 @@
   <tr>
     <td><%= problem.content %></td>
     <td><%= problem.questioner %></td>
-    <td><%= link_to 'Show', problem %></td>
-    <td><%= link_to 'Edit', edit_problem_path(problem) %></td>
-    <td><%= link_to 'Destroy', problem, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <td><%= link_to t('.show'), problem %></td>
+    <td><%= link_to t('.edit'), edit_problem_path(problem) %></td>
+    <td><%= link_to t('.destroy'), problem, method: :delete, data: { confirm: 'Are you sure?' } %></td>
   </tr>
 <% end %>
 </table>
 
 <br />
 
-<%= link_to 'New Problem', new_problem_path %>
+<%= link_to t('.new_problem'), new_problem_path %>

@@ -332,3 +332,35 @@ es:
       password_digest:      "Contraseña digest:"
       edit:                 "Editar"
       back:                 "Espalda"
+
+  about_us:
+    index:
+      aboutus:              "Quiénes Somos"
+
+  problems:
+    index:
+      list_problems:        "Problemas Listing"
+      content:              "Contenido"
+      questioner:           "Preguntador"
+      new_problem:          "Problema Nuevo"
+      show:                 "Mostrar"
+      edit:                 "Editar"
+      destroy:              "Destruir"   
+    new:
+      new_problem:          "Problema Nuevo"
+      back:                 "Espalda"
+    form:
+      create_problem:       "Crear Problema" 
+      content:              "Contenido"
+      questioner:           "Preguntador"
+    edit:
+      edit_problem:         "Edición problema"
+      show:                 "Mostrar"      
+      back:                 "Espalda"         
+    show:
+      show_problem:         "Muestra Problema"
+      content:              "Contenido"
+      questioner:           "Preguntador"
+      edit:                 "Editar"
+      back:                 "Espalda"    
+      
