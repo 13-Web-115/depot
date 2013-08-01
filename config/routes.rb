@@ -1,4 +1,6 @@
 Depot::Application.routes.draw do
+  #get "welcome/index"
+
   #get "contact/index"
 
   #get "about_us/index"
@@ -15,6 +17,9 @@ Depot::Application.routes.draw do
   get 'store/showOrder'
   post 'store/showOrder'
   
+  controller :welcome do
+    get 'welcome' => :index
+  end
   controller :contact do
     get 'contact' => :index
     post 'contact' => :index

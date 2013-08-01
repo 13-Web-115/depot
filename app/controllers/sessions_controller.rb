@@ -10,7 +10,7 @@ class SessionsController < ApplicationController
     if user and user.authenticate(params[:password])
       session[:user_id] = user.id
       if user.genre == "ordinary"
-        redirect_to store_url
+        redirect_to welcome_path
       else
         redirect_to admin_url
       end

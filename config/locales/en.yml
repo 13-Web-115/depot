@@ -395,4 +395,20 @@ en:
       content:              "Content"
       poster:               "Poster"
       post_news:            "Post this news" 
+   
+  contact:
+    index:
+      title:               "What You Want to Say to Us"
+      back:                "Back"
+    form:
+      word:                "Input Your Words Here:"
+      name:                "Input Your Name:"
+      phone:               "Input Your Phone Number:"
+      send:                "Send Message"
+
+  welcome:
+    index:
+      its:                 "It's "
+      youhave:             "You have "
+      tochoose:            "product(s) to choose! Have a nice shopping!"
       

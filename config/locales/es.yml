@@ -395,4 +395,19 @@ es:
       content:              "Contenido"
       poster:               "Póster"
       post_news:            "Publicar Noticias" 
-              
+    
+  contact:
+    index:
+      title:               "¿Quiere decirnos algo"
+      back:                "volver"
+    form:
+      word:                "¿Quieres decir:"
+      name:                "Su nombre:"
+      phone:               "Su número de teléfono:"
+      send:                "enviar"     
+
+  welcome:
+    index:
+      its:                 "Es "
+      youhave:             "Tienes "
+      tochoose:            "producto(s) para elegir! Tener una buena compra!"           

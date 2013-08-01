@@ -395,4 +395,19 @@ ch:
       content:              "内容"
       poster:               "发布人"
       post_news:            "发布新闻" 
-       
+      
+  contact:
+    index:
+      title:               "你想要对我们说些什么"
+      back:                "返回"
+    form:
+      word:                "您想说的话:"
+      name:                "您的姓名:"
+      phone:               "您的电话号码:"
+      send:                "发送"
+
+  welcome:
+    index:
+      its:                 "现在是 "
+      youhave:             "我们有 "
+      tochoose:            "个商品供您选择！ 祝购物愉快！"       

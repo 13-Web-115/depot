@@ -1,4 +1,4 @@
-<h1>What You Want to Say to Us</h1>
+<h1><%= t('.title') %></h1>
 
 <% if notice %>
 	<p id="notice"><%= notice %></p>
@@ -6,4 +6,4 @@
 
 <%= render 'form' %>
 
-<div> | <%= link_to 'Back', store_path %></div>
+<div> | <%= link_to t('.back'), store_path %> </div>

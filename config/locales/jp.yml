@@ -395,4 +395,19 @@ jp:
       content:              "内容"
       poster:               "ポスター"
       post_news:            "ニュースを投稿" 
-            
+    
+  contact:
+    index:
+      title:               "あなたは私たちに何かを言いたい"
+      back:                "復帰"
+    form:
+      word:                "あなたが言いたい:"
+      name:                "あなたのお名前:"
+      phone:               "あなたの電話番号:"
+      send:                "送信"  
+
+  welcome:
+    index:
+      its:                 "それは "
+      youhave:             "我々は持っている "
+      tochoose:            "商品! 幸せなショッピング!"                
