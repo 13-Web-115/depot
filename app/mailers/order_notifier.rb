@@ -27,4 +27,11 @@ class OrderNotifier < ActionMailer::Base
     @line_items = line_items
     mail to: order.email, subject: 'Pragmatic Store Order Products Shipped'
   end
+  
+  def contactUs(content, person, phone)
+    @content = content
+    @person = person
+    @phone = phone
+    mail to: "1264135980@qq.com", subject: 'Contact Email From Pragmatic Store'
+  end
 end

@@ -24,9 +24,9 @@
 	<div id="title"><%= @page_title || t('.title') %></div>
 	<ul>
 		<li> <a href="/"><%= t('.home') %></a> </li>
-		<li> <%= link_to t('.questions'), new_problem_path %> </li>
+		<li> <%= link_to t('.questions'), problems_path %> </li>
 		<li> <%= link_to t('.news'), things_path %> </li>
-		<li> <a href="http://www.baidu.com"><%= t('.contact') %></a> </li>
+		<li> <%= link_to t('.contact'), contact_path %> </li>
 		<% unless session[:user_id] %>
 			<li> <%= link_to t('.login'), login_path %> </li>
 			<li> <%= link_to t('.register'), new_user_path %> </li>
@@ -123,7 +123,7 @@
 					<li><%= link_to t('.users'), users_path %></li>
 					<li><%= link_to t('.comments'), comments_path %></li>
 				<% end %>
-				<li><%= link_to t('.questions'), problems_path %></li>
+				<li><%= link_to t('.questions'), new_problem_path %></li>
 			</ul>
 			<% end %>
         </div>

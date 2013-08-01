@@ -1,7 +1,7 @@
 Depot::Application.routes.draw do
-  get "contact/index"
+  #get "contact/index"
 
-  get "about_us/index"
+  #get "about_us/index"
 
   resources :things
 
@@ -15,6 +15,10 @@ Depot::Application.routes.draw do
   get 'store/showOrder'
   post 'store/showOrder'
   
+  controller :contact do
+    get 'contact' => :index
+    post 'contact' => :index
+  end
   controller :about_us do
     get 'about' => :index
   end
