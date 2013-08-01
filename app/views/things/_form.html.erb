@@ -12,18 +12,18 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :title %><br />
+    <%= f.label :title,t('.title')%><br />
     <%= f.text_field :title %>
   </div>
   <div class="field">
-    <%= f.label :content %><br />
+    <%= f.label :content,t('.content')%><br />
     <%= f.text_area :content %>
   </div>
   <div class="field">
-    <%= f.label :poster %><br />
+    <%= f.label :poster,t('.poster')%><br />
     <%= f.text_field :poster %>
   </div>
   <div class="actions">
-    <%= f.submit "Post This News" %>
+    <%= f.submit t('.post_news') %>
   </div>
 <% end %>

@@ -345,7 +345,8 @@ es:
       new_problem:          "Problema Nuevo"
       show:                 "Mostrar"
       edit:                 "Editar"
-      destroy:              "Destruir"   
+      destroy:              "Destruir"
+      sure_delete:          "Está seguro de eliminar ?"   
     new:
       new_problem:          "Problema Nuevo"
       back:                 "Espalda"
@@ -363,4 +364,35 @@ es:
       questioner:           "Preguntador"
       edit:                 "Editar"
       back:                 "Espalda"    
-      
+
+  things:
+    index:
+      list_news:            "Listado de Noticias"
+      title:                "Título"
+      content:              "Contenido"
+      poster:               "Póster"
+      show:                 "Mostrar"
+      edit:                 "Editar"
+      destroy:              "Destruir"   
+      post_news:            "Publicar Noticias"
+      sure_delete:          "Está seguro de eliminar ?"
+    edit:
+      edit_news:            "Edición Noticias"
+      show:                 "Mostrar"
+      back:                 "Espalda"
+    new:
+      post_news:            "Publicar Noticias"
+      back:                 "Espalda"
+    show:
+      show_news:            "Mostrar Noticias"
+      title:                "Título"
+      content:              "Contenido"
+      poster:               "Póster"
+      edit:                 "Editar"
+      back:                 "Espalda"
+    form:
+      title:                "Título"
+      content:              "Contenido"
+      poster:               "Póster"
+      post_news:            "Publicar Noticias" 
+              

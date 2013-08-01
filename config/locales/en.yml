@@ -345,7 +345,8 @@ en:
       new_problem:          "New Problem"
       show:                 "Show"
       edit:                 "Edit"
-      destroy:              "Destroy"   
+      destroy:              "Destroy"  
+      sure_delete:          "Are you sure ?" 
     new:
       new_problem:          "New Problem"
       back:                 "Back"
@@ -364,3 +365,34 @@ en:
       edit:                 "Edit"
       back:                 "Back"
                         
+  things:
+    index:
+      list_news:            "Listing News"
+      title:                "Title"
+      content:              "Content"
+      poster:               "Poster"
+      show:                 "Show"
+      edit:                 "Edit"
+      destroy:              "Destroy"   
+      post_news:            "Post News"
+      sure_delete:          "Are you sure delete ?"
+    edit:
+      edit_news:            "Editing News"
+      show:                 "Show"
+      back:                 "Back"
+    new:
+      post_news:            "Post News"
+      back:                 "Back"
+    show:
+      show_news:            "Show News"
+      title:                "Title"
+      content:              "Content"
+      poster:               "Poster" 
+      edit:                 "Edit"
+      back:                 "Back"
+    form:
+      title:                "Title"
+      content:              "Content"
+      poster:               "Poster"
+      post_news:            "Post this news" 
+      

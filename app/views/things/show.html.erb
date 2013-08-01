@@ -1,22 +1,22 @@
-<h1>Show News</h1>
+<h1><%= t('.show_news')%></h1>
 <% if notice %>
 <p id="notice"><%= notice %></p>
 <% end %>
 <p>
-  <b>Title:</b>
+  <b><%= t('.title')%>:</b>
   <%= @thing.title %>
 </p>
 
 <p>
-  <b>Content:</b>
+  <b><%= t('.content')%>:</b>
   <%= @thing.content %>
 </p>
 
 <p>
-  <b>Poster:</b>
+  <b><%= t('.poster')%>:</b>
   <%= @thing.poster %>
 </p>
 
 
-<%= link_to 'Edit', edit_thing_path(@thing) %> |
-<%= link_to 'Back', things_path %>
+<%= link_to t('.edit'), edit_thing_path(@thing) %> |
+<%= link_to t('.back'), things_path %>
