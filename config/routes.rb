@@ -1,4 +1,6 @@
 Depot::Application.routes.draw do
+  get "contact/index"
+
   get "about_us/index"
 
   resources :things
