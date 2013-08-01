@@ -267,6 +267,8 @@ ch:
       edit:               "编辑"
       destroy:            "删除"
       sure_delete:        "您确定要删除吗？"
+      prelabel:           "上一页"
+      nexlabel:           "下一页"
     edit:
       show:               "详情"
       back:               "返回"

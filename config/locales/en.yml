@@ -267,6 +267,8 @@ en:
       edit:               "Edit"
       destroy:            "Destroy"
       sure_delete:        "Are you sure delete ?"
+      prelabel:     "Previous page"
+      nexlabel:     "Next page"
     edit:
       show:               "Show"
       back:               "Back"

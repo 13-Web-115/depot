@@ -267,6 +267,8 @@ es:
       edit:               "Editar"
       destroy:            "Destruir"
       sure_delete:        "Está seguro de eliminar ?"
+      prelabel:           "Página anterior"
+      nexlabel:           "Página siguiente"
     edit:
       show:               "Mostrar"
       back:               "Espalda"

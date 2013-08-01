@@ -267,6 +267,8 @@ jp:
       edit:               "編集"
       destroy:            "削除"
       sure_delete:        "あなたはそれを削除してもよろしいですか？"
+      prelabel:           "前のページ"
+      nexlabel:           "次のページ"
     edit:
       show:               "詳細"
       back:               "帰る"

@@ -8,9 +8,10 @@ class ProductsController < ApplicationController
     if user.genre == "shopkeeper"
       @products = Product.where(owner: user.name)
     else
-      @products = Product.all
+      @products = Product.where("price > ?", -1)
     end
-
+    @products = @products.paginate page: params[:page], order: 'created_at desc',
+      per_page: 6
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @products }
