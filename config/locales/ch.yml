@@ -345,7 +345,8 @@ ch:
       new_problem:          "新提问"
       show:                 "详情"
       edit:                 "编辑"
-      destroy:              "删除"      
+      destroy:              "删除"
+      sure_delete:          "您确定要删除吗？"      
     new:
       new_problem:          "新提问"
       back:                 "返回"
@@ -363,3 +364,35 @@ ch:
       questioner:           "提问者"
       edit:                 "编辑"
       back:                 "返回"
+
+  things:
+    index:
+      list_news:            "新闻列表"
+      title:                "标题"
+      content:              "内容"
+      poster:               "发布人"
+      show:                 "详情"
+      edit:                 "编辑"
+      destroy:              "删除"   
+      post_news:            "发布新闻"
+      sure_delete:          "您确定要删除吗？"
+    edit:
+      edit_news:            "编辑新闻"
+      show:                 "详情"
+      back:                 "返回"
+    new:
+      post_news:            "发布新闻"
+      back:                 "返回"
+    show:
+      show_news:            "新闻详情"
+      title:                "标题"
+      content:              "内容"
+      poster:               "发布人" 
+      edit:                 "编辑"
+      back:                 "返回"
+    form:
+      title:                "标题"
+      content:              "内容"
+      poster:               "发布人"
+      post_news:            "发布新闻" 
+       

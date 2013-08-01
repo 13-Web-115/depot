@@ -345,7 +345,8 @@ jp:
       new_problem:          "新たな質問"
       show:                 "詳細"
       edit:                 "編集"
-      destroy:              "削除"     
+      destroy:              "削除"
+      sure_delete:          "あなたはそれを削除してもよろしいですか？"      
     new:
       new_problem:          "新たな質問"
       back:                 "帰る"
@@ -363,4 +364,35 @@ jp:
       questioner:           "質問者"
       edit:                 "編集"
       back:                 "帰る"
-      
+
+  things:
+    index:
+      list_news:            "ニュース一覧"
+      title:                "タイトル"
+      content:              "内容"
+      poster:               "ポスター"
+      show:                 "詳細"
+      edit:                 "編集"
+      destroy:              "削除"   
+      post_news:            "ニュースを投稿"
+      sure_delete:          "あなたはそれを削除してもよろしいですか？"  
+    edit:
+      edit_news:            "編集ニュース"
+      show:                 "詳細"
+      back:                 "帰る"
+    new:
+      post_news:            "ニュースを投稿"
+      back:                 "帰る"
+    show:
+      show_news:            "ニュース詳細"
+      title:                "タイトル"
+      content:              "内容"
+      poster:               "ポスター" 
+      edit:                 "編集"
+      back:                 "帰る"
+    form:
+      title:                "タイトル"
+      content:              "内容"
+      poster:               "ポスター"
+      post_news:            "ニュースを投稿" 
+            

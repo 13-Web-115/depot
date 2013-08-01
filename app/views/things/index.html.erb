@@ -1,10 +1,10 @@
-<h1>Listing News</h1>
+<h1><%= t('.list_news')%></h1>
 
 <table>
   <tr>
-    <th>Title</th>
-    <th>Content</th>
-    <th>Poster</th>
+    <th><%= t('.title')%></th>
+    <th><%= t('.content')%></th>
+    <th><%= t('.poster')%></th>
     <th></th>
     <th></th>
     <th></th>
@@ -15,13 +15,13 @@
     <td><%= thing.title %></td>
     <td><%= thing.content %></td>
     <td><%= thing.poster %></td>
-    <td><%= link_to 'Show', thing %></td>
-    <td><%= link_to 'Edit', edit_thing_path(thing) %></td>
-    <td><%= link_to 'Destroy', thing, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <td><%= link_to t('.show'), thing %></td>
+    <td><%= link_to t('.edit'), edit_thing_path(thing) %></td>
+    <td><%= link_to t('.destroy'), thing, method: :delete, data: { confirm: t('.sure_delete') } %></td>
   </tr>
 <% end %>
 </table>
 
 <br />
 
-<%= link_to 'Post News', new_thing_path %>
+<%= link_to t('.post_news'), new_thing_path %>
