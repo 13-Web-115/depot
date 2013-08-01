@@ -21,9 +21,21 @@ class ApplicationController < ActionController::Base
     end
     
     def current_cart
-      Cart.find(session[:cart_id])
+      if session[:user_id]
+        user = User.find(session[:user_id])
+      end
+      if user
+        Cart.find(user.cart_id)
+      else
+        Cart.find(session[:cart_id])
+      end
+      #Cart.find(session[:cart_id])
     rescue ActiveRecord::RecordNotFound
       cart = Cart.create
+      if session[:user_id]
+        user = User.find(session[:user_id])
+        user.update_attribute(:cart_id, cart.id)
+      end
       session[:cart_id] = cart.id
       cart
     end

@@ -22,6 +22,7 @@ class SessionsController < ApplicationController
 
   def destroy
     session[:user_id] = nil
+    session[:cart_id] = nil
     redirect_to store_url, notice: t('.logout')
   end
 end
