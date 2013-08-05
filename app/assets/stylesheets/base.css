@@ -1,0 +1,31 @@
+
+
+/* #ICON FONT
+================================================== */
+
+
+@font-face {
+	font-family: 'WebSymbolsRegular';
+	src: url('fonts/websymbols-regular-webfont.eot');
+	src: url('fonts/websymbols-regular-webfont.eot@#iefix') format('embedded-opentype'), url('fonts/websymbols-regular-webfont.woff') format('woff'), url('fonts/websymbols-regular-webfont.ttf') format('truetype'), url('fonts/websymbols-regular-webfont.svg#WebSymbolsRegular') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+/*	Blockquotes  */
+
+	
+	a {
+		text-decoration:none;
+		outline:none;
+		color:#fe8a02;
+	}
+	
+	a:hover {
+		color:#322e39;
+	}
+	span {
+		color:#fe8a02;
+	}
+
+

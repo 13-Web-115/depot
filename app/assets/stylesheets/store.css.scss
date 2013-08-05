@@ -17,6 +17,12 @@
     float: left;
   }
  
+ .slider {
+   img {
+     width: 700px;
+     height: 300px;
+   }
+ }
   /* An entry in the store catalog */
  .entry {
    overflow: auto;

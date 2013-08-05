@@ -32,6 +32,12 @@ class StoreController < ApplicationController
           @products = Product.order(:title)
         end
       end
+      temp = Product.order(:created_at)
+      len = temp.length
+      @recommends = []
+      for i in 1..3
+        @recommends << temp[len - i]
+      end
       @cart = current_cart
       if @products.class == ActiveRecord::Relation
         @products = @products.paginate page: params[:page], order: 'created_at desc', per_page: 5

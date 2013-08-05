@@ -1,8 +1,38 @@
+<head><link rel="stylesheet" href="style.css"></head>
 <% if notice %>
 <p id="notice"><%= notice %></p>
 <% end %>
 <div id="product">
 <h1></h1>
+<!--slider-->
+  <div class="sixteen columns clearfix">
+    <div class="slider">
+      <ul class="rslides" id="slider3">
+        <li> <%= link_to image_tag(@recommends[0].image_url, title:"some title", alt:"some title"), controller: 'store', action: :show, id: @recommends[0] %>
+          <div class="caption">
+            <h3><%= @recommends[0].title %></h3>
+            <p><%= sanitize(truncate(@recommends[0].description, length: 200)) %><br />           	
+            </p>
+          </div>
+        </li>
+        <li> <%= link_to image_tag(@recommends[1].image_url, title:"some title", alt:"some title"), controller: 'store', action: :show, id: @recommends[1] %>
+          <div class="caption">
+            <h3><%= @recommends[1].title %></h3>
+            <p><%= sanitize(truncate(@recommends[1].description, length: 200)) %><br />
+            </p>
+          </div>
+        </li>
+        <li> <%= link_to image_tag(@recommends[2].image_url, title:"some title", alt:"some title"), controller: 'store', action: :show, id: @recommends[2] %>
+          <div class="caption">
+            <h3><%= @recommends[2].title %></h3>
+            <p><%= sanitize(truncate(@recommends[2].description, length: 200)) %><br />
+            </p>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <!--.slider--> 
 </div>
 <% @products.each do |product|%>
 	<div class="entry" background="red">

@@ -1,0 +1,27 @@
+/*
+Theme Name: Cubismo
+Description: Minimal Responsive HTML/CSS Theme
+Author: Predrag Stojanovic
+Author URI: http://themeforest.net/user/pebas/
+*/
+
+/********* FONT *********/
+
+
+/********* BASE *********/
+@import url('base.css') screen; 
+
+/********* SKELETON *********/
+
+
+/********* PRETTY PHOTO *********/
+
+
+/********* FLEX SLIDER *********/
+
+
+/********* TIPSY *********/
+
+
+/********* LAYOUT *********/
+@import url('layout.css') screen; 
