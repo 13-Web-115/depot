@@ -76,19 +76,23 @@ class ProductsController < ApplicationController
   def create
     if request.get?  
       @product = Product.new  
-      puts "NNNNNNNNNNNNNNNNNNNNNNN"
-    else  
-      @product= Product.new(params[:product])     
-      @product.image_url = uploadFile(params[:product]['image_url']) 
-      puts "MMMMMMMMMMMMMMMMMMMMMMMM:#{@product.image_url}"  
-      respond_to do |format|
-        if @product.save
-          format.html { redirect_to @product, notice: 'Product was successfully created.' }
-          format.json { render json: @product, status: :created, location: @product }
-        else
-          format.html { render action: "new" }
-          format.json { render json: @product.errors, status: :unprocessable_entity }
+      #puts "NNNNNNNNNNNNNNNNNNNNNNN"
+    else
+      if params[:product]['image_url'] != nil
+        @product= Product.new(params[:product])     
+        @product.image_url = uploadFile(params[:product]['image_url']) 
+        #puts "MMMMMMMMMMMMMMMMMMMMMMMM:#{@product.image_url}"  
+        respond_to do |format|
+          if @product.save
+            format.html { redirect_to @product, notice: 'Product was successfully created.' }
+            format.json { render json: @product, status: :created, location: @product }
+          else
+            format.html { render action: "new" }
+            format.json { render json: @product.errors, status: :unprocessable_entity }
+          end
         end
+      else
+        redirect_to new_product_path, notice: "Please Upload an Image!"  
       end 
     end
 =begin    
@@ -114,6 +118,8 @@ class ProductsController < ApplicationController
   def update
     @product = Product.find(params[:id])
     if params[:product]['image_url'] != nil
+      puts "xxxxxxxxxxxxxxxxxxxxxx"
+      puts params[:product]['image_url']
       params[:product][:image_url] = uploadFile(params[:product]['image_url']) 
       @product.genre = params[:genre]
       respond_to do |format|
