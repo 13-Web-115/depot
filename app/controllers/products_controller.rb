@@ -3,6 +3,32 @@ class ProductsController < ApplicationController
   # GET /products.json
   before_filter :authorizeAdminAndShopper
   
+  before_filter :configure_charsets    
+  def configure_charsets
+    @headers = {}          
+    @headers["Content-Type"] = "text/html;charset=utf-8"      
+   end      
+    
+  def uploadFile(file)    
+     if !file.original_filename.empty?  
+       #生成一个随机的文件名      
+       @filename=file.original_filename         
+       #向dir目录写入文件  
+       File.open("#{Rails.root}/app/assets/images/#{@filename}", "wb") do |f|   
+          f.write(file.read)  
+       end   
+       #返回文件名称，保存到数据库中  
+       return @filename  
+     end  
+  end   
+  
+  def getFileName(filename)  
+     if !filename.nil?  
+       require 'uuidtools'  
+       filename.sub( /.*\./,UUID.random_create.to_s+'.')  
+     end  
+  end 
+  
   def index
     user = User.find_by_id(session[:user_id])
     if user.genre == "shopkeeper"
@@ -48,6 +74,24 @@ class ProductsController < ApplicationController
   # POST /products
   # POST /products.json
   def create
+    if request.get?  
+      @product = Product.new  
+      puts "NNNNNNNNNNNNNNNNNNNNNNN"
+    else  
+      @product= Product.new(params[:product])     
+      @product.image_url = uploadFile(params[:product]['image_url']) 
+      puts "MMMMMMMMMMMMMMMMMMMMMMMM:#{@product.image_url}"  
+      respond_to do |format|
+        if @product.save
+          format.html { redirect_to @product, notice: 'Product was successfully created.' }
+          format.json { render json: @product, status: :created, location: @product }
+        else
+          format.html { render action: "new" }
+          format.json { render json: @product.errors, status: :unprocessable_entity }
+        end
+      end 
+    end
+=begin    
     @product = Product.new(params[:product])
     #@product.genre = params[:genre]
     unless File.exist?(@product.image_url)
@@ -62,26 +106,27 @@ class ProductsController < ApplicationController
         format.json { render json: @product.errors, status: :unprocessable_entity }
       end
     end
+=end
   end
 
   # PUT /products/1
   # PUT /products/1.json
   def update
     @product = Product.find(params[:id])
-    @product.genre = params[:genre]
-    unless File.exist?(@product.image_url)
-      @product.image_url = 'default.png'
-      params[:product][:image_url] = 'default.png'
-    end
-
-    respond_to do |format|
-      if @product.update_attributes(params[:product])
-        format.html { redirect_to @product, notice: 'Product was successfully updated.' }
-        format.json { head :no_content }
-      else
-        format.html { render action: "edit" }
-        format.json { render json: @product.errors, status: :unprocessable_entity }
+    if params[:product]['image_url'] != nil
+      params[:product][:image_url] = uploadFile(params[:product]['image_url']) 
+      @product.genre = params[:genre]
+      respond_to do |format|
+        if @product.update_attributes(params[:product])
+          format.html { redirect_to @product, notice: 'Product was successfully updated.' }
+          format.json { head :no_content }
+        else
+          format.html { render action: "edit" }
+          format.json { render json: @product.errors, status: :unprocessable_entity }
+        end
       end
+    else
+      redirect_to edit_product_path(@product), notice: "Please Upload an Image!"
     end
   end
 
