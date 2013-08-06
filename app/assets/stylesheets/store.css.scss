@@ -2,6 +2,7 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 .store{
+  /*
   h1 {
     margin: 0;
     padding-bottom: 0.5em;
@@ -9,7 +10,7 @@
     color: #154;
     border-bottom: 4px dotted #77d;
   }
-  
+  */
   img {
     width: 80px;
     margin-right: 5px;
@@ -113,6 +114,7 @@
       width: 50%;
       height: 50%;
       z-index:1002;
+      color: black;
       #a4 {
         padding-top: 100px;
       }
@@ -123,7 +125,7 @@
       top: 0;
       left: 0;
       width:102%;
-      height:200%;
+      height:210%;
       background-color:black;
       z-index:1001;
       opacity:.80;
@@ -154,5 +156,55 @@
       position:absolute;
       right:0;
       margin-top:-5px;
+  }
+  
+  .templatemo_product_box {
+    float: left;
+    width: 303px;
+    height: 210px;
+    padding: 10px;
+    border: 1px solid #333;
+  }
+  .templatemo_product_box h1 span {
+    font-weight: normal;
+  }
+  
+  .templatemo_product_box img {
+    float: left;
+    margin-right: 20px;
+  }
+  
+  .templatemo_product_box .product_info {
+    float: left;
+    width: 180px;
+  }
+  
+  .product_info p {
+    margin-bottom: 15px;
+  }
+  .buy_now_button a{
+    clear: both;
+    text-align: center;
+    display: block;
+    width: 100px;
+    padding: 4px 0 5px 0;
+    margin-bottom: 10px; 
+    background: url(templatemo_btn_02.jpg) no-repeat;
+    color: #FFFFFF;
+    font-weight: bold;
+    text-decoration: none;
+  }
+  
+  .detail_button a{
+    clear: both;
+    text-align: center;
+    display: block;
+    width: 100px;
+    padding: 4px 0 5px 0;
+    margin-bottom: 10px; 
+    background: url(templatemo_btn_01.jpg) no-repeat;
+    color: #ffffff;
+    font-weight: bold;
+    text-decoration: none;
   }
 }

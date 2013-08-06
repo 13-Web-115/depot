@@ -1,6 +1,7 @@
 class ApplicationController < ActionController::Base
   before_filter :set_i18n_locale_from_params
   before_filter :getCurrentUser
+  before_filter :recommend_books
   
   protect_from_forgery
   before_filter :authorize
@@ -10,6 +11,15 @@ class ApplicationController < ActionController::Base
     def authorize
       unless User.find_by_id(session[:user_id]) 
         redirect_to login_url, notice: "Please login"
+      end
+    end
+    
+    def recommend_books
+      temp = Product.order(:created_at)
+      len = temp.length
+      @recommends = []
+      for i in 1..3
+        @recommends << temp[len - i]
       end
     end
     

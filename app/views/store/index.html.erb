@@ -3,11 +3,11 @@
 <p id="notice"><%= notice %></p>
 <% end %>
 <div id="product">
-<h1></h1>
+
 <!--slider-->
   <div class="sixteen columns clearfix">
     <div class="slider">
-      <ul class="rslides" id="slider3">
+      <ol class="rslides" id="slider3">
         <li> <%= link_to image_tag(@recommends[0].image_url, title:"some title", alt:"some title"), controller: 'store', action: :show, id: @recommends[0] %>
           <div class="caption">
             <h3><%= @recommends[0].title %></h3>
@@ -29,12 +29,13 @@
             </p>
           </div>
         </li>
-      </ul>
+      </ol>
     </div>
   </div>
   <!--.slider--> 
 </div>
 <% @products.each do |product|%>
+	<!--
 	<div class="entry" background="red">
 		<%= image_tag(product.image_url) %>
 		<h3><%= product.title %></h3>
@@ -45,8 +46,20 @@
 				remote: true %>
 			<%= link_to t('.detail'), controller: 'store', action: :show, id: product %>
 		</div>
-	</div>
+	</div>-->
+	<div class="templatemo_product_box">
+    	<h1><%= truncate(product.title, length: 30) %></h1>
+  		<%= image_tag(product.image_url) %>
+        <div class="product_info">
+        	<%= sanitize(truncate(product.description, length: 50)) %>
+          <h3><%= number_to_currency(product.price) %></h3>
+            <div class="buy_now_button"><%= link_to t('.add_html'), line_items_path(product_id: product), method: :post, 
+				remote: true %></div>
+            <div class="detail_button"><%= link_to t('.detail'), controller: 'store', action: :show, id: product %></div>
+        </div>
+        <div class="cleaner">&nbsp;</div>
+    </div>
 <% end %>
 <% if @products.class == ActiveRecord::Relation %>
-<p><%= will_paginate @products, previous_label: t('.prelabel'),next_label: t('.nexlabel') %></p>
+<div style="text-align: center;"><%= will_paginate @products, previous_label: t('.prelabel'),next_label: t('.nexlabel') %></div>
 <% end %>

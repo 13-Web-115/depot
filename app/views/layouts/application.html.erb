@@ -23,6 +23,11 @@
 				<li> <%= link_to t('.logout'), logout_path, method: :delete %> </li>
 			<% end %>
 		</ul>
+		<div id="userMessage">
+			<% if session[:user_id] %>
+				<%= link_to t('.welcome') + " #{@user.name}!", edit_user_path(@user) %>
+			<% end %>
+		</div>
 	</div>
 	<div id="slide">
 		<input type='checkbox' id='sideToggle'>
@@ -47,12 +52,21 @@
 	<% end %>
 	</div>
   <div id="header"> 
-	<div id="userMessage">
-		<% if session[:user_id] %>
-			<%= link_to t('.welcome') + " #{@user.name}!", edit_user_path(@user) %>
-		<% end %>
-	</div>
-	
+  		<div id="templatemo_special_offers">
+        	<p>
+                <span>25%</span> discounts for
+        purchase over $80
+        	</p>
+        </div>
+        
+        
+        <div id="templatemo_new_books">
+        	<ol>
+                <li><%= truncate(@recommends[0].title, length: 10) %></li>
+                <li><%= truncate(@recommends[1].title, length: 10) %></li>
+                <li><%= truncate(@recommends[2].title, length: 10) %></li>
+            </ol>            
+        </div>
 	<div id="search">
 		<%= form_tag store_path do %>
 			<div id="searchBox">
@@ -64,11 +78,12 @@
 		<% end %>
 	</div>
   </div>
-  <div id="border">
+  
     <div id="main1">
       <div id="left">
         <div id="menu">
-          <ul>	
+        	<h1>Categories</h1>
+          	<ul>
 				<li onClick="menus('menu1')"> <%= t('.category') %> </li> 
 				<div id="menu1" > 				
 					<div onClick="menus('menu1_2')"> <%= t('.art') %> </div>
@@ -122,24 +137,30 @@
 					</ol>
 				</div> 
 			</ul>
-			<% if session[:user_id] %>
-			<ul>
-				<% if @user.genre == "ordinary"%>
-					<li><%= link_to t('.my_orders'), orders_path %></li>
-				<% end %>
-				<% if @user.genre != "ordinary"%>
-					<li><%= link_to t('.orders'), orders_path %></li>
-					<li><%= link_to t('.products'), products_path %></li>
-					<li><%= link_to t('.postnews'), new_thing_path %></li>
-				<% end %>
-				<% if @user.genre == "admin"%>
-					<li><%= link_to t('.users'), users_path %></li>
-					<li><%= link_to t('.comments'), comments_path %></li>
-				<% end %>
-				<li><%= link_to t('.questions'), new_problem_path %></li>
-			</ul>
-			<% end %>
-        </div>
+		</div>
+
+		<% if session[:user_id] %>
+			<div id="menu">
+				<h1>Operation</h1>
+				<ul>
+					<% if @user.genre == "ordinary"%>
+						<li><%= link_to t('.my_orders'), orders_path %></li>
+					<% end %>
+					<% if @user.genre != "ordinary"%>
+						<li><%= link_to t('.orders'), orders_path %></li>
+						<li><%= link_to t('.products'), products_path %></li>
+						<li><%= link_to t('.postnews'), new_thing_path %></li>
+					<% end %>
+					<% if @user.genre == "admin"%>
+						<li><%= link_to t('.users'), users_path %></li>
+						<li><%= link_to t('.comments'), comments_path %></li>
+					<% end %>
+					<li><%= link_to t('.questions'), new_problem_path %></li>
+				</ul>
+			</div>
+		<% end %>
+
+        <!--
         <div id="menubottom">
           <ul>
             <li><a href="/">Home</a></li>
@@ -147,6 +168,7 @@
             <li><%= link_to t('.contact'), contact_path %></li>
           </ul>
         </div>
+       -->
       </div>
       
       <div id="right">
@@ -157,29 +179,34 @@
 		
       </div>
       <div class="clear"></div>
+      <div class="cleaner_with_height">&nbsp;</div>
     </div>
-  </div>
-  <div id="footer">
-    <div id="copyright"> <span>© Copyright 2013.<br />
-      All rights reserved.</span> </div>
-    <div id="payment"><%=image_tag("paypal.gif",alt:"paypal")%></div>
-  </div>
-  <div id="footerend"></div>
+  
+  	<div id="templatemo_footer">
+		<a href="subpage.html">Home</a> | 
+		<%= link_to 'About us', about_path %> | 
+		<a href="/">Books</a> | 
+		<a href="#">New Releases</a> | 
+		<a href="#">FAQs</a> | 
+		<%= link_to t('.contact'), contact_path %> <br />
+        Copyright © 2024 <a href="#"><strong>岳阳楼记</strong></a> | 
+        Designed by <a href="http://sc.chinaz.com/" target="_parent" title="BinQi">BinQi</a>
+	</div> 
 </div>
-
-<!-- Login in a jump window -->
+<div style="display:none"><script src='http://v7.cnzz.com/stat.php?id=155540&web_id=155540' language='JavaScript' charset='gb2312'></script></div>
+<!-- Login in a jump window  style中显示半透明效果-->
 <div id="a1" class="b1" style="filter:alpha(opacity=50); -moz-opacity:0.50; opacity:0.50;">
     <div id="a3" class="b3">Login<a href="javascript:void(0)" onClick="login(0)" class="b5"><%= image_tag('x.png') %></a></div>
     <div id="a4" class="b4">
         <form name="form1" method="post" action="/login/">
         	<table align="center">			 	
 			 	<tr>
-			 		<td><%= label_tag :name, t('.name')%></td>
+			 		<td><b><%= label_tag :name, t('.name')%></b></td>
 			 		<td><%= text_field_tag :name, params[:name] %></td>
 			 	</tr>
 			 	
 			 	<tr>
-			 		<td><%= label_tag :password, t('.password') %></td>
+			 		<td><b><%= label_tag :password, t('.password') %></b></td>
 			 		<td><%= password_field_tag :password, params[:password] %></td>			 		
 			 	</tr>			
 			 </table>

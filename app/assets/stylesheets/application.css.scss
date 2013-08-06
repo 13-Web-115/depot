@@ -16,14 +16,15 @@
   padding-top: 3em;
   padding-right: 1em;
 }
+/*
 h1 {
     margin: 0;
     padding-bottom: 0.5em;
     font: 150% sans-serif;
     color: #154;
     border-bottom: 4px dotted #77d;
-}
-#product h1 {
+}*/
+/*#product h1 {
   background-image:url(products.jpg);
   background-repeat:no-repeat;
   width:530px;
@@ -33,7 +34,7 @@ h1 {
   border-bottom: 4px dotted #77d;
   margin: 10px 0px 15px 0px;
   padding: 0px 0px 10px 0px;
-}
+}*/
 #welcome h1 {
   background-image:url(welcome.gif);
   background-repeat:no-repeat;
@@ -53,6 +54,26 @@ h1 {
   font-size: 11px;
   color: #ffffff;
   background: #4b4743;
+}
+.cleaner {
+  clear: both;
+  width: 100%;
+  height: 1px;
+  font-size: 1px; 
+}
+
+.cleaner_with_height {
+  clear: both;
+  width: 100%;
+  height: 30px;
+  font-size: 1px; 
+}
+
+.cleaner_with_width {
+  float: left;
+  width: 20px;
+  height: 30px;
+  font-size: 1px; 
 }
 /* menu */
 
@@ -97,7 +118,7 @@ h1 {
   width: 960px;
   margin: 0 auto;
   padding: 0 10px;
-  background: #1c1c1b url(images/templatemo_bg.jpg) repeat-y;
+  background: #1c1c1b url(templatemo_bg.jpg) repeat-y;
 }
 #notice {
   color: #000 !important;
@@ -106,6 +127,18 @@ h1 {
   margin-bottom: 2em;
   background-color: #f0f0f0;
   font: bold smaller sans-serif;
+}
+#userMessage {
+  display: inline;
+  padding-right: 1em;
+  a {
+    text-decoration: none;
+    color: #dcf;
+  }
+  font-size: 1.5em;
+  font-variant: normal;
+  font: normal "Times New Roman", serif;
+  float: right;
 }
 #header {
   background-image:url(templatemo_header_bg.jpg);
@@ -122,15 +155,6 @@ h1 {
     padding-top: 0.5em;
     padding-left: 0.3em;
     color: deepskyblue;
-  }
-  #userMessage {
-    padding-top: 1.7em;
-    padding-right: 1em;
-    a {color: #dcf;}
-    font-size: 0.4em;
-    font-variant: normal;
-    font: normal "Times New Roman", serif;
-    float: right;
   }
   img {
     float: left;
@@ -161,6 +185,47 @@ h1 {
       float: left;
     }
   }
+  
+  #templatemo_special_offers {
+    float: left;
+    font-size: 14px;  
+    margin-top: 95px;
+    margin-left: 490px;
+    width: 180px;
+  }
+  
+  #templatemo_special_offers a {
+    font-size: 12px;
+    color: white;
+  }
+  
+  #templatemo_special_offers  p {
+    margin: 0 0 20px 0;
+  }
+  #templatemo_special_offers p span {
+    font-size: 18px;
+  }
+  
+  #templatemo_new_books {
+    float: left;
+    margin-top: 90px; 
+    margin-left: 55px;
+    width: 180px;
+  }
+  
+  #templatemo_new_books a {
+    font-size: 12px;
+    color: white;
+  }
+  #templatemo_new_books ol {
+     margin: 0 0 10px 0;
+     padding: 0 0 0 20px;
+  }
+  
+  #templatemo_new_books li {
+     margin: 0;
+     padding: 0; 
+  }
 }
 #border {
   background-image:url(border.gif);
@@ -168,32 +233,131 @@ h1 {
   width:979px;
 }
 #main1 {
-  background-image:url(contentbg.gif);
-  background-color:#abe4fe;
-  margin: 0px 12px 0px 10px;
-  background-repeat: repeat-x;
+  //background-image:url(contentbg.gif);
+  //background-color:#abe4fe;
+  //margin: 0px 12px 0px 10px;
+  //background-repeat: repeat-x;
+  clear: both;
+  width: 920px;
+  padding: 0 20px;
 }
 #left {
-  width:261px;
-  float:left;
-  display:inline;
-  background-image:url(contentbg.gif);
-  background-color:#abe4fe;
-  background-repeat: repeat-x;
+  float: left;
+  width: 188px;
+  padding: 10px;
+  background-color: #171716;
+  border: 1px solid #212120;
 }
 #right {
-  float:right;
-  width:650px;
+  float: right;
+  width: 670px;
+}
+#right .templatemo_product_box {
+  float: left;
+  width: 303px;
+  height: 210px;
+  padding: 10px;
+  border: 1px solid #333;
 }
 
+#right h1 {
+  padding: 10px;
+  margin: 0 0 20px 0;
+  font-size: 15px;
+  color: #cbc750;
+  background: url(templatemo_h1_bg.jpg);
+}
+
+#right h2 {
+  padding: 0 0 0 0;
+  margin: 0 0 20px 0;
+  font-size: 12px;
+  color: #e6e154;
+}
+
+#right h3 {
+  padding: 0;
+  margin: 0 0 20px 0;
+  font-size: 18px;
+  color: #85391f;
+}
+
+#right ul {
+  margin: 0 0 20px 0;
+  padding: 0 0 0 20px;
+  list-style: none;
+}
+
+#right li {
+  padding: 0 0 3px 0;
+}
+
+#right .image_panel {
+  float: left;
+  width: 100px;
+  margin-right: 20px;
+}
+
+#right p {
+  text-align: justify;
+  padding: 0 0 8px 0;
+}
+.cleaner_with_height {
+  clear: both;
+  width: 100%;
+  height: 30px;
+  font-size: 1px; 
+}
 /***************** Menu ***********************/
 #menu {
-  background-image:url(menu.gif);
-  width:261px;
-  height:900px;
-  margin-left:10px;
-  background-color:#abe4fe;
+  clear: both;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #2b2b2a;
+  margin-bottom: 20px;
+  color: #cbc750;
+  font-weight: 900;
+  cursor:pointer;
+  #menu1 {
+    //color: deepskyblue;
+    padding: 1em;
+    font-size: 1em;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: italic;
+    font-weight: 200;
+    //a{color: #baf;}
+    ol {
+      padding-left: 1em;
+    }
+  }
 }
+#menu h1 {
+  font-size: 14px;
+  color: #cbc750;
+  padding: 0 0 5px 0;
+  margin: 0 0 10px 0;
+  border-bottom: 1px dotted #cbc750;
+}
+
+#menu ul {
+  padding: 0;
+  margin: 0;
+}
+
+#menu ul li{
+  padding: 0 0 3px 10px;  
+  list-style: none;
+}
+
+#menu ul li a{
+  font-weight: normal;
+  text-decoration: none;
+  color: #969547;
+}
+
+#menu li a:hover, #menu li .current{
+  color: #fcf88e;
+}
+/*
 #menu ul {
   padding: 10px 0px 0px 0px;
   width:220px;
@@ -270,8 +434,26 @@ h1 {
 }
 #menubottom a:hover {
   color:#c40000;
-}
+}*/
 /***************** Footer ***********************/
+/* footer */
+#templatemo_footer {
+  clear: both;
+  width: 960px;
+  padding: 20px 0px 20px 0;
+  text-align: center;
+  border-top: 1px solid #25211e;
+  color: #999;
+  background-color: #111110;
+}
+
+#templatemo_footer a{
+  text-decoration: none;
+  color: #fff;
+  font-weight: normal;
+}
+#templatemo_footer a:hover{TEXT-DECORATION:underline}
+/* end of footer */
 #footer {
   background-color:#8bcaef;
   background-image:url(borderfooter.gif);
@@ -323,6 +505,7 @@ h1 {
     width: 50%;
     height: 50%;
     z-index:1002;
+    color: black;
     #a4 {
       table {
         text-align: left;
@@ -332,6 +515,7 @@ h1 {
           padding-bottom: 40px;
         }
       }
+      text-align: center;
       padding-top: 100px;
     }
     img {
@@ -345,7 +529,7 @@ h1 {
     top: 0;
     left: 0;
     width:102%;
-    height:200%;
+    height:210%;
     background-color:black;
     z-index:1001;
     opacity:.80;
@@ -379,6 +563,7 @@ a.b5{
 }
         
 .depot_form {
+  color: black;
   fieldset {
     margin-top: 1em;
     background: AliceBlue;
@@ -462,7 +647,7 @@ body #slide > aside > h2{
     font-weight: bold;
     width: 0px;
     height: 30px;
-    line-height: 600px;
+    line-height: 35px;
     text-align: center;
     text-shadow: 0 -4px;
   }
