@@ -68,24 +68,26 @@ $ID("a3").onmousedown=function (e) {
             };
             if ($this.setCapture)$this.setCapture();
             return false;
-        }
+}
  
-        function login(id){
-            if(id==1){
-                $ID('a1').style.display='block';
-        		$ID('a2').style.display='block';
-		    }else{
-		    	if( id == 2){
-		    		$ID('a5').style.display='block';
-		        	$ID('a6').style.display='block';
-		    	}
-		    	else
-		    	{
-		    		$ID('a1').style.display='none';
-		       		$ID('a2').style.display='none';
-		       		$ID('a5').style.display='none';
-		       		$ID('a6').style.display='none';
-		    	}
-		        
-		    }
-		}
+function login(id){
+    if(id==1){
+        $ID('a1').style.display='block';
+		$ID('a2').style.display='block';
+    }else{
+    	if( id == 2){
+    		$ID('a5').style.display='block';
+        	$ID('a6').style.display='block';
+    	}
+    	else
+    	{
+    		$ID('a1').style.display='none';
+       		$ID('a2').style.display='none';
+       		$ID('a5').style.display='none';
+       		$ID('a6').style.display='none';
+       		$ID('a7').style.display='none';
+       		$ID('a8').style.display='none';
+    	}
+        
+    }
+}

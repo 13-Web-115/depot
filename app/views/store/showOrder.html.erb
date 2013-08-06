@@ -5,43 +5,54 @@
 <br />
 <p style="border-bottom-style: dotted; overflow: hidden"></p>
 <br />
-<fieldset>
-<legend><%= t('.your_cart')%></legend>
-<table class="manageCart">
-	<th></th>
-	<th><%= t('.books')%></th>
-	<th><%= t('.num') %></th>
-	<th> </th>
-	<th><%= t('.price') %></th>
-	<th></th>
-	<% @cart.line_items.each do |item| %>
-		<tr>
-			<%= form_tag do %>
-				<td>
-					<%= text_field_tag 'id', nil, value: item.id, style: "display:none" %>
-				</td>
-				<td><%= item.product.title %></td>
-				<td>
-					<%= number_field_tag 'quantity', nil, value: item.quantity, min: 1, max: 100, size: 1 %>
-				</td>
-				<td>
-					<%= submit_tag t('.update')%>
-				</td>
+<!-- Manage Cart in a jump window -->
+<div id="a7" class="b1">
+    <div id="a3" class="b3">Manage Cart</div>
+    <div id="a4" class="b4">
+    	<h1><%= t('.manage_your_cart') %></h1>
+		<br />
+		<p style="border-bottom-style: dotted; overflow: hidden"></p>
+		<br />
+        <fieldset>
+		<legend><%= t('.your_cart')%></legend>
+		<table class="manageCart">
+			<th></th>
+			<th><%= t('.books')%></th>
+			<th><%= t('.num') %></th>
+			<th> </th>
+			<th><%= t('.price') %></th>
+			<th></th>
+			<% @cart.line_items.each do |item| %>
+				<tr>
+					<%= form_tag do %>
+						<td>
+							<%= text_field_tag 'id', nil, value: item.id, style: "display:none" %>
+						</td>
+						<td><%= item.product.title %></td>
+						<td>
+							<%= number_field_tag 'quantity', nil, value: item.quantity, min: 1, max: 100, size: 1 %>
+						</td>
+						<td>
+							<%= submit_tag t('.update')%>
+						</td>
+					<% end %>
+					<td><%= number_to_currency(item.total_price) %></td>
+					<td><%= link_to t('.remove'), item, method: :delete, data: { confirm: t('.sure_delete') } %></td>
+				</tr>
 			<% end %>
-			<td><%= number_to_currency(item.total_price) %></td>
-			<td><%= link_to t('.remove'), item, method: :delete, data: { confirm: t('.sure_delete') } %></td>
-		</tr>
-	<% end %>
-	<tr class="total_line">
-		<td colspan="4"><%= t('.total') %></td>
-		<td class="total_cell"><%= number_to_currency(@cart.total_price) %></td>
-	</tr>
-</table>
-</fieldset>
-<br />
-<p style="border-bottom-style: dotted; overflow: hidden; border-color: #aaa"></p>
-<br />
-
-<div style="float:left; padding-right: 1em;"><%= button_to t('.confirm'), new_order_path, method: :get %> </div>
-<div>|  <%= link_to t('.continue_shopping'), store_path %></div>
+			<tr class="total_line">
+				<td colspan="4"><%= t('.total') %></td>
+				<td class="total_cell"><%= number_to_currency(@cart.total_price) %></td>
+			</tr>
+		</table>
+		</fieldset>
+		<br />
+		<p style="border-bottom-style: dotted; overflow: hidden; border-color: #aaa"></p>
+		<br />		
+		<div style="float:left; padding-right: 1em;"><%= button_to t('.confirm'), new_order_path, method: :get %> </div>
+		<div>|  <%= link_to t('.continue_shopping'), store_path %></div>
+		
+	</div>
+</div>
+<div id="a8" class="b2"></div>
 

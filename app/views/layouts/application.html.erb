@@ -7,6 +7,20 @@
   <%= csrf_meta_tags %>
 </head>
 <body class="<%= controller.controller_name %>", id="body">
+	<div id="slide">
+		<input type='checkbox' id='sideToggle'>
+		<aside>
+			<h2>Cart</h2>
+			<% if @cart %>
+				<%= hidden_div_if(@cart.line_items.empty?, id: 'cart') do %>
+					<%= render @cart %>
+				<% end %>
+			<% end %>
+		</aside>
+		<div id='wrap'>
+	    	<label id='sideMenuControl' for='sideToggle'>=</label>
+	  	</div>
+  	</div>
 <%= form_tag store_path, class: 'locale' do %>
 	<%= select_tag 'set_locale', options_for_select(LANGUAGES, I18n.locale.to_s),
 			onchange: 'this.form.submit()' %>
@@ -30,7 +44,7 @@
 		<% unless session[:user_id] %>
 			<!-- <li> <%= link_to t('.login'), login_path %> </li> -->
 			<li> <a href="javascript:void(0)" onClick="login(1)"><%= t('.login') %></a> </li>
-			<li> <%= link_to t('.register'), new_user_path, javascript:"javascript:void(0)", onClick:"login(2)" %> </li>
+			<li> <%= link_to t('.register'), new_user_path, onClick:"login(2)" %> </li>
 			<!-- <li> <a href="javascript:void(0)" onClick="login(2)"><%= t('.register') %></a> </li> -->
 		<% else %>
 			<li> <%= link_to t('.logout'), logout_path, method: :delete %> </li>
@@ -53,11 +67,6 @@
       <div id="left">
         <div id="menu">
           <ul>	
-			<% if @cart %>
-				<%= hidden_div_if(@cart.line_items.empty?, id: 'cart') do %>
-					<%= render @cart %>
-				<% end %>
-			<% end %>
 				<li onClick="menus('menu1')"> <%= t('.category') %> </li> 
 				<div id="menu1" > 				
 					<div onClick="menus('menu1_2')"> <%= t('.art') %> </div>
@@ -158,7 +167,7 @@
 
 <!-- Login in a jump window -->
 <div id="a1" class="b1">
-    <div id="a3" class="b3">Login<a href="javascript:void(0)" onClick="login(0)" class="b5">close</a></div>
+    <div id="a3" class="b3">Login<a href="javascript:void(0)" onClick="login(0)" class="b5"><%= image_tag('x.png') %></a></div>
     <div id="a4" class="b4">
         <form name="form1" method="post" action="/login/">
         	<table align="center">			 	
