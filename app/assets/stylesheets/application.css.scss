@@ -46,20 +46,58 @@ h1 {
   padding: 0px 0px 10px 0px;
 }
 #body {
-  color: #000000;
-  font-family: Verdana, Arial, Helvetica, sans-serif;
-  font-size: 12px;
-  margin: 0px;
-  padding: 0px;
-  text-align:center;
-  background-color:#5ba0d6;
+  margin: 0;
+  padding: 0;
+  line-height: 1.5em;
+  font-family: Verdana, Arial, san-serif;
+  font-size: 11px;
+  color: #ffffff;
+  background: #4b4743;
 }
+/* menu */
+
+#templatemo_menu {
+  clear: both;
+  width: 960px;
+  height: 45px;
+  background: url(templatemo_menu_bg.jpg) no-repeat;
+}
+
+#templatemo_menu ul {
+  padding: 13px 0 0 0;
+  margin: 0;
+  list-style: none;
+}
+
+#templatemo_menu ul li{
+  display: inline;
+}
+
+#templatemo_menu ul li a{
+  float: left;
+  padding: 0 20px;
+  font-size: 12px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  color: #969547;
+}
+
+#templatemo_menu li a:hover, #templatemo_menu li .current{
+  color: #fcf88e;
+}
+
+/* end of menu*/
 * {margin:0px;padding:0px;}
 .clear{clear:both;}
 #container {
-  margin: 0px auto;
-  text-align: left;
-  width: 979px;
+  //margin: 0px auto;
+  //text-align: left;
+  //width: 979px;
+  width: 960px;
+  margin: 0 auto;
+  padding: 0 10px;
+  background: #1c1c1b url(images/templatemo_bg.jpg) repeat-y;
 }
 #notice {
   color: #000 !important;
@@ -70,10 +108,13 @@ h1 {
   font: bold smaller sans-serif;
 }
 #header {
-  background-image:url(header.png);
-  width:979px;
-  height:232px;
+  background-image:url(templatemo_header_bg.jpg);
   display:block;
+  clear: both;
+  width: 960px;
+  height: 285px;
+  padding: 0;
+  margin: 0;
   
   font: small-caps 40px/40px "Times New Roman", serif;
   #title {
@@ -113,9 +154,9 @@ h1 {
      } 
     } 
   }
-  #search {
-    padding-top: 3.7em;
-    padding-left: 800px;
+  #search {     
+    padding-top: 190px;
+    padding-left: 600px;
     #searchBox {
       float: left;
     }
@@ -389,7 +430,7 @@ body #slide > aside{
   top:300px; bottom:200px; 
   left:-200px; 
   width:200px; 
-  filter:alpha(opacity=50); -moz-opacity:0.50; opacity:0.50;
+  filter:alpha(opacity=50); -moz-opacity:0.50; opacity:0.50;//半透明效果
   //background:#FFFFF0; 
   transition:0.2s ease-out; 
   -webkit-transition:0.2s ease-out; 
@@ -402,9 +443,14 @@ body #slide > aside > h2{
   padding:10px; 
 }
 #slide { 
-  #wrap{ margin-left:20px; padding:10px; transition:0.25s ease-out; -webkit-transition:0.25s ease-out; }
+  img {
+    width: 100px;
+    height: 100px;
+  }
+  #wrap{ margin-left:-150px; padding:0px; transition:0.25s ease-out; -webkit-transition:0.25s ease-out; }
   #wrap > label{ display:inline-block; }
   #wrap > label{ 
+    
     position: absolute;
     //background:#f1103a;
     border-radius:50px;

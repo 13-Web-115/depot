@@ -7,6 +7,23 @@
   <%= csrf_meta_tags %>
 </head>
 <body class="<%= controller.controller_name %>", id="body">
+<div id="container">
+	<div id="templatemo_menu">
+		<ul>
+			<li> <a href="/" class="current"><%= t('.home') %></a> </li>
+			<li> <%= link_to t('.questions'), problems_path %> </li>
+			<li> <%= link_to t('.news'), things_path %> </li>
+			<li> <%= link_to t('.contact'), contact_path %> </li>
+			<% unless session[:user_id] %>
+				<!-- <li> <%= link_to t('.login'), login_path %> </li> -->
+				<li> <a href="javascript:void(0)" onClick="login(1)"><%= t('.login') %></a> </li>
+				<li> <%= link_to t('.register'), new_user_path, onClick:"login(2)" %> </li>
+				<!-- <li> <a href="javascript:void(0)" onClick="login(2)"><%= t('.register') %></a> </li> -->
+			<% else %>
+				<li> <%= link_to t('.logout'), logout_path, method: :delete %> </li>
+			<% end %>
+		</ul>
+	</div>
 	<div id="slide">
 		<input type='checkbox' id='sideToggle'>
 		<aside>
@@ -18,39 +35,24 @@
 			<% end %>
 		</aside>
 		<div id='wrap'>
-	    	<label id='sideMenuControl' for='sideToggle'>=</label>
+	    	<label id='sideMenuControl' for='sideToggle'><%= image_tag('cart.png') %></label>
 	  	</div>
   	</div>
-<%= form_tag store_path, class: 'locale' do %>
-	<%= select_tag 'set_locale', options_for_select(LANGUAGES, I18n.locale.to_s),
-			onchange: 'this.form.submit()' %>
-	<%= submit_tag 'submit'%>
-	<%= javascript_tag "$('.locale input').hide()" %>
-<% end %>
-<div id="container">
+  	<div style="position:absolute;padding-left: 1000px;">
+	<%= form_tag store_path, class: 'locale' do %>
+		<%= select_tag 'set_locale', options_for_select(LANGUAGES, I18n.locale.to_s),
+				onchange: 'this.form.submit()' %>
+		<%= submit_tag 'submit'%>
+		<%= javascript_tag "$('.locale input').hide()" %>
+	<% end %>
+	</div>
   <div id="header"> 
 	<div id="userMessage">
 		<% if session[:user_id] %>
 			<%= link_to t('.welcome') + " #{@user.name}!", edit_user_path(@user) %>
 		<% end %>
 	</div>
-	<!--<%= image_tag("logo.png") %>-->
-	<div id="title"><%= @page_title || t('.title') %></div>
-	<ul>
-		<li> <a href="/"><%= t('.home') %></a> </li>
-		<li> <%= link_to t('.questions'), problems_path %> </li>
-		<li> <%= link_to t('.news'), things_path %> </li>
-		<li> <%= link_to t('.contact'), contact_path %> </li>
-		<% unless session[:user_id] %>
-			<!-- <li> <%= link_to t('.login'), login_path %> </li> -->
-			<li> <a href="javascript:void(0)" onClick="login(1)"><%= t('.login') %></a> </li>
-			<li> <%= link_to t('.register'), new_user_path, onClick:"login(2)" %> </li>
-			<!-- <li> <a href="javascript:void(0)" onClick="login(2)"><%= t('.register') %></a> </li> -->
-		<% else %>
-			<li> <%= link_to t('.logout'), logout_path, method: :delete %> </li>
-		<% end %>
-	</ul>
-	<br />
+	
 	<div id="search">
 		<%= form_tag store_path do %>
 			<div id="searchBox">
@@ -166,7 +168,7 @@
 </div>
 
 <!-- Login in a jump window -->
-<div id="a1" class="b1">
+<div id="a1" class="b1" style="filter:alpha(opacity=50); -moz-opacity:0.50; opacity:0.50;">
     <div id="a3" class="b3">Login<a href="javascript:void(0)" onClick="login(0)" class="b5"><%= image_tag('x.png') %></a></div>
     <div id="a4" class="b4">
         <form name="form1" method="post" action="/login/">
