@@ -28,8 +28,10 @@
 		<li> <%= link_to t('.news'), things_path %> </li>
 		<li> <%= link_to t('.contact'), contact_path %> </li>
 		<% unless session[:user_id] %>
-			<li> <%= link_to t('.login'), login_path %> </li>
-			<li> <%= link_to t('.register'), new_user_path %> </li>
+			<!-- <li> <%= link_to t('.login'), login_path %> </li> -->
+			<li> <a href="javascript:void(0)" onClick="login(1)"><%= t('.login') %></a> </li>
+			<li> <%= link_to t('.register'), new_user_path, javascript:"javascript:void(0)", onClick:"login(2)" %> </li>
+			<!-- <li> <a href="javascript:void(0)" onClick="login(2)"><%= t('.register') %></a> </li> -->
 		<% else %>
 			<li> <%= link_to t('.logout'), logout_path, method: :delete %> </li>
 		<% end %>
@@ -131,7 +133,7 @@
           <ul>
             <li><a href="/">Home</a></li>
             <li><%= link_to 'About us', about_path %></li>
-            <li><a href="#">Contact</a></li>
+            <li><%= link_to t('.contact'), contact_path %></li>
           </ul>
         </div>
       </div>
@@ -153,5 +155,28 @@
   </div>
   <div id="footerend"></div>
 </div>
+
+<!-- Login in a jump window -->
+<div id="a1" class="b1">
+    <div id="a3" class="b3">Login<a href="javascript:void(0)" onClick="login(0)" class="b5">close</a></div>
+    <div id="a4" class="b4">
+        <form name="form1" method="post" action="/login/">
+        	<table align="center">			 	
+			 	<tr>
+			 		<td><%= label_tag :name, t('.name')%></td>
+			 		<td><%= text_field_tag :name, params[:name] %></td>
+			 	</tr>
+			 	
+			 	<tr>
+			 		<td><%= label_tag :password, t('.password') %></td>
+			 		<td><%= password_field_tag :password, params[:password] %></td>			 		
+			 	</tr>			
+			 </table>
+			 <%= submit_tag t('.login') %> | 
+			 <%= link_to t('.new_user'), new_user_path %>
+        </form>
+    </div>
+</div>
+<div id="a2" class="b2"></div>
 </body>
 </html>

@@ -39,3 +39,53 @@ function menus(str){
 		} 
 	} 
 } 
+
+var $ID=function (id){
+            var d=document.getElementById(id);
+            if(!d){
+                //alert(id+" control object not exists!") ;
+        return false;
+    }else{
+        return d;
+    }
+}
+var $this = $ID("a1");
+$ID("a3").onmousedown=function (e) {
+    var oe=e||window.event;
+    var startX = oe.clientX - $this.offsetLeft;
+    var startY = oe.clientY - $this.offsetTop;
+    document.onmousemove = function (e) {
+        var oe = e || window.event;
+        $this.style.left = oe.clientX - startX + "px";
+        $this.style.top = oe.clientY - startY + "px";
+            };
+            document.onmouseup = function () {
+                document.onmousemove = null;
+                document.onmouseup = null;
+                if ($this.releaseCapture) {
+                    $this.releaseCapture();
+                }
+            };
+            if ($this.setCapture)$this.setCapture();
+            return false;
+        }
+ 
+        function login(id){
+            if(id==1){
+                $ID('a1').style.display='block';
+        		$ID('a2').style.display='block';
+		    }else{
+		    	if( id == 2){
+		    		$ID('a5').style.display='block';
+		        	$ID('a6').style.display='block';
+		    	}
+		    	else
+		    	{
+		    		$ID('a1').style.display='none';
+		       		$ID('a2').style.display='none';
+		       		$ID('a5').style.display='none';
+		       		$ID('a6').style.display='none';
+		    	}
+		        
+		    }
+		}
