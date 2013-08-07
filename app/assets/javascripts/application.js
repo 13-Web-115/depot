@@ -46,7 +46,7 @@ function login(id){
 	var $ID=function (id){		
         var d=document.getElementById(id);
         if(!d){
-			alert(id+" control object not exists!") ;
+			//alert(id+" control object not exists!") ;
         	return false;
     	}else{
         	return d;
