@@ -14,7 +14,7 @@ class ProductsController < ApplicationController
        #生成一个随机的文件名      
        @filename=file.original_filename         
        #向dir目录写入文件  
-       File.open("/app/assets/images/#{@filename}", "wb") do |f|   
+       File.open("#{Rails.root}/app/assets/images/#{@filename}", "wb") do |f|   
           f.write(file.read)  
        end   
        #返回文件名称，保存到数据库中  
@@ -81,7 +81,10 @@ class ProductsController < ApplicationController
       if params[:product]['image_url'] != nil
         @product= Product.new(params[:product])     
         @product.image_url = uploadFile(params[:product]['image_url']) 
-        #puts "MMMMMMMMMMMMMMMMMMMMMMMM:#{@product.image_url}"  
+        #puts "MMMMMMMMMMMMMMMMMMMMMMMM:#{@product.image_url}"
+        unless File.exist?(@product.image_url)
+          @product.image_url = 'default.png'
+        end
         respond_to do |format|
           if @product.save
             format.html { redirect_to @product, notice: 'Product was successfully created.' }
@@ -122,6 +125,9 @@ class ProductsController < ApplicationController
       puts params[:product]['image_url']
       params[:product][:image_url] = uploadFile(params[:product]['image_url']) 
       @product.genre = params[:genre]
+      unless File.exist?(params[:product][:image_url])
+        params[:product][:image_url] = 'default.png'
+      end
       respond_to do |format|
         if @product.update_attributes(params[:product])
           format.html { redirect_to @product, notice: 'Product was successfully updated.' }
