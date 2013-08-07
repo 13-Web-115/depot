@@ -35,14 +35,6 @@ ActiveRecord::Schema.define(:version => 20130801032310) do
     t.integer  "order_id"
   end
 
-  create_table "news", :force => true do |t|
-    t.string   "title"
-    t.text     "content"
-    t.string   "poster"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
-  end
-
   create_table "orders", :force => true do |t|
     t.string   "name"
     t.text     "address"
