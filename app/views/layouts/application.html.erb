@@ -16,7 +16,7 @@
 			<li> <%= link_to t('.contact'), contact_path %> </li>
 			<% unless session[:user_id] %>
 				<!-- <li> <%= link_to t('.login'), login_path %> </li> -->
-				<li> <a href="javascript:void(0)" onClick="login(1)"><%= t('.login') %></a> </li>
+				<li> <a href="javascript:void(0)" onClick="login(1)" remote="true"><%= t('.login') %></a> </li>
 				<li> <%= link_to t('.register'), new_user_path, onClick:"login(2)" %> </li>
 				<!-- <li> <a href="javascript:void(0)" onClick="login(2)"><%= t('.register') %></a> </li> -->
 			<% else %>
@@ -62,9 +62,9 @@
         
         <div id="templatemo_new_books">
         	<ol>
-                <li><%= truncate(@recommends[0].title, length: 10) %></li>
-                <li><%= truncate(@recommends[1].title, length: 10) %></li>
-                <li><%= truncate(@recommends[2].title, length: 10) %></li>
+                <li><%= truncate(@recommends[0].title, length: 14) %></li>
+                <li><%= truncate(@recommends[1].title, length: 14) %></li>
+                <li><%= truncate(@recommends[2].title, length: 14) %></li>
             </ol>            
         </div>
 	<div id="search">
@@ -187,10 +187,10 @@
 		<%= link_to 'About us', about_path %> | 
 		<a href="/">Books</a> | 
 		<a href="#">New Releases</a> | 
-		<a href="#">FAQs</a> | 
+		<%= link_to "FAQs", problems_path %> | 
 		<%= link_to t('.contact'), contact_path %> <br />
-        Copyright © 2024 <a href="#"><strong>岳阳楼记</strong></a> | 
-        Designed by <a href="http://sc.chinaz.com/" target="_parent" title="BinQi">BinQi</a>
+        Copyright © 2024 <a href="http://my.ss.sysu.edu.cn/wiki/display/113WEB115/13-Web-115"><strong>岳阳楼记</strong></a> | 
+        Designed by <a href="http://my.ss.sysu.edu.cn/wiki/pages/viewpage.action?pageId=188154988" target="_parent" title="BinQi">吴彬麒</a>
 	</div> 
 </div>
 <div style="display:none"><script src='http://v7.cnzz.com/stat.php?id=155540&web_id=155540' language='JavaScript' charset='gb2312'></script></div>

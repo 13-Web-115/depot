@@ -1,6 +1,8 @@
 class ThingsController < ApplicationController
   # GET /things
   # GET /things.json
+  before_filter :authorizeAdminAndShopper
+  
   def index
     @things = Thing.all
 
@@ -80,4 +82,13 @@ class ThingsController < ApplicationController
       format.json { head :no_content }
     end
   end
+
+  private
+    def authorizeAdminAndShopper
+      user = User.find_by_id(session[:user_id])
+      unless user and (user.genre == "admin" or user.genre == "shopkeeper") 
+        redirect_to login_url, notice: "You are not Admin or Shopkeeper. Access denied!"
+      end
+    end
+  
 end
