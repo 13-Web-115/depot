@@ -7,39 +7,29 @@
 <!--slider-->
   <div class="sixteen columns clearfix">
     <div class="slider">
-      <a class="rslides_nav rslides1_nav prev" href="#" style="opacity: 0.2;">(</a>
-      <a class="rslides_nav rslides1_nav next" href="#" style="opacity: 0.2;">)</a>
-      <ol id="slider3" class="rslides rslides1">
-        <li id="rslides1_s0"> 
-        	<%= link_to image_tag(@recommends[0].image_url, title:"some title", alt:"some title"), controller: 'store', action: :show, id: @recommends[0] %>
-            <div class="caption">
-              <h3><%= @recommends[0].title %></h3>
-              <p><%= sanitize(truncate(@recommends[0].description, length: 200)) %><br />           	
-              </p>
-            </div>
+      <ol class="rslides" id="slider3">
+        <li> <%= link_to image_tag(@recommends[0].image_url, title:"some title", alt:"some title"), controller: 'store', action: :show, id: @recommends[0] %>
+          <div class="caption">
+            <h3><%= @recommends[0].title %></h3>
+            <p><%= sanitize(truncate(@recommends[0].description, length: 200)) %><br />           	
+            </p>
+          </div>
         </li>
-        <li id="rslides1_s1">
-        	<%= link_to image_tag(@recommends[1].image_url, title:"some title", alt:"some title"), controller: 'store', action: :show, id: @recommends[1] %>
-            <div class="caption">
-              <h3><%= @recommends[1].title %></h3>
-              <p><%= sanitize(truncate(@recommends[1].description, length: 200)) %><br />
-              </p>
-            </div>
+        <li> <%= link_to image_tag(@recommends[1].image_url, title:"some title", alt:"some title"), controller: 'store', action: :show, id: @recommends[1] %>
+          <div class="caption">
+            <h3><%= @recommends[1].title %></h3>
+            <p><%= sanitize(truncate(@recommends[1].description, length: 200)) %><br />
+            </p>
+          </div>
         </li>
-        <li id="rslides1_s2">
-        	<%= link_to image_tag(@recommends[2].image_url, title:"some title", alt:"some title"), controller: 'store', action: :show, id: @recommends[2] %>
-          	<div class="caption">
-            	<h3><%= @recommends[2].title %></h3>
-            	<p><%= sanitize(truncate(@recommends[2].description, length: 200)) %><br />
-            	</p>
-          	</div>
+        <li> <%= link_to image_tag(@recommends[2].image_url, title:"some title", alt:"some title"), controller: 'store', action: :show, id: @recommends[2] %>
+          <div class="caption">
+            <h3><%= @recommends[2].title %></h3>
+            <p><%= sanitize(truncate(@recommends[2].description, length: 200)) %><br />
+            </p>
+          </div>
         </li>
       </ol>
-      <ul class="rslides_tabs rslides1_tabs">
-      	<li class=""><a class="rslides1_s1" href="#"> … </a></li>
-      	<li class=""><a class="rslides1_s2" href="#"> … </a></li>
-      	<li class="rslides_here"><a class="rslides1_s3" href="#"> … </a></li>
-      </ul>
     </div>
   </div>
   <!--.slider--> 
