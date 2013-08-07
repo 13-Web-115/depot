@@ -9,19 +9,18 @@ Author URI: http://themeforest.net/user/pebas/
 @import url(../../../../fonts.googleapis.com/css@family=Open+Sans); 
 
 /********* BASE *********/
-@import url('base.css') screen; 
+@import url('base.css');
 
 /********* SKELETON *********/
-@import url('skeleton.css') screen;
+
 
 /********* PRETTY PHOTO *********/
-@import url('prettyphoto.css') screen;
+
 
 /********* FLEX SLIDER *********/
-@import url('flexslider.css') screen;
+
 
 /********* TIPSY *********/
-@import url('tipsy.css') screen;
+
 
 /********* LAYOUT *********/
-@import url('layout.css') screen; 
