@@ -81,7 +81,10 @@ class ProductsController < ApplicationController
       if params[:product]['image_url'] != nil
         @product= Product.new(params[:product])     
         @product.image_url = uploadFile(params[:product]['image_url']) 
-        #puts "MMMMMMMMMMMMMMMMMMMMMMMM:#{@product.image_url}"  
+        #puts "MMMMMMMMMMMMMMMMMMMMMMMM:#{@product.image_url}"
+        unless File.exist?(@product.image_url)
+          @product.image_url = 'default.png'
+        end  
         respond_to do |format|
           if @product.save
             format.html { redirect_to @product, notice: 'Product was successfully created.' }
@@ -122,6 +125,9 @@ class ProductsController < ApplicationController
       puts params[:product]['image_url']
       params[:product][:image_url] = uploadFile(params[:product]['image_url']) 
       @product.genre = params[:genre]
+      unless File.exist?(params[:product][:image_url])
+        params[:product][:image_url] = 'default.png'
+      end
       respond_to do |format|
         if @product.update_attributes(params[:product])
           format.html { redirect_to @product, notice: 'Product was successfully updated.' }
