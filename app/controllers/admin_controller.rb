@@ -1,5 +1,6 @@
 class AdminController < ApplicationController
   def index
+    @cart = current_cart
     user = User.find_by_id(session[:user_id])
     if user.genre == "admin"
       @total_orders = Order.count
