@@ -17,7 +17,7 @@
 			<% unless session[:user_id] %>
 				<!-- <li> <%= link_to t('.login'), login_path %> </li> -->
 				<li> <a href="javascript:void(0)" onClick="login(1)" remote="true"><%= t('.login') %></a> </li>
-				<li> <%= link_to t('.register'), new_user_path, onClick:"login(2)", remote: true %> </li>
+				<li> <%= link_to t('.register'), new_user_path, onClick:"login(2)" %> </li>
 				<!-- <li> <a href="javascript:void(0)" onClick="login(2)"><%= t('.register') %></a> </li> -->
 			<% else %>
 				<li> <%= link_to t('.logout'), logout_path, method: :delete %> </li>
