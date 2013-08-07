@@ -4,6 +4,7 @@
   <tr>
     <th><%= t('.content')%></th>
     <th><%= t('.questioner')%></th>
+    <th><%= t('.reply')%></th>
     <th></th>
     <th></th>
     <th></th>
@@ -13,9 +14,16 @@
   <tr>
     <td><%= problem.content %></td>
     <td><%= problem.questioner %></td>
+    <% if problem.reply %>
+    	<td><%= problem.reply %></td>
+    <% else %>
+    	<td><%= t('.no')%></td>
+    <% end %>
     <td><%= link_to t('.show'), problem %></td>
+    <% if @user.genre == "admin" %>
     <td><%= link_to t('.edit'), edit_problem_path(problem) %></td>
     <td><%= link_to t('.destroy'), problem, method: :delete, data: { confirm: t('.sure_delete') } %></td>
+    <% end %>
   </tr>
 <% end %>
 </table>

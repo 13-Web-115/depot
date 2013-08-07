@@ -350,6 +350,8 @@ fr:
       edit:                 "Modifier"
       destroy:              "Détruisez"  
       sure_delete:          "Etes-vous sûr ?" 
+      reply:                "répondre"
+      no:                   "aucune réponse"   
     new:
       new_problem:          "nouveau problème"
       back:                 "Retour"
@@ -357,6 +359,7 @@ fr:
       create_problem:       "créer problème"
       content:              "Content"
       questioner:           "Interlocuteur"
+      reply:                "répondre"
     edit:
       edit_problem:         "Modification problème"
       show:                 "montrer"      

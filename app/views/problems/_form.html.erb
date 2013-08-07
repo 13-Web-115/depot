@@ -19,6 +19,12 @@
     <%= f.label :questioner,t('.questioner') %><br />
     <%= f.text_field :questioner %>
   </div>
+  <% if @user.genre == "admin" %>
+  <div class="field">
+    <%= f.label :questioner,t('.reply') %><br />
+    <%= f.text_field :reply %>
+  </div>
+  <% end %>
   <div class="actions">
     <%= f.submit t('.create_problem')%>
   </div>

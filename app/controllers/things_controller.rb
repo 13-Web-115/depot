@@ -1,7 +1,7 @@
 class ThingsController < ApplicationController
   # GET /things
   # GET /things.json
-  before_filter :authorizeAdminAndShopper
+  
   
   def index
     @things = Thing.all
@@ -26,23 +26,39 @@ class ThingsController < ApplicationController
   # GET /things/new
   # GET /things/new.json
   def new
-    @thing = Thing.new
+    user = User.find_by_id(session[:user_id])
+    unless user and (user.genre == "admin" or user.genre == "shopkeeper") 
+      redirect_to login_url, notice: "You are not Admin or Shopkeeper. Access denied!"
+    else
+      @thing = Thing.new
 
     respond_to do |format|
       format.html # new.html.erb
       format.json { render json: @thing }
     end
+    end
+    
   end
 
   # GET /things/1/edit
   def edit
-    @thing = Thing.find(params[:id])
+    user = User.find_by_id(session[:user_id])
+    unless user and user.genre == "admin"
+      redirect_to login_url, notice: "You are not Admin. Access denied!"
+    else
+      @thing = Thing.find(params[:id])
+    end
+    
   end
 
   # POST /things
   # POST /things.json
   def create
-    @thing = Thing.new(params[:thing])
+    user = User.find_by_id(session[:user_id])
+    unless user and (user.genre == "admin" or user.genre == "shopkeeper") 
+      redirect_to login_url, notice: "You are not Admin or Shopkeeper. Access denied!"
+    else
+      @thing = Thing.new(params[:thing])
 
     respond_to do |format|
       if @thing.save
@@ -53,6 +69,8 @@ class ThingsController < ApplicationController
         format.json { render json: @thing.errors, status: :unprocessable_entity }
       end
     end
+    end
+    
   end
 
   # PUT /things/1

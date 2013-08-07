@@ -348,7 +348,9 @@ ch:
       show:                 "详情"
       edit:                 "编辑"
       destroy:              "删除"
-      sure_delete:          "您确定要删除吗？"      
+      sure_delete:          "您确定要删除吗？"
+      reply:                "回复"
+      no:                   "无回复"    
     new:
       new_problem:          "新提问"
       back:                 "返回"
@@ -356,6 +358,7 @@ ch:
       create_problem:       "创建提问"
       content:              "内容"
       questioner:           "提问者"
+      reply:                "回复"
     edit:
       edit_problem:         "编辑问题"
       show:                 "详情"      

@@ -348,7 +348,9 @@ jp:
       show:                 "詳細"
       edit:                 "編集"
       destroy:              "削除"
-      sure_delete:          "あなたはそれを削除してもよろしいですか？"      
+      sure_delete:          "あなたはそれを削除してもよろしいですか？" 
+      reply:                "返信"
+      no:                   "応答なし"     
     new:
       new_problem:          "新たな質問"
       back:                 "帰る"
@@ -356,6 +358,7 @@ jp:
       create_problem:       "新しい質問を作成"
       content:              "内容"
       questioner:           "質問者"
+      reply:                "返信"
     edit:
       edit_problem:         "質問の編集"
       show:                 "詳細"      

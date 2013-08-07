@@ -34,7 +34,13 @@ class ProblemsController < ApplicationController
 
   # GET /problems/1/edit
   def edit
-    @problem = Problem.find(params[:id])
+    user = User.find_by_id(session[:user_id])
+    unless user and user.genre == "admin"
+      redirect_to login_url, notice: "You are not Admin. Access denied!"
+    else
+      @problem = Problem.find(params[:id])
+    end
+    
   end
 
   # POST /problems

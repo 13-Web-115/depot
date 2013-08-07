@@ -16,8 +16,10 @@
     <td><%= thing.content %></td>
     <td><%= thing.poster %></td>
     <td><%= link_to t('.show'), thing %></td>
+    <% if @user.genre == "admin" %>
     <td><%= link_to t('.edit'), edit_thing_path(thing) %></td>
     <td><%= link_to t('.destroy'), thing, method: :delete, data: { confirm: t('.sure_delete') } %></td>
+    <% end %>
   </tr>
 <% end %>
 </table>

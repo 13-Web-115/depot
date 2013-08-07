@@ -349,6 +349,8 @@ en:
       edit:                 "Edit"
       destroy:              "Destroy"  
       sure_delete:          "Are you sure ?" 
+      reply:                "Reply"
+      no:                   "Empty"
     new:
       new_problem:          "New Problem"
       back:                 "Back"
@@ -356,6 +358,7 @@ en:
       create_problem:       "Create Problem"
       content:              "Content"
       questioner:           "Questioner"
+      reply:                "Reply"
     edit:
       edit_problem:         "Editing problem"
       show:                 "Show"      
