@@ -7,7 +7,7 @@
 <!--slider-->
   <div class="sixteen columns clearfix">
     <div class="slider">
-      <ol class="rslides" id="slider3">
+      <ul class="rslides" id="slider3">
         <li> <%= link_to image_tag(@recommends[0].image_url, title:"some title", alt:"some title"), controller: 'store', action: :show, id: @recommends[0] %>
           <div class="caption">
             <h3><%= @recommends[0].title %></h3>
@@ -29,7 +29,7 @@
             </p>
           </div>
         </li>
-      </ol>
+      </ul>
     </div>
   </div>
   <!--.slider--> 

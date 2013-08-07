@@ -9,7 +9,7 @@ Author URI: http://themeforest.net/user/pebas/
 @import url(../../../../fonts.googleapis.com/css@family=Open+Sans); 
 
 /********* BASE *********/
-@import url('base.css');
+@import url('base.css') screen; 
 
 /********* SKELETON *********/
 
@@ -24,3 +24,4 @@ Author URI: http://themeforest.net/user/pebas/
 
 
 /********* LAYOUT *********/
+@import url('layout.css') screen; 
