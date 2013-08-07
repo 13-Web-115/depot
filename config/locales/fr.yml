@@ -1,0 +1,417 @@
+fr:
+  
+  thanks:         "Merci de votre ordre"
+  
+  invalid:        "Invalide combinaison utilisateur / mot de passe"
+  logout:         "déconnecté"
+  
+  admin:
+    index:
+      welcome:      "accueil"
+      its:          "il est"
+      wehave:       "nous avons"
+      order:        "Commander."
+      
+  layouts:
+    application:
+      Pragmatic_Books_Online_Store: "Pragmatiques Livres Boutique en ligne"
+      title:          "Pragmatic Bookshelf"
+      welcome:        "accueil"
+      home:           "maison"
+      questions:      "question"
+      news:           "nouvelles"
+      contact:        "Contactez"
+      login:          "Connexion"
+      register:       "Inscription"
+      category:       "Livres Catégorie"
+      art:            "Littérature et Art"
+      youth:          "jeunesse"
+      education:      "éducation"
+      management:     "économie Gestion"
+      literature:     "littérature"
+      economy:        "économie"
+      life:           "vie"
+      children:       "enfants"
+      technology:     "technologie"
+      
+      memoir:                 "mémoire"
+      art1:                   "art"
+      photograph:             "photographie"
+      youthliterature:        "la littérature de jeunesse"
+      cartoon:                "dessin animé"
+      humor:                  "humour"
+      0-2:                    "0-2 ans"
+      3-6:                    "3-6 ans"
+      7-10:                   "7-10 ans"
+      11-14:                  "11-14 ans"
+      picturebook:            "livre d'image"
+      exercise:               "exercer"
+      food:                   "nourriture"
+      tour:                   "tournée"
+      arder:                  "Arder"
+      family:                 "famille"
+      coptic:                 "copte"
+      building:               "bâtiment"
+      computer:               "ordinateur"
+      naturalscience:         "sciences naturelles"
+      medicine:               "médecine"
+      foreignlanguage:        "langue étrangère"
+      test:                   "essai"
+      teachingmaterial:       "matériel pédagogique"
+      manage:                 "gestion"
+      finance:                "financement"
+      
+      my_orders:      "Mes commandes"
+      orders:         "commandes"
+      products:       "Produits"
+      postnews:       "Message Nouvelles"
+      users:          "utilisateurs"
+      comments:       "commentaires"
+      logout:         "Déconnexion"
+      search:         "Rechercher"
+
+  line_items:
+    form:
+      product_id:           "Identifiant du produit"
+      cart_id:              "Identifiant panier"
+    edit:
+      edit_line_item:       "Modifier poste"
+      show:                 "montrer"
+      back:                 "Retour"
+    index:
+      line_item_list:       "Liste des éléments de ligne"
+      product:              "produit"
+      cart:                 "Panier"
+      show:                 "montrer"
+      edit:                 "Modifier"
+      destroy:              "Détruisez"
+      sure_delete:          "Est-ce que vous supprimez-vous?"
+      new_line_item:        "Nouveau poste"
+    new:
+      new_line_item:        "Nouveau poste"
+      back:                 "Retour"
+    show:
+      product:              "produit:"
+      cart:                 "Panier:"
+      edit:                 "Modifier"
+      back:                 "Retour"
+      
+  store:
+    index:
+      title_html:   "Votre catalogue Pragmatique"
+      add_html:     "Ajouter au panier"
+      detail:       "détail"   
+      prelabel:     "Page précédente"
+      nexlabel:     "Page suivante"
+    show:
+      comments:     "commentaires"
+      poster:       "affiche"
+      add_comment:  "Ajouter un commentaire"
+      no_comments:  "Pas encore de commentaires pour ce produit encore!"
+      add_html:     "Ajouter au panier"
+      back:         "Retour"
+      book_details:     "Fiche du livre"
+      title:            "Titre:"
+      genre:            "espèce:"
+      price:            "prix:"
+      descriptions:     "descriptions:"
+    form:
+      your_comment:     "votre commentaire:"
+      add_comment:      "Ajouter un commentaire" 
+    showHome:
+      new_user:         "nouvel utilisateur ?"
+      back:             "Retour"
+    showOrder:
+      manage_your_cart:   "Gérez votre panier"
+      your_cart:          "votre panier"
+      books:              "Livres"
+      num:                "nombre"
+      price:              "prix"
+      remove:             "supprimer"
+      sure_delete:        "Est-ce que vous supprimez-vous ?"
+      total:              "totale:"
+      confirm:            "Confirmez"
+      continue_shopping:  "Poursuivre les achats"
+      update:             "mettre à jour"
+         
+  carts:
+    cart:
+      title:      "votre panier"
+      empty:      "Vider le panier"
+      checkout:   "caisse"
+      ifsure:     "Est-ce que vous videz-vous ce panier?"
+      total:      "totale"
+    form:
+      confirm:    "Confirmez"
+    edit:
+      edit_cart:  "Modifier panier"
+      show:       "montrer"
+      back:       "Retour"
+    index:
+      cart_list:          "Liste panier"
+      show:               "montrer"
+      edit:               "Modifier"
+      destroy:            "Détruisez"
+      sure_delete:        "Est-ce que vous supprimez-vous ?"
+      new_cart:           "nouveau panier"
+    new:
+      new_cart:           "nouveau panier"
+      back:               "Retour"
+    show:
+      your_cart:          "votre panier"
+      total:              "totale："
+      empty_cart:         "Vider le panier"
+      sure_empty:         "Est-ce que vous videz-vous ce panier ?"
+
+  comments:
+    form:
+      content:            "Content"
+      confirm:            "Confirmez"
+    edit:
+      edit_comment:       "Editer ce commentaire"
+      show:               "montrer"
+      back:               "Retour"
+    index:
+      comment_list:       "liste des commentaires"
+      content:            "Content"
+      poster:             "affiche"
+      show:               "montrer"
+      edit:               "Modifier"
+      destroy:            "Détruisez"
+      sure_delete:        "Est-ce que vous supprimez-vous ?"
+      new_comment:        "nouveau commentaire"
+    new:
+      new_comment:        "nouveau commentaire"
+      back:               "Retour"
+    show:
+      content:            "Content:"
+      poster:             "affiche:"
+      edit:               "Modifier"
+      back:               "Retour"
+  
+  number:
+    currency:
+      format:
+        unit:      "€"
+        precision: 2
+        separator: "."
+        delimiter: ","
+        format:    "%u%n"
+
+  orders:
+    edit:
+      edit_order:     "Modifier l'ordre"
+      show:           "montrer"
+      back:           "Retour"
+      
+    new:
+      new_order:      "nouvel ordre"
+      back:           "Retour"
+      legend:         "S'il vous plaît Entrez vos coordonnées"
+    form:
+      name:           "nom"
+      address_html:   "adresse"
+      email:          "E-mail"
+      pay_type:       "lieu avec"
+      pay_prompt_html: "Choisissez une méthode de paiement"
+      submit:          "Passer une commande"
+    index:
+      order_list:      "Liste de commande"
+      name:            "nom"
+      address:         "adresse"
+      email:           "Email"
+      pay_type:        "Type payer"
+      shipped:         "Expédié"
+      show:            "montrer"
+      edit:            "Modifier"
+      destroy:         "Détruisez"
+      sure_delete:     "Est-ce que vous supprimez-vous ?"
+      new_order:       "nouvel ordre"
+    show:
+      name:            "nom"
+      address:         "adresse："
+      email:           "Email："
+      pay_type:        "Type payer："
+      product:         "produit"
+      edit:            "Modifier"
+      back:            "Retour"
+      shipped:         "Expédié"
+
+  order_notifier:
+    shipped:
+      order_shipped:    "Commande expédiée"
+      message:          "C'est juste pour que vous sachiez que nous avons expédié votre commande récente:"
+      description:      "Description" 
+    received:
+      dear:             "Cher"
+      message:          "Merci pour votre récente commande sur la Boutique pragmatique!"
+      yourorder:        "Vous avez commandé les articles suivants:"
+      separate:         "Nous vous enverrons un e-mail séparé lorsque votre commande est expédiée."     
+    
+  products:
+    new:
+      new_product:        "nouveau produit"
+      back:               "Retour"
+    form:
+      title:              "Titre"
+      owner:              "propriétaire"
+      description:        "Description"
+      genre:              "espèce"
+      image_url:          "Url de l'image"
+      price:              "prix"
+      create:             "créer"
+    index:
+      product_list:       "Liste des produits"
+      new_product:        "nouveau produit"
+      comments:           "commentaires"
+      show:               "montrer"
+      edit:               "Modifier"
+      destroy:            "Détruisez"
+      sure_delete:        "Est-ce que vous supprimez-vous ?"
+      prelabel:           "Page précédente"
+      nexlabel:           "Page suivante"
+    edit:
+      show:               "montrer"
+      back:               "Retour"
+      edit_product:       "Modifier produit"
+    show:
+      title:              "Titre"
+      owner:              "propriétaire"
+      description:        "Description"
+      genre:              "espèce"
+      image_url:          "Url de l'image"
+      price:              "prix"
+      edit:               "Modifier"
+      back:               "Retour"
+    indexPre:
+      product_list:       "Liste des produits"
+      title:              "Titre"
+      owner:              "propriétaire"
+      description:        "Description"
+      genre:              "espèce"
+      image_url:          "Url de l'image"
+      price:              "Prix"
+      show:               "montrer"
+      edit:               "Modifier"
+      destroy:            "Détruisez"
+      sure_delete:        "Est-ce que vous supprimez-vous?"
+      new_product:        "nouveau produit"
+
+  sessions:
+    new:
+      please_login:       "S'il vous plaît vous identifier"
+      name:               "nom:"
+      password:           "mot de passe:"
+      login:              "Connexion"
+      new_user:           "nouvel utilisateur ?"
+      
+  users:
+    form:
+      enter_user_details:   "Entrez les détails de l'utilisateur"
+      name:                 "nom:"
+      password:             "mot de passe:"
+      password_confirm:     "Mot de passe confirment:"
+      genre:                "espèce:"
+      select_user_type:     "sélectie d'utilisateur"
+      confirm:              "Confirmez"
+    edit:
+      editing_user:         "Modification de l'utilisateur"
+      show:                 "montrer"
+      back:                 "Retour"
+    index:
+      user_list:            "listes de l'utilisateur"
+      name:                 "nom"
+      type:                 "catégorie"
+      show:                 "montrer"
+      edit:                 "Modifier"
+      destroy:              "Détruisez"
+      sure_delete:          "Est-ce que vous supprimez-vous ?"
+      new_user:             "nouvel utilisateur ?"
+    new:
+      new_user:             "nouvel utilisateur ?"
+      back:                 "Retour"
+    show:
+      name:                 "nom:"
+      password_digest:      "Mot de passe digest:"
+      edit:                 "Modifier"
+      back:                 "Retour"
+
+  about_us:
+    index:
+      aboutus:              "Qui sommes-nous"
+
+  problems:
+    index:
+      list_problems:        "Problèmes signalétique"
+      content:              "Content"
+      questioner:           "Interlocuteur"
+      new_problem:          "nouveau problème"
+      show:                 "montrer"
+      edit:                 "Modifier"
+      destroy:              "Détruisez"  
+      sure_delete:          "Etes-vous sûr ?" 
+    new:
+      new_problem:          "nouveau problème"
+      back:                 "Retour"
+    form:
+      create_problem:       "créer problème"
+      content:              "Content"
+      questioner:           "Interlocuteur"
+    edit:
+      edit_problem:         "Modification problème"
+      show:                 "montrer"      
+      back:                 "Retour"
+    show:
+      show_problem:         "Montrez problème"
+      content:              "Content"
+      questioner:           "Interlocuteur"
+      edit:                 "Modifier"
+      back:                 "Retour"
+                        
+  things:
+    index:
+      list_news:            "Listing Nouvelles"
+      title:                "Titre"
+      content:              "Content"
+      poster:               "affiche"
+      show:                 "montrer"
+      edit:                 "Modifier"
+      destroy:              "Détruisez"   
+      post_news:            "Message Nouvelles"
+      sure_delete:          "Est-ce que vous supprimez-vous ?"
+    edit:
+      edit_news:            "Modification Nouvelles"
+      show:                 "montrer"
+      back:                 "Retour"
+    new:
+      post_news:            "Message Nouvelles"
+      back:                 "Retour"
+    show:
+      show_news:            "Afficher Nouvelles"
+      title:                "Titre"
+      content:              "Content"
+      poster:               "affiche" 
+      edit:                 "Modifier"
+      back:                 "Retour"
+    form:
+      title:                "Titre"
+      content:              "Content"
+      poster:               "affiche"
+      post_news:            "Diffusez cette nouvelles" 
+   
+  contact:
+    index:
+      title:               "Ce que vous voulez dire à nous"
+      back:                "Retour"
+    form:
+      word:                "Entrée vos mot:"
+      name:                "Saisissez votre nom:"
+      phone:               "Entrez votre numéro de téléphone:"
+      send:                "Envoyer un message"
+
+  welcome:
+    index:
+      its:                 "il est "
+      youhave:             "vous avez "
+      tochoose:            "product to choose! Ayez des achats gentils!"
+      
