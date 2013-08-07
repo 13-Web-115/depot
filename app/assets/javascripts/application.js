@@ -43,13 +43,13 @@ function menus(str){
 
  
 function login(id){
-	var $ID=function (id){
-            var d=document.getElementById(id);
-            if(!d){
-                alert(id+" control object not exists!") ;
+	var $ID=function (id){		
+        var d=document.getElementById(id);
+        if(!d){
+			alert(id+" control object not exists!") ;
         	return false;
     	}else{
-        return d;
+        	return d;
     	}
 	}
 	var $this = $ID("a1");
@@ -61,16 +61,16 @@ function login(id){
 	        var oe = e || window.event;
 	        $this.style.left = oe.clientX - startX + "px";
 	        $this.style.top = oe.clientY - startY + "px";
-	            };
-	            document.onmouseup = function () {
-	                document.onmousemove = null;
-	                document.onmouseup = null;
-	                if ($this.releaseCapture) {
-	                    $this.releaseCapture();
-	                }
-	            };
-	            if ($this.setCapture)$this.setCapture();
-	            return false;
+	    };
+        document.onmouseup = function () {
+            document.onmousemove = null;
+            document.onmouseup = null;
+            if ($this.releaseCapture) {
+                $this.releaseCapture();
+            }
+        };
+        if ($this.setCapture)$this.setCapture();
+        return false;
 	}
     if(id==1){
         $ID('a1').style.display='block';
